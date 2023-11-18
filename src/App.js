@@ -22,8 +22,7 @@ function App() {
 
       <h1>hello</h1>
        <h1>Manikandan</h1>
-<p>svfhnvskflvj</p>
-        <Route path="/Product" element={<Product />} />
+<p>svfhnvskflvj</p>        <Route path="/Product" element={<Product />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
         <Route path="/blog/:id" element={<BlogPost />} />
