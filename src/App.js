@@ -19,7 +19,7 @@ function App() {
       <Share/>
       <Routes>
       <Route path="/" element={<Home />} />
-    
+
         <Route path="/Product" element={<Product />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
