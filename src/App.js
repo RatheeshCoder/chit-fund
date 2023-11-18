@@ -19,7 +19,10 @@ function App() {
       <Share/>
       <Routes>
       <Route path="/" element={<Home />} />
+
       <h1>hello</h1>
+       <h1>Manikandan</h1>
+
         <Route path="/Product" element={<Product />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
