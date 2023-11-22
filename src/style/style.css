@@ -2036,7 +2036,7 @@ form select {
 }
 .cta-main-home .product .container7 button:hover {
   background-color: #2532c1;
-  color: white;
+  color: white !important;
   box-shadow: inset 0 -3.25em 0 0 var(--hover);
 }
 .cta-main-home .content {

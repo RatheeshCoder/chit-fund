@@ -4,6 +4,7 @@ import Secure from '../../components/home/secure/secure';
 import Read from '../../components/home/readmore/read';
 import Product from '../../components/home/product/product';
 import Content from '../../components/home/content/content';
+import Testimonial from '../../components/home/testimonial/testimonial';
 import Casestudy from '../../components/home/casestudy/casestudy';
 
 
@@ -14,9 +15,11 @@ const Home = () => {
       <Onetouch />
       <Secure />
       <Read />
+        
       <Content />
       <Product />
       <Casestudy />
+    
 
       
       </section>
