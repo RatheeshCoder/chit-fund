@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid #000 !important;
   font-family: "futura regular", Arial, sans-serif !important;
 }
 
@@ -817,154 +818,8 @@ nav {
 }
 
 .footer2 {
-  background-color: #ffffff;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  padding: 55px 50px;
-  margin-top: 80px;
-}
-.footer2 .footer-left,
-.footer2 .footer-center,
-.footer2 .footer-right {
-  display: inline-block;
-  vertical-align: top;
-}
-.footer2 .footer-left {
-  width: 40%;
-}
-.footer2 .footer-left .logo {
-  width: 100%;
-  height: 100%;
-}
-.footer2 .footer-left .logo img {
-  width: 50%;
-  height: 50%;
-}
-.footer2 h3 {
-  color: #000;
-  font: normal 36px "Cookie", cursive;
-  margin: 0;
-}
-.footer2 h3 span {
-  color: #2532c1;
-}
-.footer2 .footer-links {
-  color: #000;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-.footer2 .footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color: inherit;
-  padding: 0 1%;
-}
-.footer2 .footer-company-name {
-  color: #8f9296;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
-.footer2 .footer-center {
-  width: 35%;
-}
-.footer2 .footer-center i {
-  background-color: #33383b;
-  color: #000;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-.footer2 .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
-}
-.footer2 .footer-center p {
-  display: inline-block;
-  color: #000;
-  vertical-align: middle;
-  margin: 0;
-}
-.footer2 .footer-center p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
-}
-.footer2 .footer-center p a {
-  color: #2532c1;
-  text-decoration: none;
-}
-.footer2 .footer-right {
-  width: 20%;
-}
-.footer2 .footer-company-about {
-  line-height: 20px;
-  color: #92999f;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-}
-.footer2 .footer-company-about span {
-  display: block;
-  color: #000;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.footer2 .footer-icons {
-  margin-top: 25px;
-}
-.footer2 .footer-icons a {
-  color: #2532c1;
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: transparent;
-  border-radius: 2px;
-  font-size: 20px;
-  text-align: center;
-  line-height: 35px;
-  margin-right: 3px;
-  margin-bottom: 5px;
-}
-@media (max-width: 880px) {
-  .footer2 {
-    font: bold 14px sans-serif;
-  }
-  .footer2 .footer-left,
-  .footer2 .footer-center,
-  .footer2 .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  .footer2 .footer-left i,
-  .footer2 .footer-center i,
-  .footer2 .footer-right i {
-    margin-left: 0;
-  }
-  .footer2 .footer-left .main,
-  .footer2 .footer-center .main,
-  .footer2 .footer-right .main {
-    line-height: normal;
-    font-size: auto;
-  }
-}
-.footer2 .cta-footer-2-condact-ph {
-  margin-left: 6%;
-}
-.footer2 .cta-footer-2-condact-ph p:nth-child(2) {
-  display: block;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
 }
 
 .footer3 {
@@ -1488,7 +1343,8 @@ form {
   align-items: start;
   flex-direction: column;
   padding: 40px 40px;
-  height: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 450px;
 }
 form input {

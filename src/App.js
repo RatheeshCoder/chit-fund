@@ -12,11 +12,14 @@ import Jobs from './page/jobs/Jobs';
 import ContactMain from './page/Contact/Contact';
 import Home from './page/Home/pages';
 
+
+
 function App() {
   return (
     <BrowserRouter>
     <h1>Rathsh</h1>
       <Header />
+     
       <Share/>
       <Routes>
       <Route path="/" element={<Home />} />
