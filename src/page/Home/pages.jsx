@@ -15,7 +15,7 @@ const Home = () => {
       <Onetouch />
       <Secure />
       <Read />
-        
+
       <Content />
       <Product />
       <Casestudy />

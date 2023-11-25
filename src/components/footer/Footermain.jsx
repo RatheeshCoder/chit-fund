@@ -8,7 +8,7 @@ const Footermain = () => {
     <section className='footer'>
         <Footer1/>
         <Footer2/>
-        <Footer3/>
+        {/* <Footer3/> */}
     </section>
   )
 }
