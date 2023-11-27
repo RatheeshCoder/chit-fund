@@ -17,7 +17,7 @@ import Home from './page/Home/pages';
 function App() {
   return (
     <BrowserRouter>
-    <h1>Ajaybala</h1>
+
       <Header />
      
       <Share/>
