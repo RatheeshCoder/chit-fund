@@ -64,7 +64,7 @@ const AvgFund = () => {
   className=' cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  '
   onClick={() => openContentPopup(product)}
 >
-  Get Started
+ view more
 </Button>
 
 
@@ -90,7 +90,7 @@ const AvgFund = () => {
                     <th key={colIndex}>{heading}</th>
                   ))}
                 </tr>
-                {selectedProduct.additionalInfo.tableData.slice(1, Math.min(16, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
+                {selectedProduct.additionalInfo.tableData.slice(1, Math.min(10, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
                   <tr key={rowIndex}>
                     {row.map((cell, colIndex) => (
                       <td key={colIndex}>{cell}</td>
@@ -108,7 +108,7 @@ const AvgFund = () => {
                       <th key={colIndex}>{heading}</th>
                     ))}
                   </tr>
-                  {selectedProduct.additionalInfo.tableData.slice(16, Math.min(31, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
+                  {selectedProduct.additionalInfo.tableData.slice(10, Math.min(31, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
                     <tr key={rowIndex}>
                       {row.map((cell, colIndex) => (
                         <td key={colIndex}>{cell}</td>
