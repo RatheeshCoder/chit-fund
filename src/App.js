@@ -17,10 +17,7 @@ import Home from './page/Home/pages';
 function App() {
   return (
     <BrowserRouter>
-<<<<<<< HEAD
-=======
-    <h1>Ajaybala</h1>
->>>>>>> 9be3ee12ad1034b2a01b686b3cea5ed2befd03a8
+
       <Header />
      
       <Share/>
