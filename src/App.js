@@ -17,6 +17,7 @@ import Home from './page/Home/pages';
 function App() {
   return (
     <BrowserRouter>
+
       <Header />
      
       <Share/>
