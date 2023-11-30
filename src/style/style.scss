@@ -26,7 +26,6 @@ $other-color: #000;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // border: 1px solid #000 ;
   font-family: $font-family !important;
 }
 
@@ -2137,6 +2136,28 @@ form {
     }
   }
 
+  .py-14{
+     background-color: $primary-color;
+
+     button{
+        color: white;
+        top: 95px;
+        margin-left: -11px;
+
+        .left-4{
+          left: 179px;
+        }
+        }
+        
+        .right-4{
+          left: 179px;
+        }
+     }
+     
+  }
+
+ 
+
   //secure
 
   .secure {
@@ -2170,13 +2191,7 @@ form {
       }
     }
 
-    // .container4{
-    //     padding-left: 80px;
-    //     iframe{
-    //         width: 620px;
-    //         height: 380px;
-    //     }
-    // }
+  
   }
 
 
@@ -2197,7 +2212,7 @@ form {
       border: 1px solid #ccc;
       padding: 10px;
 
-      max-width: 400px;
+      max-width: 600px;
       background-color: #f9f9f9;
 
 
@@ -2205,23 +2220,19 @@ form {
 
     button {
       width: 170px;
-      height: 40px;
+      height: 66px;
       border: 2px solid $primary-color;
       padding: 5px;
       border-radius: 10px;
       background-color: white;
       color: $primary-color;
       font-size: 22px;
+      margin-bottom: 15px;
     }
 
-    button:hover {
-      // background-color: $primary-color;
-      // color: white;
-    }
 
     .ReadMoreContent.expanded {
       max-height: none;
-      overflow: visible;
     }
   }
 
@@ -3121,7 +3132,7 @@ form {
   .carousel.carousel-slider {
     width: 73% !important;
   }
-}
+
 
 
 .cta-no-image {
@@ -3322,4 +3333,12 @@ form {
   background-color: $primary-color !important;
   color: white !important;
   border-radius: 25px !important;
+}
+
+.Imgslider {
+  height: 400px; /* Adjust the height as needed */
+}
+.py-14 .bg-gray-100 button.text-4xl.text-gray-500.focus\:outline-none.absolute.top-1\/2.right-4.transform.-translate-y-1\/2 {
+  left: 174px;
+  margin-left: 31px;
 }

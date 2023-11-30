@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { Component, useEffect } from 'react';
-import phone from '../../../asset/imgs/Ad_img.png'
-import playstore from "../../../asset/imgs/play-store.webp";
+import Playstore from "../../../asset/imgs/play-store.webp"
 import user from "../../../asset/imgs/user.png"
 import trophy from "../../../asset/imgs/trophy.png"
 import gift from "../../../asset/imgs/gift.png"
@@ -14,6 +13,8 @@ import Gift from './gift';
 import Location from './location';
 import Camera from './camera';
 import Heart from './heart';
+import Imageslider from './imgslider'
+
 
 
 class Onetouch extends Component {
@@ -29,6 +30,7 @@ class Onetouch extends Component {
         "Trusted by 6500+ Customers",
       ],
     };
+   
   }
 
   componentDidMount() {
@@ -62,8 +64,9 @@ class Onetouch extends Component {
             
             <div className="store">             
             
+
               <div className="playstore">
-                <img src={playstore} alt="" />
+               <img src={Playstore} alt="" />
               </div>
 
               
@@ -72,7 +75,7 @@ class Onetouch extends Component {
           </div>
           
           <div className="container2">
-            <img src={phone} alt="" />
+          <Imageslider />
           </div>
           </div>
 
