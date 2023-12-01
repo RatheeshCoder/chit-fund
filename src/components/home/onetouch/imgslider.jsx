@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const TestimonialSlider = () => {
   const testimonials = [
@@ -23,20 +23,29 @@ const TestimonialSlider = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextTestimonial();
+    }, 5000); // Change the interval duration (in milliseconds) as needed
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+  }, [currentTestimonial]);
+
   return (
-    <section className="py-14 bg-gray-100">
+  
+       <section className="py-14 bg-gray-100">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 relative">
         <button
           className="text-4xl text-gray-500 focus:outline-none absolute top-1/2 left-4 transform -translate-y-1/2"
           onClick={prevTestimonial}
         >
-          {"<"}
+          
         </button>
         <button
           className="text-4xl text-gray-500 focus:outline-none absolute top-1/2 right-4 transform -translate-y-1/2"
           onClick={nextTestimonial}
         >
-          {">"}
+      
         </button>
         <div className="max-w-3xl mx-auto text-center">
           <ul className="flex justify-center items-center">
@@ -82,6 +91,7 @@ const TestimonialSlider = () => {
           </ul>
         </div>
       </div>
+    
     </section>
   );
 };
