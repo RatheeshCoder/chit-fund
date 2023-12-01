@@ -61,11 +61,11 @@ const AvgFund = () => {
               </div>
               <div className="flex-1 flex items-end">
               <Button
-  className=' cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  '
-  onClick={() => openContentPopup(product)}
->
-  Get Started
-</Button>
+                  className=' cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  '
+                  onClick={() => openContentPopup(product)}
+                >
+                view more
+                </Button>
 
 
 
