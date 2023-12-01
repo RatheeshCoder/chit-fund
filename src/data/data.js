@@ -32,6 +32,15 @@ import gallaryImg29 from '../asset/imgs/3-year (9).jpeg'
 
 // gallery dataset
 
+import gallery1 from "../asset/imgs/galleryImg (1).jpg"
+import gallery2 from "../asset/imgs/galleryImg (2).jpg"
+import gallery3 from "../asset/imgs/galleryImg (3).jpg"
+import gallery4 from "../asset/imgs/galleryImg (4).jpg"
+import gallery5 from "../asset/imgs/galleryImg (5).jpg"
+import gallery6 from "../asset/imgs/galleryImg (6).jpg"
+import gallery7 from "../asset/imgs/galleryImg (7).jpg"
+import gallery8 from "../asset/imgs/galleryImg (8).jpg"
+
 // home data 
 
 import img1 from '../asset/imgs/img1.jpg';
@@ -45,17 +54,15 @@ import blogimg2 from '../asset/imgs/Case Study Own Vehicle_.webp'
 import blogimg3 from '../asset/imgs/Case Study Insurance_.jpg'
 
 export const gallaryImg =[
-  { id: 2, url: gallaryImg2, },
-  { id: 3, url: gallaryImg3,  },
-  { id: 4, url: gallaryImg4,  },
-  { id: 5, url: gallaryImg5, },
-  { id: 6, url: gallaryImg6,   },
-  { id: 7, url: gallaryImg7,  },
-  { id: 8, url: gallaryImg8,  },
-  { id: 9, url: gallaryImg9, },
-  { id: 10, url: gallaryImg10,  },
-  { id: 11, url: gallaryImg11,   },
-  { id: 12, url: gallaryImg12,  },
+  { id: 1, url: gallery1,  },
+  { id: 2, url: gallery2, },
+  { id: 3, url: gallery3,  },
+  { id: 4, url: gallery4,  },
+  { id: 5, url: gallery5, },
+  { id: 6, url: gallery6,   },
+  { id: 7, url: gallery7,  },
+  { id: 8, url: gallery8,  },
+  
 ]
 
 
