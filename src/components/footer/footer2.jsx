@@ -1,6 +1,11 @@
 import React from 'react';
 import logo from '../../asset/imgs/logo-img.png'
-
+import { 
+  Facebook, 
+  LinkedIn, 
+  WhatsApp,
+  Instagram
+} from '@mui/icons-material';
 
 
 function Footer2() {
@@ -101,7 +106,7 @@ function Footer2() {
                         </div>
                     </form>
                 </div>
-                <div className="cta-footer-page flex-1 mt-10 space-y-6  justify-between sm:flex md:space-y-0 md:mt-0">
+                <div className="flex-1 mt-10 space-y-6  justify-between sm:flex md:space-y-0 md:mt-0">
                     {
                         footerNavs.map((item, idx) => (
                             <ul
