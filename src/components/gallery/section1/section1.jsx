@@ -6,9 +6,9 @@ const Background = () => {
 
   const reset = () => {
     const sliderImages = document.querySelectorAll(".slide");
-    for (let i = 0; i < sliderImages.length; i++) {
-      sliderImages[i].style.display = "none";
-    }
+    sliderImages.forEach((image) => {
+      image.style.display = "none";
+    });
   };
 
   const startSlide = () => {
@@ -42,9 +42,20 @@ const Background = () => {
     <div className="wrap">
       <div id="slider">
         {gallaryImg.map((img, index) => (
-          <div key={img.id} className={`slide slide${index + 1}`}>
-            <div className="slide-content">
-              <img src={img.url} alt={`Image ${index + 1}`} />
+          <div
+            key={img.id}
+            className={`slide slide${index + 1}`}
+            style={{
+              display: index === current ? 'block' : 'none',
+              textAlign: 'center',
+            }}
+          >
+            <div className="slide-content" style={{ display: 'inline-block' }}>
+              <img
+                src={img.url}
+                alt={`Image ${index + 1}`}
+                style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+              />
             </div>
           </div>
         ))}

@@ -1,9 +1,9 @@
-// MainComponent.js
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import FAQsPage from './FAQsPage';
 
-const MainComponent = () => {
+const FAQmain = () => {
   return (
     <Router>
       <div className="leading-relaxed mt-12 mx-4 md:mx-8">
@@ -14,7 +14,7 @@ const MainComponent = () => {
             to="/faqs"
             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
           >
-            FAQs
+           
           </Link>
         </div>
 
@@ -24,4 +24,4 @@ const MainComponent = () => {
   );
 };
 
-export default MainComponent;
+export default FAQmain;
