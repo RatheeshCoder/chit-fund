@@ -20,7 +20,7 @@ const Cards = () => {
       <div className={`sidenavbar ${isActive ? 'active' : ''}`}>
         <div className='wrapper'>
         <li onClick={toggleActive} className={`brand-dropdown ${isActive ? 'active' : ''}`}>
-            JOB TITLES ↓
+            JOB'S TITLES ↓ 
           </li>
           {jobTitles.map((office) => (
             <li className='jobFilter' key={office} onClick={() => { setFilter(office); setActive(false); }}>{office === 'all' ? 'All Jobs' : office}</li>
