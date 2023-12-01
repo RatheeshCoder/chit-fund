@@ -1062,11 +1062,6 @@ table td:first-child {
 .Hiring h1 span:hover {
   color: black;
 }
-.Hiring p {
-  font-size: 20px;
-  color: #7c7b7b;
-  margin-bottom: 35px;
-}
 
 .Main {
   display: flex;
@@ -1077,6 +1072,11 @@ table td:first-child {
   margin: 20px 0px;
   list-style: none;
   padding: 20px 0px 20px 10px;
+}
+
+li:active {
+  background-color: #2532c1;
+  color: white;
 }
 
 .brand-dropdown {
@@ -1131,21 +1131,6 @@ table td:first-child {
 .job-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.job-card h1 {
-  font-weight: 400;
-  margin: 15px 0px 8px 0px;
-  font-size: 31px;
-  text-align: center;
-  color: #333;
-}
-
-.job-card p {
-  color: #7c7b7b;
-  font-weight: 600;
-  margin: 30px 0px 0px 0px;
-  font-size: medium !important;
 }
 
 .job-icon {
