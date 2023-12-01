@@ -1,6 +1,4 @@
 
-
-
 @font-face {
   font-family: 'asul regular';
   src: url('../font/Fonts/asul-regular.ttf') format('opentype');
@@ -2718,7 +2716,7 @@ form {
 
   // media query 720px
 
-  @media only screen and (max-width: 920px) {
+  @media only screen and (max-width: 720px) {
 
     //onetouch
 
@@ -2750,6 +2748,11 @@ form {
       }
     }
 
+     .wrapper1 .container2 .cta-main-home .py-14 button {
+      color: white;
+      top: 95px;
+      margin-left: -25px !important;
+  }
     .wrapper1 .container1 .store {
       justify-content: center;
       align-items: center;
@@ -2791,6 +2794,8 @@ form {
         height: 250px;
       }
     }
+    
+ 
 
 
     //secure
