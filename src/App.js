@@ -12,10 +12,14 @@ import Jobs from './page/jobs/Jobs';
 import ContactMain from './page/Contact/Contact';
 import Home from './page/Home/pages';
 
+
+
 function App() {
   return (
     <BrowserRouter>
+
       <Header />
+     
       <Share/>
       <Routes>
       <Route path="/" element={<Home />} />

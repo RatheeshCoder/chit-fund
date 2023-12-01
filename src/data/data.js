@@ -44,7 +44,19 @@ import blogimg1 from '../asset/imgs/Case Study Education_.jpg'
 import blogimg2 from '../asset/imgs/Case Study Own Vehicle_.webp'
 import blogimg3 from '../asset/imgs/Case Study Insurance_.jpg'
 
-
+export const gallaryImg =[
+  { id: 2, url: gallaryImg2, },
+  { id: 3, url: gallaryImg3,  },
+  { id: 4, url: gallaryImg4,  },
+  { id: 5, url: gallaryImg5, },
+  { id: 6, url: gallaryImg6,   },
+  { id: 7, url: gallaryImg7,  },
+  { id: 8, url: gallaryImg8,  },
+  { id: 9, url: gallaryImg9, },
+  { id: 10, url: gallaryImg10,  },
+  { id: 11, url: gallaryImg11,   },
+  { id: 12, url: gallaryImg12,  },
+]
 
 
 const photoData = [
@@ -146,7 +158,7 @@ export const small_fund = [
   {
     id: 1,
     amount: ' 10,000',
-    timeline: '10- months',
+    timeline: '304 days',
     youpay:'-',
     youget:'-',
     monthlypay:'1000',
@@ -173,7 +185,7 @@ export const small_fund = [
   {
     id: 2,
     amount: ' 20,000',
-    timeline: '10 months',
+    timeline: '304 days',
     youpay:'-',
     youget:'-',
     monthlypay:'2000',
@@ -198,7 +210,7 @@ export const small_fund = [
   {
     id: 3,
     amount: ' 50,000',
-    timeline: '10 months',
+    timeline: '304 days',
     youpay:'-',
     youget:'-',
     monthlypay:'5000',
@@ -230,7 +242,7 @@ export const avg_fund = [
   {
     id: 1,
     amount: ' 3,00,000',
-    timeline: '30 months',
+    timeline: '912  days',
     youpay:'-',
     youget:'-',
     monthlypay:'10000',
@@ -276,7 +288,7 @@ export const avg_fund = [
   {
     id: 2,
     amount: ' 6,00,000',
-    timeline: '30 months',
+    timeline: '912  days',
     youpay:'-',
     youget:'-',
     monthlypay:'5000',
@@ -327,7 +339,7 @@ export const high_fund = [
   {
     id: 1,
     amount: ' 10,00,000',
-    timeline: '40 months',
+    timeline: '1216 days',
     youpay:'-',
     youget:'-',
     monthlypay:'25,000',
@@ -386,7 +398,7 @@ export const mid_fund = [
   {
     id: 1,
     amount: ' 50,000',
-    timeline: '20 months',
+    timeline: '608 days',
     youpay:'-',
     youget:'-',
     monthlypay:'2500',
@@ -424,7 +436,7 @@ export const mid_fund = [
   {
     id: 2,
     amount: ' 1,00,000',
-    timeline: '20 months',
+    timeline: '608 days',
     youpay:'-',
     youget:'-',
     monthlypay:'5000',
@@ -462,7 +474,7 @@ export const mid_fund = [
   {
     id: 3,
     amount: ' 2,00,000',
-    timeline: '20 months',
+    timeline: '608 days',
     youpay:'-',
     youget:'-',
     monthlypay:'10000',
@@ -500,7 +512,7 @@ export const mid_fund = [
   {
     id: 4,
     amount: ' 3,00,000',
-    timeline: '20 months',
+    timeline: '608 days',
     youpay:'-',
     youget:'-',
     monthlypay:'15000',
@@ -538,7 +550,7 @@ export const mid_fund = [
   {
     id: 5,
     amount: ' 5,00,000',
-    timeline: '20 months',
+    timeline: '608 days',
     youpay:'-',
     youget:'-',
     monthlypay:'25000',
@@ -576,7 +588,7 @@ export const mid_fund = [
   {
     id: 6,
     amount: ' 10,00,000',
-    timeline: '20 months',
+    timeline: '608 days',
     youpay:'-',
     youget:'-',
     monthlypay:'50000',
