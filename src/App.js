@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/header';
 import Footermain from './components/footer/Footermain';
 import './style/style.css'
-import Share from './components/share/share';
+import Share from './components/FAQs/FAQsPage';
 import Gallery from './page/gallery/gallery';
 import CaseStudy from './page/caseStudy/caseStudy';
 import BlogPost from './components/blog/section2/BlogPost';
@@ -11,7 +11,7 @@ import Product from './page/product/product';
 import Jobs from './page/jobs/Jobs';
 import ContactMain from './page/Contact/Contact';
 import Home from './page/Home/pages';
-
+import FAQs from './components/FAQs/FAQsPage';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
       <Header />
      
-      <Share/>
+      <FAQs/>
       <Routes>
       <Route path="/" element={<Home />} />
 
