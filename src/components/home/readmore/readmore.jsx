@@ -12,8 +12,9 @@ const ReadMoreContent = ({ initialContent, expandedContent }) => {
     <div className='readmore'>
       {expanded ? expandedContent : initialContent}
       <button
-      variant="outline-primary"
-      type = "button"
+    
+
+      
        onClick={toggleContent}>
         
         {expanded ? 'Read Less' : 'Read More'}

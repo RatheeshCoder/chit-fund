@@ -2298,6 +2298,7 @@ form {
       justify-content: space-evenly;
       align-items: center;
       padding: 5%;
+      margin-left: 5%;
 
       li {
         font-size: 25px;
@@ -2318,7 +2319,8 @@ form {
         width: 50%;
         line-height: 80px;
         text-align: justify;
-        // margin-left: 230px !important;
+        padding-left: 10%;
+       
 
         ul {
           list-style-type: none;
@@ -2338,6 +2340,7 @@ form {
         width: 50%;
         line-height: 80px;
         text-align: justify;
+        padding-left: 10%;
 
         ul {
           list-style-type: none;
@@ -2748,15 +2751,7 @@ form {
       }
     }
 
-     .wrapper1 .container2 .cta-main-home .py-14 button {
-      color: white;
-      top: 95px;
-      margin-left: -25px !important;
-  }
-    .wrapper1 .container1 .store {
-      justify-content: center;
-      align-items: center;
-    }
+ 
 
     .wrapper1 .container1 .store img {
       width: 330px !important;

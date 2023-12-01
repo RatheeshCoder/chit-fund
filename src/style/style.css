@@ -1834,6 +1834,7 @@ form select {
   justify-content: space-evenly;
   align-items: center;
   padding: 5%;
+  margin-left: 5%;
 }
 .product .container6 li {
   font-size: 25px;
@@ -1852,6 +1853,7 @@ form select {
   width: 50%;
   line-height: 80px;
   text-align: justify;
+  padding-left: 10%;
 }
 .product .container6 .wrapper2 ul {
   list-style-type: none;
@@ -1866,6 +1868,7 @@ form select {
   width: 50%;
   line-height: 80px;
   text-align: justify;
+  padding-left: 10%;
 }
 .product .container6 .wrapper3 ul {
   list-style-type: none;
@@ -2131,7 +2134,7 @@ form select {
     color: rgb(127, 124, 124);
   }
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 720px) {
   .wrapper1 {
     flex-direction: column-reverse;
   }
@@ -2142,10 +2145,6 @@ form select {
   .wrapper1 .container1 h1 {
     font-size: 25px;
     padding-top: 15px;
-  }
-  .wrapper1 .container1 .store {
-    justify-content: center;
-    align-items: center;
   }
   .wrapper1 .container1 .store img {
     width: 330px !important;
@@ -2568,4 +2567,4 @@ form select {
 .py-14 .bg-gray-100 button.text-4xl.text-gray-500.focus\:outline-none.absolute.top-1\/2.right-4.transform.-translate-y-1\/2 {
   left: 174px;
   margin-left: 31px;
-}/*# sourceMappingURL=style.;;css.map */
+}/*# sourceMappingURL=style.css.map */
