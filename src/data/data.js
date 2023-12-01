@@ -44,7 +44,19 @@ import blogimg1 from '../asset/imgs/Case Study Education_.jpg'
 import blogimg2 from '../asset/imgs/Case Study Own Vehicle_.webp'
 import blogimg3 from '../asset/imgs/Case Study Insurance_.jpg'
 
-
+export const gallaryImg =[
+  { id: 2, url: gallaryImg2, },
+  { id: 3, url: gallaryImg3,  },
+  { id: 4, url: gallaryImg4,  },
+  { id: 5, url: gallaryImg5, },
+  { id: 6, url: gallaryImg6,   },
+  { id: 7, url: gallaryImg7,  },
+  { id: 8, url: gallaryImg8,  },
+  { id: 9, url: gallaryImg9, },
+  { id: 10, url: gallaryImg10,  },
+  { id: 11, url: gallaryImg11,   },
+  { id: 12, url: gallaryImg12,  },
+]
 
 
 const photoData = [
