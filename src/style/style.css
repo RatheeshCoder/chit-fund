@@ -306,7 +306,6 @@ nav {
 .casestudy .blog-main .blog-card {
   margin: 10px;
   width: 300px;
-  /* Adjust the width as needed */
   display: inline-block;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -324,7 +323,6 @@ nav {
 }
 .casestudy .blog-main .blog-card .MuiCardContent-root .MuiButton-root {
   background-color: #2532c1;
-  /* Change to your preferred color */
   color: #fff;
   transition: background-color 0.3s;
   text-align: center;
@@ -1758,11 +1756,8 @@ form select {
 .readmore button {
   width: 170px;
   height: 66px;
-  border: 2px solid #2532c1;
   padding: 5px;
   border-radius: 10px;
-  background-color: white;
-  color: #2532c1;
   font-size: 22px;
   margin-bottom: 15px;
 }
@@ -1867,16 +1862,14 @@ form select {
   justify-content: center;
   align-items: center;
 }
-.product .container7 button {
-  width: 180px;
-  height: 70px;
-  border: 2px solid #2532c1;
+.product .container7 a button {
   padding: 5px;
   border-radius: 10px;
   background-color: white;
   color: #2532c1;
   font-size: 22px;
 }
+
 .content {
   background-color: #F9F9F9;
 }
@@ -1937,10 +1930,9 @@ form select {
   align-items: center;
   padding: 5% 0;
 }
-.content .wrapper4 .container10 .container7 button {
+.content .wrapper4 .container10 .container7 a button {
   width: 150px;
   height: 50px;
-  border: 2px solid #2532c1;
   padding: 5px;
   border-radius: 10px;
   background-color: white;
@@ -2070,12 +2062,6 @@ form select {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-}
-.carousel-container .prev-button {
-  left: 10px;
-}
-.carousel-container .next-button {
-  right: 10px;
 }
 
 @media only screen and (max-width: 980px) {

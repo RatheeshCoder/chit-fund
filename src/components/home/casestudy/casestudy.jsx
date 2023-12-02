@@ -10,20 +10,19 @@ const images = [
   {
     id: 1,
     src:img1,
-    title: 'Title 1',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus.',
+
   },
   {
     id: 2,
     src: img2,
-    title: 'Title 2',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus.',
+
+   
   },
   {
     id: 3,
     src: img3,
-    title: 'Title 3',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, necessitatibus.',
+    
+  
   },
 ];
 
@@ -94,17 +93,17 @@ const Casestudy = () => {
           </div>
         </div>
       ))}
-      {/* Next and previous buttons */}
+    
       <div className="slider-nav">
         <Button className="slider-nav-btn" onClick={() => plusSlides(-1)}>
-          <ChevronLeftIcon />
+          <ChevronLeftIcon style={{ color: 'white' }} />
         </Button>
         <Button className="slider-nav-btn" onClick={() => plusSlides(1)}>
-          <ChevronRightIcon />
+          <ChevronRightIcon style={{ color: 'white' }}/>
         </Button>
       </div>
 
-      {/* The dots/circles */}
+      
       <div className="dot-container">
         {images.map((_, index) => (
           <span key={index} className={`dot ${index + 1 === slideIndex ? 'active' : ''}`} onClick={() => currentSlide(index + 1)}></span>
