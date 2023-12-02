@@ -1332,11 +1332,11 @@ table {
 
   }
 
-  p {
-    font-size: 20px;
-    color: #7c7b7b;
-    margin-bottom: 35px;
-  }
+  // p {
+  //   font-size: 20px;
+  //   color: #7c7b7b;
+  //   margin-bottom: 35px;
+  // }
 }
 
 .Main {
@@ -1351,8 +1351,8 @@ table {
 }
 
 li:active {
-  // background-color: $primary-color;
-  // color: white;
+  background-color: $primary-color;
+  color: white;
 }
 
 .brand-dropdown {
@@ -1410,20 +1410,20 @@ li:active {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.job-card h1 {
-  font-weight: 400;
-  margin: 15px 0px 8px 0px;
-  font-size: 31px;
-  text-align: center;
-  color: #333;
-}
+// .job-card h1 {
+//   font-weight: 400;
+//   margin: 15px 0px 8px 0px;
+//   font-size: 31px;
+//   text-align: center;
+//   color: #333;
+// }
 
-.job-card p {
-  color: #7c7b7b;
-  font-weight: 600;
-  margin: 30px 0px 0px 0px;
-  font-size: medium !important;
-}
+// .job-card p {
+//   color: #7c7b7b;
+//   font-weight: 600;
+//   margin: 30px 0px 0px 0px;
+//   font-size: medium !important;
+// }
 
 .job-icon {
   font-size: xx-large;
