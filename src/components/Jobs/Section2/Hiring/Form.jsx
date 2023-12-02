@@ -19,9 +19,6 @@ export default function RegistrationForm() {
   const [formData, setFormData] = React.useState({
     firstName: '',
     lastName: '',
-    dateOfBirth: '',
-    gender: '',
-    experience: '',
     phoneNumber: '',
     email: '',
     selectedFile: null,
@@ -60,13 +57,7 @@ export default function RegistrationForm() {
 
   return (
     <div className='cta-reg-form  cta-hiring-form' >
-      <Button className='cta-know-more-btn' style={{
-  textDecoration: 'none',
-  margin: '20px 0px',
-  color: 'white',
-  padding: '18px',
-  borderRadius: '18px'
-}} variant="contained" onClick={handleDialogOpen}>
+      <Button className='cta-know-more-btn cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  '  variant="contained" onClick={handleDialogOpen}>
         Know More
       </Button>
 
@@ -88,40 +79,6 @@ export default function RegistrationForm() {
               label="Last Name"
               name="lastName"
               value={formData.lastName}
-              onChange={handleFormChange}
-              required
-            />
-
-            <TextField
-              fullWidth
-              label="Date of Birth"
-              name="dateOfBirth"
-              type="date"
-              value={formData.dateOfBirth}
-              onChange={handleFormChange}
-              required
-            />
-
-            <FormControl fullWidth>
-              <InputLabel>Gender</InputLabel>
-              <Select
-                name="gender"
-                value={formData.gender}
-                onChange={handleFormChange}
-                required
-              >
-                <MenuItem value="male">Male</MenuItem>
-                <MenuItem value="female">Female</MenuItem>
-                <MenuItem value="other">Other</MenuItem>
-              </Select>
-            </FormControl>
-
-            <TextField
-              fullWidth
-              label="Experience (in years)"
-              name="experience"
-              type="number"
-              value={formData.experience}
               onChange={handleFormChange}
               required
             />

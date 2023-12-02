@@ -46,6 +46,29 @@ import blogimg3 from '../asset/imgs/Case Study Insurance_.jpg'
 
 
 
+import gallerystart1 from '../asset/imgs/galleryImg (1).jpg'
+import gallerystart2 from '../asset/imgs/galleryImg (2).jpg'
+import gallerystart3 from '../asset/imgs/galleryImg (3).jpg'
+import gallerystart4 from '../asset/imgs/galleryImg (4).jpg'
+import gallerystart5 from '../asset/imgs/galleryImg (5).jpg'
+import gallerystart6 from '../asset/imgs/galleryImg (6).jpg'
+import gallerystart7 from '../asset/imgs/galleryImg (7).jpg'
+import gallerystart8 from '../asset/imgs/galleryImg (8).jpg'
+
+
+
+export const gallaryImg =[
+
+  { id: 1, url: gallerystart1 },
+  { id: 2, url: gallerystart2 },
+  { id: 3, url: gallerystart3 },
+  { id: 4, url: gallerystart4 },
+  { id: 5, url: gallerystart5 },
+  { id: 6, url: gallerystart6 },
+  { id: 7, url: gallerystart7 },
+  { id: 8, url: gallerystart8 },
+]
+
 
 const photoData = [
     // { id: 1, url: gallaryImg1, category: 'CustomerMeetups' },
@@ -138,8 +161,6 @@ const blogData = {
 };
 
 export { blogData }; 
-
-
 
 // small_fund.js
 export const small_fund = [
@@ -615,11 +636,6 @@ export const mid_fund = [
 ];
 
 
-
-
-
-
-
 export const jobData = [
   {
     id: 1,
@@ -768,3 +784,27 @@ export const people = [
     },
 ]
 
+
+
+export const faqsList =[
+  {
+    q: "What are some random questions to ask?",
+    a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question."
+},
+{
+    q: "Do you include common questions?",
+    a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator."
+},
+{
+    q: "Can I use this for 21 questions?",
+    a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated."
+},
+{
+    q: "Are these questions for girls or for boys?",
+    a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with)."
+},
+{
+    q: "What do you wish you had more talent doing?",
+    a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
+},
+]

@@ -1062,11 +1062,6 @@ table td:first-child {
 .Hiring h1 span:hover {
   color: black;
 }
-.Hiring p {
-  font-size: 20px;
-  color: #7c7b7b;
-  margin-bottom: 35px;
-}
 
 .Main {
   display: flex;
@@ -1131,21 +1126,6 @@ table td:first-child {
 .job-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.job-card h1 {
-  font-weight: 400;
-  margin: 15px 0px 8px 0px;
-  font-size: 31px;
-  text-align: center;
-  color: #333;
-}
-
-.job-card p {
-  color: #7c7b7b;
-  font-weight: 600;
-  margin: 30px 0px 0px 0px;
-  font-size: medium !important;
 }
 
 .job-icon {
@@ -2564,7 +2544,70 @@ form select {
   height: 400px; /* Adjust the height as needed */
 }
 
-.py-14 .bg-gray-100 button.text-4xl.text-gray-500.focus\:outline-none.absolute.top-1\/2.right-4.transform.-translate-y-1\/2 {
-  left: 174px;
-  margin-left: 31px;
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 650px) {
+  #slider, .wrap, .slide-content {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 420px) {
+  #slider, .wrap, .slide-content {
+    height: 30vh;
+  }
+}
+.max-h-full {
+  max-height: 100vw !important;
+}
+
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.slide-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bg-gray-100 {
+  background-color: transparent !important;
+}
+
+.cta-footer-list-main {
+  text-align: center !important;
 }/*# sourceMappingURL=style.css.map */

@@ -11,6 +11,7 @@ import Product from './page/product/product';
 import Jobs from './page/jobs/Jobs';
 import ContactMain from './page/Contact/Contact';
 import Home from './page/Home/pages';
+import FAQsPage from './components/FAQs/FAQsPage';
 
 
 
@@ -20,7 +21,7 @@ function App() {
 
       <Header />
      
-      <Share/>
+      <FAQsPage/>
       <Routes>
       <Route path="/" element={<Home />} />
 
