@@ -32,15 +32,6 @@ import gallaryImg29 from '../asset/imgs/3-year (9).jpeg'
 
 // gallery dataset
 
-import gallery1 from "../asset/imgs/galleryImg (1).jpg"
-import gallery2 from "../asset/imgs/galleryImg (2).jpg"
-import gallery3 from "../asset/imgs/galleryImg (3).jpg"
-import gallery4 from "../asset/imgs/galleryImg (4).jpg"
-import gallery5 from "../asset/imgs/galleryImg (5).jpg"
-import gallery6 from "../asset/imgs/galleryImg (6).jpg"
-import gallery7 from "../asset/imgs/galleryImg (7).jpg"
-import gallery8 from "../asset/imgs/galleryImg (8).jpg"
-
 // home data 
 
 import img1 from '../asset/imgs/img1.jpg';
@@ -53,17 +44,7 @@ import blogimg1 from '../asset/imgs/Case Study Education_.jpg'
 import blogimg2 from '../asset/imgs/Case Study Own Vehicle_.webp'
 import blogimg3 from '../asset/imgs/Case Study Insurance_.jpg'
 
-export const gallaryImg =[
-  { id: 1, url: gallery1,  },
-  { id: 2, url: gallery2, },
-  { id: 3, url: gallery3,  },
-  { id: 4, url: gallery4,  },
-  { id: 5, url: gallery5, },
-  { id: 6, url: gallery6,   },
-  { id: 7, url: gallery7,  },
-  { id: 8, url: gallery8,  },
-  
-]
+
 
 
 const photoData = [
@@ -787,28 +768,3 @@ export const people = [
     },
 ]
 
-
-
-
-export const faqsList =[
-  {
-    q: "What are some random questions to ask?",
-    a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question."
-},
-{
-    q: "Do you include common questions?",
-    a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator."
-},
-{
-    q: "Can I use this for 21 questions?",
-    a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated."
-},
-{
-    q: "Are these questions for girls or for boys?",
-    a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with)."
-},
-{
-    q: "What do you wish you had more talent doing?",
-    a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
-},
-]

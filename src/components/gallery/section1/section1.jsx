@@ -1,44 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { gallaryImg } from '../../../data/data';
+import React from 'react'
 
 const Background = () => {
-  const [current, setCurrent] = useState(0);
-
-  const reset = () => {
-    const sliderImages = document.querySelectorAll(".slide");
-    sliderImages.forEach((image) => {
-      image.style.display = "none";
-    });
-  };
-
-  const startSlide = () => {
-    reset();
-    const sliderImages = document.querySelectorAll(".slide");
-    sliderImages[0].style.display = "block";
-  };
-
-  const slideNext = () => {
-    reset();
-    const sliderImages = document.querySelectorAll(".slide");
-    const nextIndex = (current + 1) % sliderImages.length;
-    sliderImages[nextIndex].style.display = "block";
-    setCurrent(nextIndex);
-  };
-
-  useEffect(() => {
-    const intervalId = setInterval(slideNext, 3000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [current]);
-
-  useEffect(() => {
-    startSlide();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
+
     <div className="wrap">
       <div id="slider">
         {gallaryImg.map((img, index) => (
@@ -64,4 +28,11 @@ const Background = () => {
   );
 };
 
-export default Background;
+    <section className='cta-gallery-bg'>
+      
+    </section>
+  )
+}
+
+
+export default Background
