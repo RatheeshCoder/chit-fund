@@ -3352,7 +3352,27 @@ form {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 650px){
+  #slider, .wrap, .slide-content {
+    height: 50vh;
+  }
+}
 
+@media screen and (max-width: 420px){
+  #slider, .wrap, .slide-content {
+    height: 30vh;
+  }
+}
+
+// @media screen and (max-width: 360px){
+//   #slider, .wrap, .slide-content {
+//     height: 25vh;
+//   }
+// }
+
+.max-h-full{
+  max-height: 100vw !important;
+}
 
 .slide-content {
   display: flex;
@@ -3369,7 +3389,7 @@ form {
 
 .slide-content img{
   width: 100%;
-  height: 100%;
+  height: fit-content;
   object-fit: contain;
   
 }

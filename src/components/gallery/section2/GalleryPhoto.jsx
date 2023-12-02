@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-
 import photoData from '../../../data/data';
 
 class GalleryPhoto extends Component {
@@ -58,21 +57,53 @@ class GalleryPhoto extends Component {
     const currentPhoto = filteredPhotos[photoIndex];
 
     return (
-      <section className="gallery-photo">
-        <div className="cta-title">
-          <h1>Be A Part Of Our Joy Faces You See! Moments With Our Financial Geeks!</h1>
-        </div>
-        <div className="cta-filter-option">
-          <button onClick={() => this.handleFilterChange('all')}>All</button>
-          <button onClick={() => this.handleFilterChange('CustomerMeetups')}>Customer Meetups</button>
-          <button onClick={() => this.handleFilterChange('FestivalCelebrations')}>Festival Celebrations</button>
-          <button onClick={() => this.handleFilterChange('anniversary')}>3rd Year Anniversary </button>
+      <section className="gallery-photo container mx-auto p-4 md:p-8 lg:p-12">
+        <div className="cta-title text-center mb-4">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl">
+            Be A Part Of Our Joy Faces You See! Moments With Our Financial Geeks!
+          </h1>
         </div>
 
-        <div className="gallery " >
+        <div className="cta-filter-option flex justify-center space-x-4 mb-4">
+          <button
+            className={`${
+              selectedFilter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'
+            } px-4 py-2 rounded`}
+            onClick={() => this.handleFilterChange('all')}
+          >
+            All
+          </button>
+          <button
+            className={`${
+              selectedFilter === 'CustomerMeetups' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'
+            } px-4 py-2 rounded`}
+            onClick={() => this.handleFilterChange('CustomerMeetups')}
+          >
+            Customer Meetups
+          </button>
+          <button
+            className={`${
+              selectedFilter === 'FestivalCelebrations' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'
+            } px-4 py-2 rounded`}
+            onClick={() => this.handleFilterChange('FestivalCelebrations')}
+          >
+            Festival Celebrations
+          </button>
+          <button
+            className={`${
+              selectedFilter === 'anniversary' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'
+            } px-4 py-2 rounded`}
+            onClick={() => this.handleFilterChange('anniversary')}
+          >
+            3rd Year Anniversary
+          </button>
+        </div>
+
+        <div className="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredPhotos.map((photo, index) => (
             <div key={photo.id}>
-              <img className='zoomIn'
+              <img
+                className='zoomIn w-full h-auto cursor-pointer'
                 src={photo.url}
                 alt={`Photo ${photo.id}`}
                 onClick={() => this.openLightbox(index)}
