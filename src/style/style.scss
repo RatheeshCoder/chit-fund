@@ -2209,15 +2209,26 @@ form {
 
 
     }
+    a:-webkit-any-link {
+    text-decoration: none !important;
+    color: $secondary-color;
+    background-color: $primary-color;
+        width: 170px !important;
+        height: 60px !important;
+        padding: 5px;
+}
 
     button {
-      width: 170px;
-      height: 66px;
+      width: 200px;
+      height: 20px;
       padding: 5px;
       border-radius: 10px ;
       // border: 2px solid $primary-color;
       font-size: 22px;
       margin-bottom: 15px;
+      // background-color: $primary-color;
+      // color: $secondary-color;
+      margin-bottom: 5%;
     }
 
 
@@ -2357,12 +2368,12 @@ form {
       align-items: center;
 
       a{
-
+        background-color: $primary-color;
+        color: $secondary-color;
       button {
         padding: 5px;
         border-radius: 10px;
-        background-color: white;
-        color: $primary-color;
+       
         font-size: 22px;
       }}
     }

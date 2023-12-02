@@ -1753,13 +1753,22 @@ form select {
   max-width: 600px;
   background-color: #f9f9f9;
 }
+.readmore a:-webkit-any-link {
+  text-decoration: none !important;
+  color: #fff;
+  background-color: #2532c1;
+  width: 170px !important;
+  height: 60px !important;
+  padding: 5px;
+}
 .readmore button {
-  width: 170px;
-  height: 66px;
+  width: 200px;
+  height: 20px;
   padding: 5px;
   border-radius: 10px;
   font-size: 22px;
   margin-bottom: 15px;
+  margin-bottom: 5%;
 }
 .readmore .ReadMoreContent.expanded {
   max-height: none;
@@ -1862,11 +1871,13 @@ form select {
   justify-content: center;
   align-items: center;
 }
+.product .container7 a {
+  background-color: #2532c1;
+  color: #fff;
+}
 .product .container7 a button {
   padding: 5px;
   border-radius: 10px;
-  background-color: white;
-  color: #2532c1;
   font-size: 22px;
 }
 
