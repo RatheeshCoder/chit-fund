@@ -1050,7 +1050,7 @@ table td:first-child {
 .Hiring h1 {
   font-weight: 500;
   font-size: xx-large;
-  margin: 100px 0px 30px 0px;
+  margin: 100px 0px 25px 0px;
 }
 .Hiring h1 span {
   font-style: italic;
@@ -1059,6 +1059,11 @@ table td:first-child {
 }
 .Hiring h1 span:hover {
   color: black;
+}
+.Hiring .kopuram {
+  font-size: 20px;
+  color: #7c7b7b;
+  margin-bottom: 23px;
 }
 
 .Main {
@@ -1078,6 +1083,7 @@ table td:first-child {
   border-radius: 3px;
   padding: 20px 0px 20px 10px;
   margin-top: 0px !important;
+  list-style: none;
 }
 
 .sidenavbar {
@@ -1101,6 +1107,7 @@ table td:first-child {
 }
 
 .job-listings {
+  padding: 0% 3%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1154,17 +1161,17 @@ table td:first-child {
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-7obqij-MuiInputBase-root-MuiInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
@@ -1279,7 +1286,7 @@ table td:first-child {
   }
   .Hiring p {
     font-size: 17px;
-    margin-bottom: 25px;
+    margin-bottom: 5% !important;
   }
   .job-card h1 {
     margin: 10px 0px 0px 0px !important;
@@ -2476,11 +2483,6 @@ form select {
   border-radius: 50%;
   display: inline-block;
   transition: ease 0.3s;
-}
-
-.active,
-.dot:hover {
-  background-color: white;
 }
 
 .fade {
