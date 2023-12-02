@@ -37,12 +37,12 @@ function Header() {
         </li>
         <li>
           <Link to="/caseStudy" onClick={toggleNav}>
-            CaseStudy
+            Blogs
           </Link>
         </li>
         <li>
           <Link to="/Jobs" onClick={toggleNav}>
-            Jobs
+          Careers
           </Link>
         </li>
         <li>
