@@ -90,7 +90,7 @@ const AvgFund = () => {
                     <th key={colIndex}>{heading}</th>
                   ))}
                 </tr>
-                {selectedProduct.additionalInfo.tableData.slice(1, Math.min(16, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
+                {selectedProduct.additionalInfo.tableData.slice(1, Math.min(11, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
                   <tr key={rowIndex}>
                     {row.map((cell, colIndex) => (
                       <td key={colIndex}>{cell}</td>
@@ -108,7 +108,7 @@ const AvgFund = () => {
                       <th key={colIndex}>{heading}</th>
                     ))}
                   </tr>
-                  {selectedProduct.additionalInfo.tableData.slice(16, Math.min(31, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
+                  {selectedProduct.additionalInfo.tableData.slice(11, Math.min(31, selectedProduct.additionalInfo.tableData.length)).map((row, rowIndex) => (
                     <tr key={rowIndex}>
                       {row.map((cell, colIndex) => (
                         <td key={colIndex}>{cell}</td>
