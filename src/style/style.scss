@@ -3322,3 +3322,223 @@ form {
   left: 174px;
   margin-left: 31px;
 }
+
+
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 650px){
+  #slider, .wrap, .slide-content {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 420px){
+  #slider, .wrap, .slide-content {
+    height: 30vh;
+  }
+}
+
+// @media screen and (max-width: 360px){
+//   #slider, .wrap, .slide-content {
+//     height: 25vh;
+//   }
+// }
+
+.max-h-full{
+  max-height: 100vw !important;
+}
+
+// gallary section style code
+
+#slider,
+.wrap,
+.slide-content {
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.slide-content img{
+  width: 100%;
+  height: 100%;
+
+  height: fit-content;
+  object-fit: contain;
+  
+}
+
+.bg-gray-100{
+  background-color: transparent !important;
+}
+
+.cta-footer-list-main{
+  text-align: center !important;
+}
+
+.py-14 .bg-gray-100 button.text-4xl.text-gray-500.focus\:outline-none.absolute.top-1\/2.right-4.transform.-translate-y-1\/2 {
+  left: 174px;
+  margin-left: 31px;
+
+}
+
+
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 650px){
+  #slider, .wrap, .slide-content {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 420px){
+  #slider, .wrap, .slide-content {
+    height: 30vh;
+  }
+}
+
+// @media screen and (max-width: 360px){
+//   #slider, .wrap, .slide-content {
+//     height: 25vh;
+//   }
+// }
+
+.max-h-full{
+  max-height: 100vw !important;
+}
+
+// gallary section style code
+
+#slider,
+.wrap,
+.slide-content {
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.slide-content img{
+  width: 100%;
+  height: 100%;
+
+  height: fit-content;
+  object-fit: contain;
+  
+}
+
+.bg-gray-100{
+  background-color: transparent !important;
+}
+
+.cta-footer-list-main{
+  text-align: center !important;
+}
+
+.cta-footer-logo{
+  width: 30% !important;
+}
+
+/* Your existing styles */
+
+/* Style for the drop-down menu */
+.dropdown {
+  display: none; /* Initially hide the dropdown */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  min-width: 160px;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the dropdown when its parent is hovered */
+.group:hover .dropdown {
+  display: block;
+}
+
+/* Additional styles for dropdown items */
+.dropdown li {
+  padding: 8px 12px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-links li.active a {
+  color: $primary-color; /* Set your desired active color */
+}
+
+.menu-link{
+  font-size: 1rem !important;
+}
