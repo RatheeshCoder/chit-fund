@@ -1594,7 +1594,7 @@ table {
 
   .Hiring p {
     font-size: 17px;
-    margin-bottom: 25px;
+    margin-bottom: 10%;
   }
 
   .job-card h1 {
@@ -3511,7 +3511,7 @@ form {
   display: none; /* Initially hide the dropdown */
   position: absolute;
   top: 50%;
-  left: 0;
+  right:0!important;
   min-width: 160px;
   z-index: 1000;
   background-color: #fff;
