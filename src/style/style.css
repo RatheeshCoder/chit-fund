@@ -1957,8 +1957,8 @@ form select {
   padding-top: 5%;
 }
 .casestudy img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 .casestudy .container11 {
   text-align: center;
