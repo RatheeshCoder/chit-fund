@@ -1327,11 +1327,11 @@ table {
 
   }
 
-  // p {
-  //   font-size: 20px;
-  //   color: #7c7b7b;
-  //   margin-bottom: 35px;
-  // }
+  .kopuram {
+    font-size: 20px;
+    color: #7c7b7b;
+    margin-bottom: 35px;
+  }
 }
 
 .Main {
@@ -1345,9 +1345,9 @@ table {
   padding: 20px 0px 20px 10px;
 }
 
-li:active {
-  // background-color: $primary-color;
-  // color: white;
+.jobFilter:active {
+  background-color: $primary-color;
+  color: white;
 }
 
 .brand-dropdown {
@@ -1449,17 +1449,17 @@ li:active {
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-7obqij-MuiInputBase-root-MuiInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
@@ -1582,7 +1582,7 @@ li:active {
   .Hiring h1 {
     font-weight: 500;
     font-size: xx-large;
-    margin: 50px 0px 20px 0px;
+    margin: 50px 0px 15px 0px;
   }
 
   .head h1 {
@@ -3261,7 +3261,7 @@ form {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-}
+
 .dot {
   cursor: pointer;
   height: 1rem;
@@ -3274,7 +3274,7 @@ form {
 .active,
 .dot:hover {
   background-color: white;
-}
+}}
 
 .fade {
   animation-name: fade;

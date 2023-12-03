@@ -1060,6 +1060,11 @@ table td:first-child {
 .Hiring h1 span:hover {
   color: black;
 }
+.Hiring .kopuram {
+  font-size: 20px;
+  color: #7c7b7b;
+  margin-bottom: 35px;
+}
 
 .Main {
   display: flex;
@@ -1070,6 +1075,11 @@ table td:first-child {
   margin: 20px 0px;
   list-style: none;
   padding: 20px 0px 20px 10px;
+}
+
+.jobFilter:active {
+  background-color: #2532c1;
+  color: white;
 }
 
 .brand-dropdown {
@@ -1155,17 +1165,17 @@ table td:first-child {
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-7obqij-MuiInputBase-root-MuiInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
@@ -1269,7 +1279,7 @@ table td:first-child {
   .Hiring h1 {
     font-weight: 500;
     font-size: xx-large;
-    margin: 50px 0px 20px 0px;
+    margin: 50px 0px 15px 0px;
   }
   .head h1 {
     color: black;
@@ -2491,8 +2501,7 @@ form select {
   justify-content: center;
   gap: 0.5rem;
 }
-
-.dot {
+.dot-container .dot {
   cursor: pointer;
   height: 1rem;
   width: 1rem;
@@ -2501,9 +2510,8 @@ form select {
   display: inline-block;
   transition: ease 0.3s;
 }
-
-.active,
-.dot:hover {
+.dot-container .active,
+.dot-container .dot:hover {
   background-color: white;
 }
 
