@@ -1078,6 +1078,7 @@ table td:first-child {
   border-radius: 3px;
   padding: 20px 0px 20px 10px;
   margin-top: 0px !important;
+  list-style: none;
 }
 
 .sidenavbar {
@@ -1279,7 +1280,7 @@ table td:first-child {
   }
   .Hiring p {
     font-size: 17px;
-    margin-bottom: 25px;
+    margin-bottom: 10%;
   }
   .job-card h1 {
     margin: 10px 0px 0px 0px !important;
@@ -2701,7 +2702,7 @@ form select {
   display: none; /* Initially hide the dropdown */
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 0 !important;
   min-width: 160px;
   z-index: 1000;
   background-color: #fff;
