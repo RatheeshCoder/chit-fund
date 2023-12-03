@@ -21,7 +21,7 @@ const FAQsPage = () => {
   
   return (
     <div className="leading-relaxed mt-12 mx-4 md:mx-8">
-      <div className="fixed bottom-4 right-4 z-50"> {/* Increased z-index */}
+      <div className="fixed bottom-4 right-4 z-50"> 
         <button className="focus:outline-none" onClick={toggleFAQsVisibility}>
           <img
             src={isFAQsVisible ? closeImage : openImage}
