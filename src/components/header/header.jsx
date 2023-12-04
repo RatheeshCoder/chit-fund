@@ -44,7 +44,7 @@ function Header() {
                 <ul className={`dropdown absolute hidden bg-white border rounded-md mt-2 p-2`}>
                   <li>
                     <Link to="/about/CompanyPro" onClick={toggleNav} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
-                      CompanyPro
+                      CompanyProfile
                     </Link>
                   </li>
                   <li>

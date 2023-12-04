@@ -1642,6 +1642,7 @@ li:active {
 form {
   display: flex;
   align-items: start;
+  gap: 15px;
   flex-direction: column;
   padding: 40px 40px;
   height: fit-content;
