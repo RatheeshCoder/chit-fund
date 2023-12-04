@@ -25,6 +25,7 @@ $other-color: #000;
   padding: 0;
   box-sizing: border-box;
   font-family: $font-family !important;
+  // border: 2px solid red !important;
 }
 
 body {
@@ -1326,11 +1327,11 @@ table {
 
   }
 
-  // p {
-  //   font-size: 20px;
-  //   color: #7c7b7b;
-  //   margin-bottom: 35px;
-  // }
+  .kopuram {
+    font-size: 20px;
+    color: #7c7b7b;
+    margin-bottom: 35px;
+  }
 }
 
 .Main {
@@ -1344,9 +1345,9 @@ table {
   padding: 20px 0px 20px 10px;
 }
 
-li:active {
-  // background-color: $primary-color;
-  // color: white;
+.jobFilter:active {
+  background-color: $primary-color;
+  color: white;
 }
 
 .brand-dropdown {
@@ -1448,17 +1449,17 @@ li:active {
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
 .css-7obqij-MuiInputBase-root-MuiInput-root {
-  margin-bottom: 13px;
+  margin-bottom: 7%;
   background-color: white;
 }
 
@@ -1581,7 +1582,7 @@ li:active {
   .Hiring h1 {
     font-weight: 500;
     font-size: xx-large;
-    margin: 50px 0px 20px 0px;
+    margin: 50px 0px 15px 0px;
   }
 
   .head h1 {
@@ -2060,12 +2061,7 @@ form {
         background-color: $secondary-color;
       }
 
-      button:hover {
-        // background-color: $primary-color;
-        // color: white !important;
-
-
-      }
+  
 
       .store {
         display: flex;
@@ -2154,38 +2150,10 @@ form {
 
   //secure
 
-  .secure {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5%;
-    padding: 0 5%;
-
-    .container3 {
-      width: 100%;
-      padding-left: 3%;
-      padding-right: 3%;
-      padding-top: 5%;
-
-      h1 {
-        padding: 0 10%;
-        color: $primary-color;
-        line-height: 1.5;
-        font-weight: 600;
-        text-align: center;
-      }
-
-      span {
-        display: inline-block;
-      }
-
-      p {
-        text-align: justify;
-        padding-bottom: 25px;
-        line-height: 2.5;
-      }
+  .relative{
+    p{
+      text-align: justify !important;
     }
-
-  
   }
 
 
@@ -2292,8 +2260,6 @@ form {
       p {
         font-size: 20px;
         color: grey;
-        // width: 75%;
-        // padding-left: 25%;
       }
     }
 
@@ -2303,7 +2269,7 @@ form {
       justify-content: space-evenly;
       align-items: center;
       padding: 5%;
-      margin-left: 5%;
+      margin-left: 0%;
 
       li {
         font-size: 25px;
@@ -2324,7 +2290,7 @@ form {
         width: 50%;
         line-height: 80px;
         text-align: justify;
-        padding-left: 10%;
+        // padding-left: 10%;
        
 
         ul {
@@ -2345,7 +2311,7 @@ form {
         width: 50%;
         line-height: 80px;
         text-align: justify;
-        padding-left: 10%;
+        // padding-left: 10%;
 
         ul {
           list-style-type: none;
@@ -2697,10 +2663,12 @@ form {
 
     .product .container6 .wrapper2 {
       margin-left: 5% !important;
+      line-height: 30px !important;
     }
 
     .product .container6 .wrapper3 {
       margin-left: 5% !important;
+      line-height: 30px !important;
     }
 
     .product .container6 li {
@@ -2727,12 +2695,38 @@ form {
           font-size: 25px;
           padding-top: 15px;
         }
-
-
-
-      }
-    }
-
+      }}
+     
+      .icons {
+        display: grid !important;
+        grid-template-columns: 50% 50% !important;
+        margin-top: 50px;
+        box-shadow: none;
+        .user {
+          height: 250px;
+        }
+  
+        .trophy {
+          height: 250px;
+        }
+  
+        .gift {
+          height: 250px;
+        }
+  
+        .heart {
+          height: 250px;
+        }
+  
+        .location {
+          height: 250px;
+        }
+  
+        .camera {
+          height: 250px;
+        }
+    
+  }
  
 
     .wrapper1 .container1 .store img {
@@ -2970,6 +2964,14 @@ form {
         }
 
       }
+      
+    .product .container6 .wrapper2 {
+      margin-left: 1% !important;
+    }
+
+    .product .container6 .wrapper3 {
+      margin-left: 1% !important;
+    }
     }
 
     //content
@@ -3102,6 +3104,14 @@ form {
       flex-direction: column;
       width: 100%;
       align-items: center;
+    }
+    
+    .product .container6 .wrapper2 {
+      margin-left: 5% !important;
+    }
+
+    .product .container6 .wrapper3 {
+      margin-left: 5% !important;
     }
   }
 
@@ -3252,7 +3262,7 @@ form {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-}
+
 .dot {
   cursor: pointer;
   height: 1rem;
@@ -3265,7 +3275,7 @@ form {
 .active,
 .dot:hover {
   background-color: white;
-}
+}}
 
 .fade {
   animation-name: fade;
