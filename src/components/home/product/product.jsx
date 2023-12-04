@@ -1,53 +1,39 @@
-import React from 'react'
+import React from 'react';
+import { featuresData } from '../../../data/data';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import SavingsIcon from '@mui/icons-material/Savings';
-import { Link } from 'react-router-dom';
 
-const Product = () => {
+const Features = () => {
   return (
-    <>
-      <div className="product">
-         <div className="container5">
-            <h1>Other Financial Products vs <span> Our Product</span></h1>
-
-            <p>The comparison of our ideal financial products with other financial products for various financial needs.</p>
-
-         </div>
-
-         <div className="container6">
-               <div className="wrapper2">
-                <h2>Other Brands</h2>
-                
-                <ul>
-                    <li className='li1'><AccountBalanceIcon className="custom-icon-color"/>High interest loan & low interest returns</li>
-                    <li className='li1'><AccountBalanceIcon className="custom-icon-color" />     Upto 4%  of returns</li>
-                    <li className='li1'><AccountBalanceIcon className="custom-icon-color"/>     Tedious disbursement process</li>
-                    <li className='li1'><AccountBalanceIcon className="custom-icon-color"/>     More security documents for loan</li>
-                </ul>
-
-               </div>
-               <div className="wrapper3">
-                  <h2>#VANMOH</h2>
-                   
-                   <ul>
-                 
-                    <li className='li1' typeof='none'><SavingsIcon className="custom-icon-color"/>     Low interest loan & high interest returns</li>
-                    <li className='li1'  typeof='none'><SavingsIcon className="custom-icon-color"/> Upto 12%  of returns</li>
-                    <li className='li1'><SavingsIcon className="custom-icon-color"/>     Simple disbursement process</li>
-                    <li className='li1'><SavingsIcon className="custom-icon-color"/>     Unsecure loan</li>
-                 
-                    </ul>
-               </div>
-         </div>
-
-         <div className="container7">
-                <a href="javascript:void(0)" className="inline-block py-2 px-4 text-gray-800 font-medium bg-white duration-150 hover:bg-gray-100 active:bg-gray-200 rounded-full">
-                   <button><Link to="/Product">Know More</Link></button>
-                   </ a>
-         </div>
+    <div className="max-w-4xl mx-auto px-5 mt-16">
+      <div className="text-center">
+        <h2 className="font-semibold text-3xl">Features you'll love</h2>
+        <p className="max-w-md mx-auto mt-2 text-gray-500">
+          A responsive documentation template built for everyone who wants to create a plugin.
+        </p>
       </div>
-    </>
-  )
-}
 
-export default Product;
+      <div className="grid md:grid-cols-2 gap-10 mt-10">
+        {featuresData.map((feature, index) => (
+          <div key={index} className="flex gap-4 items-start">
+            {feature.iconType === 'AccountBalanceIcon' && (
+              <span className="text-violet-600 bg-violet-500/10 p-3 rounded-full">
+                <AccountBalanceIcon className="custom-icon-color" />
+              </span>
+            )}
+            {feature.iconType === 'SavingsIcon' && (
+              <span className="text-violet-600 bg-violet-500/10 p-3 rounded-full">
+                <SavingsIcon className="custom-icon-color" />
+              </span>
+            )}
+            <div>
+              <h3 className="font-semibold text-xl">{feature.title}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Features;

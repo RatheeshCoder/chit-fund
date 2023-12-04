@@ -808,3 +808,49 @@ export const faqsList =[
     a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
 },
 ]
+
+
+
+
+export const featuresData = [
+  {
+    iconType: 'AccountBalanceIcon',
+    title: 'High Interest Loan & Low Interest Returns',
+    
+  },
+  {
+    iconType: 'AccountBalanceIcon',
+    title: 'Upto 4% of Returns',
+    
+  },
+  {
+    iconType: 'AccountBalanceIcon',
+    title: 'Tedious Disbursement Process',
+    
+  },
+  {
+    iconType: 'AccountBalanceIcon',
+    title: 'More Security Documents for Loan',
+    
+  },
+  {
+    iconType: 'SavingsIcon',
+    title: 'Low Interest Loan & High Interest Returns',
+    
+  },
+  {
+    iconType: 'SavingsIcon',
+    title: 'Upto 12% of Returns',
+    
+  },
+  {
+    iconType: 'SavingsIcon',
+    title: 'Simple Disbursement Process',
+    
+  },
+  {
+    iconType: 'SavingsIcon',
+    title: 'Unsecure Loan',
+    
+  },
+];
