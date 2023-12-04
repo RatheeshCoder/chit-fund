@@ -2180,13 +2180,15 @@ table {
 
     }
     a:-webkit-any-link {
-    text-decoration: none !important;
-    color: $secondary-color;
-    background-color: $primary-color;
+        text-decoration: none !important;
+        color: $secondary-color;
+        background-color: $primary-color;
         width: 170px !important;
         height: 60px !important;
         padding: 5px;
+        margin: 10px 0;
 }
+
 
     button {
       width: 200px;
@@ -3143,6 +3145,7 @@ table {
 .slider-container {
   width: 100%;
   position: relative;
+  margin: 50px 0;
   
 }
 
@@ -3558,5 +3561,26 @@ table {
 @media screen and (max-width: 490px) {
   .casestudy .blog-main .blog-list{
     padding: 0;
+  }
+}
+
+.cta-list-top{
+  margin-top: -200px;
+}
+
+.cta-sub-list{
+  background-color: $secondary-color;
+  border-radius: 20px !important;
+  width: 100% !important;
+  height:  fit-content !important;
+}
+
+@media screen and (max-width: 1000px){
+  .cta-sub-list{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta-list-top{
+    margin-top:-10px;
   }
 }

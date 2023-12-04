@@ -65,9 +65,9 @@ class Onetouch extends Component {
             <div className="store">             
             
 
-              <div className="playstore">
+              {/* <div className="playstore">
                <img src={Playstore} alt="" />
-              </div>
+              </div> */}
 
               
             
@@ -79,45 +79,62 @@ class Onetouch extends Component {
           </div>
           </div>
 
-        <div className='icons'> 
+          <section className=" cta-list-top text-gray-700 body-font">
+            <div className="container px-5 py-24 mx-auto">
+              <div className="flex cta-sub-list  text-center flex-row"> {/* Updated flex-wrap to flex-row */}
+                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                    <img src={user} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
+                    <h2 className="title-font font-medium text-3xl text-gray-900"> <NumberCounter /></h2>
+                    <p className="leading-relaxed">Subscribers</p>
+                  </div>
+                </div>
 
-        <div className="user cta-home-top-icon ">
-             <img src= {user} alt="" />
-              <NumberCounter />
-             <p>Subscribers</p>
-        </div>
+                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                    <img src={trophy} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
+                    <h2 className="title-font font-medium text-3xl text-gray-900"> <Prize /></h2>
+                    <p className="leading-relaxed">Prized Customers</p>
+                  </div>
+                </div>
 
-        <div className="trophy cta-home-top-icon">
-          <img src= {trophy} alt="" />
-          <Prize  />
-          <p>Prized Customers</p>
-        </div>
+                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                    <img src={gift} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
+                    <h2 className="title-font font-medium text-3xl text-gray-900"><Gift /></h2>
+                    <p className="leading-relaxed">Schemes</p>
+                  </div>
+                </div>
 
-        <div className="gift cta-home-top-icon">
-        <img src= {gift} alt="" />
-        <Gift />
-        <p>Schemes</p>
-        </div>
+                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                    <img src={heart} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
+                    <h2 className="title-font font-medium text-3xl text-gray-900"><Heart /></h2>
+                    <p className="leading-relaxed">Dedicated Kinds</p>
+                  </div>
+                </div>
 
-        <div className="heart cta-home-top-icon">
-        <img src= {heart} alt="" />
-        <Heart />
-        <p>Dedicated Kinds</p>
-        </div>
+                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                    <img src={location} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
+                    <h2 className="title-font font-medium text-3xl text-gray-900"><Location /></h2>
+                    <p className="leading-relaxed">Locations</p>
+                  </div>
+                </div>
 
-        <div className="location cta-home-top-icon">
-        <img src= {location} alt="" />
-        <Location />
-        <p>Locations</p>
-        </div>
+                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                    <img src={camera} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
+                    <h2 className="title-font font-medium text-3xl text-gray-900"><Camera /></h2>
+                    <p className="leading-relaxed">Repeat Business</p>
+                  </div>
+                </div>
 
-        <div className="camera cta-home-top-icon">
-        <img src= {camera} alt="" />
-        <Camera />
-        <p>Repeat Business</p>
-        </div>
+              </div>
+            </div>
+          </section>
 
-        </div>
+
       </>
     );
   }
