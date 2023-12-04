@@ -21,12 +21,12 @@ const EmailForms = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Use your email.js service ID, template ID, and user ID
-    const serviceId = 'your_emailjs_service_id';
-    const templateId = 'your_emailjs_template_id';
-    const userId = 'your_emailjs_user_id';
+   
+    const serviceId = 'service_kli8s2n';
+    const templateId = 'template_9aez2q';
+    const userId = 'Vrq45MC3_UMSVzZRK';
 
-    // Send email using email.js
+    
     emailjs
       .send(serviceId, templateId, formData, userId)
       .then((response) => {
