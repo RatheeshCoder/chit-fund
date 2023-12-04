@@ -331,7 +331,7 @@ nav {
     padding: 10%;
 
     h1 {
-      font-size: 50px;
+      font-size: clamp(1.5rem,4vw,3rem);
       color: $primary-color;
       font-weight: 600;
       padding: 3%;
@@ -1640,7 +1640,7 @@ table {
   margin-top: 6%;
 }
 
-form {
+.form {
   display: flex;
   align-items: start;
   gap: 15px;
@@ -1948,7 +1948,7 @@ form {
     padding: 35px 0px;
   }
 
-  form {
+  .form {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
   }
@@ -2453,7 +2453,7 @@ form {
 
   .casestudy {
     background-color: #F9F9F9;
-    padding-top: 5%;
+    padding-top: 0;
 
     img {
       width: 100%;
@@ -3553,4 +3553,10 @@ form {
 
 .menu-link{
   font-size: 1rem !important;
+}
+
+@media screen and (max-width: 490px) {
+  .casestudy .blog-main .blog-list{
+    padding: 0;
+  }
 }

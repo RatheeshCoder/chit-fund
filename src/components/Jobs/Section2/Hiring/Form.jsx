@@ -64,7 +64,7 @@ export default function RegistrationForm() {
       <Dialog open={openDialog} onClose={handleDialogClose}>
         <DialogTitle className='cta-form-title'>Join Our Team!</DialogTitle>
         <DialogContent>
-          <form className='' onSubmit={handleSubmit}>
+          <form className='.form' onSubmit={handleSubmit}>
             <TextField
               fullWidth
               label="First Name"

@@ -1,41 +1,53 @@
-import React from 'react'
+import React from 'react';
+import PhoneIcon from '@mui/icons-material/Phone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import RoomIcon from '@mui/icons-material/Room';
-import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
-import Cards from './Cards';
 
-const ContactCard = () => {
+const VisionSection = () => {
+  const blackAndWhiteIconStyle = {
+    filter: 'grayscale(100%)',
+  };
+
   return (
-    <section className='wrapper'>
-        <div className='container'>
-        <div className='cta-card'>
-          <div className='cta-icon'> <PhoneEnabledIcon/> </div>
-          <p> +91-8754000842 <br/> +91-8754000843
-</p></div>
-    <div  className='cta-card'><div className='cta-icon'><MailOutlineIcon/></div>
-      <p> reach@vanmohchitfunds.com</p></div>
-    <div className='cta-card'>
-      <div className='cta-icon'><RoomIcon/></div>
-      <p><span>Head Office</span>:1437, Ground floor Red rose chambers, Trichy road (Opp to welcome ITC hotel, Race course) Coimbatore-641018</p></div>
-    </div>
-    <div className='cta-hover'>
-      <h1>Our <i> Location</i></h1>
-      <p>Get it in touch and we’ll work it out right away</p>
-    </div>
-    <div className='cta-map'>
-      <iframe
-        title="map"
-       src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7545.648221854052!2d76.97305096154211!3d10.9948436012557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2f0fef453c38a6a3%3A0xe1b7c879c8f85b23!2sVanmoh%20Chit%20Funds%20Private%20Limited!5e0!3m2!1sen!2sin!4v1699381686114!5m2!1sen!2sin"  width="100%"
-        height="500vh"
-        style={{ border: "0" }}
-        allowFullScreen=""
-        loading="lazy"
-      />
-    </div>
-    <Cards/>
- 
+    <section className="bg-gray-100 py-16" style={{ marginTop: '-100px' }}>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="border p-4 flex flex-col items-center">
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" style={blackAndWhiteIconStyle}>
+              <PhoneIcon className="w-6 h-6" />
+            </div>
+            <div className="mt-5 text-center">
+              <h3 className="text-lg font-medium text-gray-900">Phone</h3>
+              <p className="mt-2 text-base text-gray-500">
+                +91-8754000842 <br />
+                +91-8754000843
+              </p>
+            </div>
+          </div>
+          <div className="border p-4 flex flex-col items-center">
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" style={blackAndWhiteIconStyle}>
+              <MailOutlineIcon className="w-6 h-6" />
+            </div>
+            <div className="mt-5 text-center">
+              <h3 className="text-lg font-medium text-gray-900">Email</h3>
+              <p className="mt-2 text-base text-gray-500">reach@vanmohchitfunds.com</p>
+            </div>
+          </div>
+          <div className="border p-4 flex flex-col items-center">
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" style={blackAndWhiteIconStyle}>
+              <RoomIcon className="w-6 h-6" />
+            </div>
+            <div className="mt-5 text-center">
+              <h3 className="text-lg font-medium text-gray-900">Location</h3>
+              <p className="mt-2 text-base text-gray-500">
+                <span>Head Office</span>: 1437, Ground floor Red rose chambers, Trichy road (Opp to welcome ITC hotel, Race course) Coimbatore-641018
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default ContactCard
+export default VisionSection;
