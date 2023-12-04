@@ -1,50 +1,113 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
-export const ContactUs = () => {
-  const form = useRef();
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [successMessage, setSuccessMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
-  const sendEmail = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_kli8s2n', 'template_9aez2qp', form.current, 'Vrq45MC3_UMSVzZRK')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+    // Use your email.js service ID, template ID, and user ID
+    const serviceId = 'your_emailjs_service_id';
+    const templateId = 'your_emailjs_template_id';
+    const userId = 'your_emailjs_user_id';
+
+    // Send email using email.js
+    emailjs
+      .send(serviceId, templateId, formData, userId)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        setSuccessMessage('Email sent successfully!');
+        setErrorMessage(null);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        setSuccessMessage(null);
+        setErrorMessage('Error sending email. Please try again later.');
       });
   };
 
-  return ( <section className='ContactMain'>
-  <div className='item'>
-   <div className='content'> 
-    <h1> 
-    Kopuram Chits - Hub For High Returns With Less Investment - Contact Us
-    </h1>
-   </div>
-   <div className="ContactUs">
-   <form ref={form} onSubmit={sendEmail} >
-    <label>Name</label>
-    <input type="text" name="user_name" />
-    <label>Contact Number</label>
-    <input type="text" name="user_contact" />
-    <label>Occupation</label>
-    
-    <select name="user_occupation" >
-      <option>Salaried</option>
-      <option>Self-Finance</option>
-      <option>Other</option>
-    </select>
-    <label>Message</label>
-    <textarea name="message" />
-    <input type="submit" value="Send" />
-  </form>
-  </div>
-  </div>
-</section>
+  return (
+    <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+      <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+      <form onSubmit={handleSubmit}>
+        {successMessage && (
+          <div className="mb-4 text-green-600">
+            <strong>{successMessage}</strong>
+          </div>
+        )}
+        {errorMessage && (
+          <div className="mb-4 text-red-600">
+            <strong>{errorMessage}</strong>
+          </div>
+        )}
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="mt-1 p-3 w-full rounded-md border border-gray-500 focus:outline-none focus:ring focus:border-blue-300"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="mt-1 p-3 w-full rounded-md border border-gray-500 focus:outline-none focus:ring focus:border-blue-300"
+          />
+        </div>
+        <div className="mb-6">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows="4"
+            className="mt-1 p-3 w-full rounded-md border border-gray-500 focus:outline-none focus:ring focus:border-blue-300"
+          ></textarea>
+        </div>
+        <div className="flex items-center">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
-   
-  )
-}
-
-export default  ContactUs
+export default ContactForm;
