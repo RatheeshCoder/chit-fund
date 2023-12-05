@@ -1675,7 +1675,6 @@ table td:first-child {
   height: 90px;
 }
 .cta-main-home .wrapper1 .container2 {
-  padding-top: 5%;
   height: 100%;
   width: 100%;
   display: flex;
@@ -2783,4 +2782,27 @@ table td:first-child {
   .cta-list-top {
     margin-top: -10px;
   }
+}
+.cta-footer-text {
+  text-align: center !important;
+}
+
+@media screen and (max-width: 500px) {
+  .gallery .gallery-photo .gallery {
+    padding: 10px;
+  }
+}
+.cta-home-slider-img {
+  width: 50% !important;
+  height: 50% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.testimonial-item {
+  display: none;
+}
+
+.testimonial-item.visible {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

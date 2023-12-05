@@ -2088,7 +2088,7 @@ table {
     }
 
     .container2 {
-      padding-top: 5%;
+      // padding-top: 5%;
       height: 100%;
       width: 100%;
       display: flex;
@@ -3584,3 +3584,28 @@ table {
     margin-top:-10px;
   }
 }
+
+.cta-footer-text{
+  text-align: center !important;
+  
+}
+
+@media screen and (max-width: 500px){
+  .gallery .gallery-photo .gallery{
+    padding: 10px;
+  }
+}
+.cta-home-slider-img {
+  width: 50% !important;
+  height: 50% !important;
+  object-fit: contain;
+}
+
+.testimonial-item {
+  display: none;
+}
+
+.testimonial-item.visible {
+  display: block;
+}
+
