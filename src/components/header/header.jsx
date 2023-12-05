@@ -102,11 +102,11 @@ const Header = () => {
             Gallery
           </Link>
         </li>
-        {/* <li className={`group relative ${location.pathname === '/caseStudy' ? 'active' : ''}`}>
-          <Link to="/caseStudy" onClick={toggleNav} className="menu-link">
-            Blogs
+        <li className={`group relative ${location.pathname === '/Product' ? 'active' : ''}`}>
+          <Link to="/Product" onClick={toggleNav} className="menu-link">
+          Service
           </Link>
-        </li> */}
+        </li>
         <li className={`group relative ${location.pathname === '/Jobs' ? 'active' : ''}`}>
           <Link to="/Jobs" onClick={toggleNav} className="menu-link">
             Careers

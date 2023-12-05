@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
+import homeslider1 from '../../../asset/imgs/homeImg1.jpg';
+import homeslider2 from '../../../asset/imgs/homeImg2.jpg';
+import homeslider3 from '../../../asset/imgs/homeImg3.jpg';
+import homeslider4 from '../../../asset/imgs/homeImg4.jpg';
 
 const TestimonialSlider = () => {
   const testimonials = [
-    {
-      avatar: "https://randomuser.me/api/portraits/men/96.jpg",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-    },
+    { avatar: homeslider1 },
+    { avatar: homeslider2 },
+    { avatar: homeslider3 },
+    { avatar: homeslider4 },
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -19,63 +18,38 @@ const TestimonialSlider = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       nextTestimonial();
-    }, 5000); // Change the interval duration (in milliseconds) as needed
+    }, 4000);
 
-    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
   }, [currentTestimonial]);
 
   return (
     <section className="py-14 bg-gray-100">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 relative">
-      <button
-          className="text-4xl text-gray-500 focus:outline-none absolute top-1/2 left-4 transform -translate-y-1/2"
-          onClick={prevTestimonial}
-        >
-          
-        </button>
-        <button
-          className="text-4xl text-gray-500 focus:outline-none absolute top-1/2 right-4 transform -translate-y-1/2"
-          onClick={nextTestimonial}
-        >
-      
-        </button>
         <div className="max-w-3xl mx-auto text-center">
-          <ul className="flex justify-center items-center">
-            {testimonials.map((item, idx) =>
-              currentTestimonial === idx ? (
-                <li key={idx}>
-                  <figure>
-                    <div className="mt-6">
-                      <img
-                        src={item.avatar}
-                        className="w-16 h-16 mx-auto rounded-md" 
-                        alt={`Avatar ${idx}`}
-                      />
-                      <div className="mt-3">
-                        <span className="block text-gray-800 font-semibold">
-                          {/* Content */}
-                        </span>
-                        <span className="block text-gray-600 text-sm mt-0.5">
-                          {/* Content */}
-                        </span>
-                      </div>
-                    </div>
-                  </figure>
-                </li>
-              ) : (
-                ""
-              )
-            )}
-          </ul>
+          <div className="testimonial-container">
+            {testimonials.map((item, idx) => (
+              <div
+                key={idx}
+                className={`testimonial-item ${currentTestimonial === idx ? 'visible' : 'hidden'}`}
+              >
+                <figure>
+                  <div className="mt-6">
+                    <img
+                      src={item.avatar}
+                      className="w-16 h-16 mx-auto cta-home-slider-img rounded-md"
+                      alt={`Avatar ${idx}`}
+                      loading="lazy"
+                    />
+                  </div>
+                </figure>
+              </div>
+            ))}
+          </div>
         </div>
-        {/* ... (unchanged code) */}
       </div>
     </section>
   );
