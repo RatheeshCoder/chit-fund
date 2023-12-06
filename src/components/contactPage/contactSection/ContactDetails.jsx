@@ -4,7 +4,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const ContactDetails = () => {
@@ -20,53 +20,48 @@ const ContactDetails = () => {
           <EmailIcon className="inline-block mr-2" />
           Email
         </h3>
-        <p className="text-gray-700">info@example.com</p>
+        <p className="text-gray-700">reach@vanmohchitfunds.com</p>
       </div>
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">
           <PhoneIcon className="inline-block mr-2" />
           Phone
         </h3>
-        <p className="text-gray-700">+1 (555) 123-4567</p>
+        <p className="text-gray-700">+91 93618 05480</p>
       </div>
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">
           <LocationOnIcon className="inline-block mr-2" />
           Address
         </h3>
-        <p className="text-gray-700">123 Main Street, Cityville, State, 12345, Country</p>
+        <p className="text-gray-700">1437, Ground floor red rose chambers, trichy road (Opp to welcome ITC hotel, Race course) Coimbatore-641018</p>
       </div>
       <div className="mb-4">
-        <h3 className="text-lg font-semibold mb-2">
-          <FacebookIcon className="inline-block mr-2" />
-          <TwitterIcon className="inline-block mr-2" />
-          <InstagramIcon className="inline-block mr-2" />
-          Social Media
-        </h3>
+        
         <div className="flex items-center space-x-4">
           <a
-            href="#"
-            className="text-blue-500 hover:text-blue-700"
+            href="https://www.facebook.com/people/Vanmoh-Chit-Funds/pfbid0KWuqR1gT6tYgQHUwtJMYgHNCZMRCDy7zEVCQMRWjn42PZraVDp8uVCEYM4ER5PgMl/?mibextid=LQQJ4d"
+            className="text-lg font-semibold mb-2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Facebook
+           <FacebookIcon className="inline-block mr-2" />
           </a>
           <a
             href="#"
-            className="text-blue-500 hover:text-blue-700"
+            className="text-lg font-semibold mb-2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Twitter
+           <LinkedInIcon className="inline-block mr-2" />
           </a>
           <a
-            href="#"
-            className="text-blue-500 hover:text-blue-700"
+            href="https://instagram.com/vanmoh_chit_funds?igshid=bnVhYjh1MmV2b3Fj"
+            className="text-lg font-semibold mb-2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram
+           <InstagramIcon className="inline-block mr-2" />
           </a>
         </div>
       </div>

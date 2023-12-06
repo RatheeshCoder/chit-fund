@@ -60,7 +60,7 @@ class Onetouch extends Component {
            
             <p>Your destination for Financial Guidance, Exclusive Schemes, Good Returns,Explicit Bidding, and many more money attraction</p>
             
-               <button><Link className='link' to="/ContactMain">Call us</Link></button>
+               <button><Link className='link' to="/Product">Call us</Link></button>
             
             <div className="store">             
             

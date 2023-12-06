@@ -83,7 +83,7 @@ function Footer2() {
                     <div className="max-w-xs">
                         <img src={logo} className="w-32" />
                         <p className="leading-relaxed mt-2 text-[15px]">
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        Feel free to reach out with any questions or concerns; we're here to help.
                         </p>
                     </div>
                     <form 
