@@ -48,12 +48,12 @@ const Header = () => {
             <ul className={`dropdown absolute hidden bg-white border rounded-md mt-2 p-2`}>
               <li>
                 <Link to="/about/CompanyPro" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
-                  CompanyProfile
+                   Why choose us 
                 </Link>
               </li>
               <li>
                 <Link to="/about/Benefits" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
-                  Key Benefits 
+                CompanyProfile
                 </Link>
               </li>
               <li>

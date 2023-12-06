@@ -5,6 +5,7 @@ import Read from '../../components/home/readmore/read';
 import Product from '../../components/home/product/product';
 import Content from '../../components/home/content/content';
 import Casestudy from '../../components/home/casestudy/casestudy';
+import FourCard from '../../components/home/FinancialFreedom/FourCard';
 
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
       <Secure />
       <Read />
 
-      <Content />
+      <FourCard />
       <Product />
       <Casestudy />
     

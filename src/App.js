@@ -20,6 +20,7 @@ import Values from './page/AboutUs/Values';
 
 
 import FAQs from './page/HowWeWorks/FAQs';
+import ComparisonsHero from './page/HowWeWorks/Comparisons';
 
 
 
@@ -39,8 +40,8 @@ function App() {
         <Route path="/Gallery" element={<Gallery />} />
 
        
-        <Route path="/about/CompanyPro" element={<AboutUs />} />
-        <Route path="/about/Benefits" element={<Directors />} />
+        <Route path="/about/Benefits" element={< Directors/>} />
+        <Route path="/about/CompanyPro" element={< AboutUs/>} />
         <Route path="/about/Direction" element={<KeyBenefits />} />
         <Route path="/about/Values" element={<Values />} />
 
@@ -49,7 +50,7 @@ function App() {
         <Route path="/how-it-works/Blogs" element={<CaseStudy />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/how-it-works/faq" element={<FAQs />} />
-
+        <Route path="/how-it-works/Comparisons" element={<ComparisonsHero />} />
 
         <Route path="/Jobs" element={<Jobs />} /> 
         <Route path="/ContactMain" element={<ContactMain />} /> 
