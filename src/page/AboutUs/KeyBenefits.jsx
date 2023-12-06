@@ -1,10 +1,13 @@
 import React from 'react'
-import Section1 from '../../components/AboutUs/KeyBenefits.jsx/Section1'
+import DirectorsHero from '../../components/AboutUs/KeyBenefits.jsx/DirectorsHero'
+import Team from '../../components/AboutUs/KeyBenefits.jsx/Team'
 
 const KeyBenefits = () => {
   return (
     <div>
-      <Section1/>
+      <DirectorsHero/>
+      <Team/>
+  
     </div>
   )
 }

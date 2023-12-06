@@ -854,3 +854,166 @@ export const featuresData = [
     
   },
 ];
+
+
+
+export const FourCards = [
+  {
+    title: "Grow",
+    content: " Cultivate wealth with Vanmoh chitfunds. Invest smartly, reap benefits.",
+  },
+  {
+    title: "Flex",
+    content: " Flexible chitfund plans tailored for your financial freedom.",
+  },
+  {
+    title: "Trust",
+    content: "Transparent chitfund management fostering trust and financial clarity.",
+  },
+  {
+    title: "Thrive",
+    content: "Join a community where financial growth and benefits thrive.",
+  },
+];
+
+
+
+export const keyFeaturesData = [
+  {
+    title: 'Professional Excellence',
+    description: ': Choose us for unmatched professionalism, ensuring trust and integrity in every financial step.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+      </svg>
+    ),
+  },
+  {
+    title: 'Effortless, Doorstep Services',
+    description: 'Enjoy seamless chitfund experiences with free documentation and convenient doorstep services.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"></path>
+      </svg>
+    ),
+  },
+  {
+    title: 'Unlock 20% Profit Growth',
+    description: ': Opt for our savings scheme and guarantee a substantial 20% profit, maximising your financial gains',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+    ),
+  },
+  {
+    title: 'Tech-Driven, App-Powered Solutions',
+    description: "Experience the future of finance with our technology-driven approach, leveraging advanced apps and software for a secure and transparent financial journey",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+      </svg>
+    ),
+  },
+];
+
+
+
+// data.js
+export const CompanyProfiles = [
+  {
+    id: 1,
+    title: "Empowering Dreams, Enriching Lives Since 2020.",
+    content:
+      "Embark on a journey with Vanmoh Chitfunds, your trusted companion since September 11, 2020. We're not just about chitfunds; we're your friendly guide to stress-free financial growth. Our commitment to honesty and openness makes growing your money with us a seamless experience.",
+    imageUrl: gallerystart2,
+  },
+  {
+    id: 2,
+    title: "Simplifying Finance for You.",
+    content:
+      "Vanmoh Chitfunds, born on September 11, 2020, is on a mission to simplify chitfund matters. Say goodbye to complicated finance talk – we're here to make growing your savings easy and fun. With fancy technology and a commitment to simplicity, managing your money becomes a breeze.",
+    imageUrl: gallerystart5,
+  },
+  {
+    id: 3,
+    title: "Where Dreams Soar Since 2020.",
+    content:
+      "Vanmoh Chitfunds invites you to a future where dreams find a home. Operating strategically from Racecourse, Thudiyalur, Karamadai, and Coonoor, we bring chitfund solutions closer to you. Join us in a journey where dreams get a chance, and lives get a lift, since 2020.",
+    imageUrl: gallerystart8,
+  },
+  
+];
+
+
+
+
+// data.js
+export const teamData = [
+  {
+    id: 1,
+    name: 'Kannan Mohan',
+    role: 'Managing Director',
+    description: `"My goal is to make Vanmoh Chitfunds a trusted partner in your chitfund journey, ensuring 
+    simplicity and prosperity for every subscriber." - Kannan Mohan `,
+    image: 'https://images.pexels.com/photos/3785084/pexels-photo-3785084.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    linkedin: '#',
+    
+  },
+  {
+    id: 2,
+    name: 'Vanitha Mohan',
+    role: 'Chairman',
+    description:   `"As Chairman, my commitment is to uphold the values that define Vanmoh Chitfunds -
+    transparency, integrity, and dedication to your chitfund success." - Vanitha Mohan `,
+    image: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    linkedin: '#',
+   
+  },
+ 
+];
+
+
+
+export const featuresDatas = [
+  {
+    id: 1,
+    title: 'Integrity',
+    content: `Our foundation rests on the pillars of honesty and ethical conduct. We believe in doing what 
+    is right, even when no one is watching. This principle extends to every aspect of our 
+    operations, ensuring the trust and confidence of our valued subscribers.`,
+  },
+  {
+    id: 2,
+    title: 'Transparency',
+    content: `Transparency is more than a buzzword for us; it's a promise. We are dedicated to providing 
+    clear, honest, and easily understandable information. From our chitfund processes to our 
+    communication, we strive to be open and straightforward in all our dealings.`,
+  },
+  {
+    id: 3,
+    title: 'Customer-Centricity',
+    content: `Our subscribers are at the heart of everything we do. We are committed to understanding 
+    their needs, anticipating their concerns, and consistently delivering chitfund solutions that 
+    exceed expectations. Our customer-centric approach ensures a personalised and rewarding 
+    experience for every subscriber.`,
+  },
+];
+
+
+// data.js
+export const ComparisonsCards = [
+  { id: 1, title: 'Community-Driven Growth ', description: 'Fosters collaboration for collective financial growth.' },
+  { id: 2, title: 'Flexible Contribution', description: `Allows varying monthly contributions, accommodating diverse financial capacities.` },
+  { id: 3, title: 'Equal Chance of Winning ', description: `Provides an equitable chance for all participants to receive the prized amount.` },
+  { id: 4, title: 'Transparent Process ', description: `Follows a clear monthly auction process, ensuring transparency`},
+  { id: 5, title: 'No Interest Rates ', description: `Eliminates the need for high-interest rates common in traditional savings methods` },
+  { id: 6, title: 'Variety of Schemes', description: `Offers diverse schemes to cater to  individual financial goals and preferences. `},
+  { id: 7, title: 'Regulated by Chit Fund Act ', description: `Governed by a regulatory framework,  ensuring legal and secure operations. ` },
+  { id: 8, title: 'No External Borrowing ', description: `Participants can access funds without  resorting to external borrowing.`},
+  { id: 9, title: 'Financial Education', description: `Provides financial education through blogs  `},
+];
+
+
+
+

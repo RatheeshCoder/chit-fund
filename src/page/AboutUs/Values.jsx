@@ -1,10 +1,12 @@
 import React from 'react'
-import Section1 from '../../components/AboutUs/Values/Section1'
+import FeaturesSection from '../../components/AboutUs/Values/FeaturesSection'
+import ValueHero from '../../components/AboutUs/Values/ValueHero'
 
 const Values = () => {
   return (
     <div>
-      <Section1/>
+      <ValueHero/>
+      <FeaturesSection/>
     </div>
   )
 }
