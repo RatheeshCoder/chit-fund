@@ -2150,11 +2150,11 @@ table {
 
   //secure
 
-  .relative{
-    p{
-      text-align: justify !important;
-    }
-  }
+  // .relative{
+  //   p{
+  //     text-align: justify ;
+  //   }
+  // }
 
 
   //readmore
@@ -3613,4 +3613,9 @@ table {
 .cta-footer-text{
   text-align: center !important;
   
+}
+
+.cta-text-center{
+  text-align: center !important;
+  font-size: 20px !important;
 }

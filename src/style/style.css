@@ -1719,10 +1719,6 @@ table td:first-child {
   left: 179px;
 }
 
-.relative p {
-  text-align: justify !important;
-}
-
 .readmore {
   padding-left: 5%;
   padding-right: 5%;
@@ -2809,4 +2805,9 @@ table td:first-child {
 
 .cta-footer-text {
   text-align: center !important;
+}
+
+.cta-text-center {
+  text-align: center !important;
+  font-size: 20px !important;
 }/*# sourceMappingURL=style.css.map */
