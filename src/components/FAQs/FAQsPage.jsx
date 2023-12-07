@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { faqsList } from '../../data/data';
 import openImage from '../../asset/imgs/FAQsOpenImg.png';
-import closeImage from '../../asset/imgs/FAQsCloseImg.png'; 
+import closeImage from '../../asset/imgs/faqCloseImg.png'; 
 
 
 const FAQsPage = () => {
-  const [isFAQsVisible, setIsFAQsVisible] = useState(false); // Set initial state to false
+  const [isFAQsVisible, setIsFAQsVisible] = useState(false);
   const navigate = useNavigate();
 
   const toggleFAQsVisibility = () => {
