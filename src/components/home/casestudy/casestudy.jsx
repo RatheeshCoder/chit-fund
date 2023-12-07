@@ -1,116 +1,127 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Typography } from '@mui/material';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import img1 from '../../../asset/imgs/Case Study Education_.jpg';
-import img2 from '../../../asset/imgs/Case Study Insurance_.jpg';
-import img3 from '../../../asset/imgs/Case Study Own Vehicle_.webp';
+import { CarouselImg } from '../../../data/data';
 
-const images = [
-  {
-    id: 1,
-    src:img1,
+const Carousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  },
-  {
-    id: 2,
-    src: img2,
-
-   
-  },
-  {
-    id: 3,
-    src: img3,
-    
-  
-  },
-];
-
-const Casestudy = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  // Function to show a specific slide
-  const showSlides = (n) => {
-    let newIndex = n;
-    if (n > images.length) {
-      newIndex = 1;
-    }
-    if (n < 1) {
-      newIndex = images.length;
-    }
-
-    // Hide all slides
-    for (let i = 0; i < images.length; i++) {
-      document.getElementById(`slide-${i + 1}`).style.display = 'none';
-    }
-
-    // Display the current slide
-    document.getElementById(`slide-${newIndex}`).style.display = 'block';
-
-    // Set the new slide index
-    setSlideIndex(newIndex);
-  };
-
-  // Function to advance to the next slide
-  const plusSlides = (n) => {
-    showSlides(slideIndex + n);
-  };
-
-  // Function to navigate to a specific slide
-  const currentSlide = (n) => {
-    showSlides(n);
-  };
-
-  // Automatically advance to the next slide every 3 seconds (3000 milliseconds)
+  // Add auto slide functionality
   useEffect(() => {
     const intervalId = setInterval(() => {
-      plusSlides(1);
-    }, 3000);
+      handleSlideChange((currentSlide + 1) % CarouselImg.length);
+    }, 5000);
 
-    // Cleanup interval on component unmount
+    // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
-  }, [slideIndex]);
+  }, [currentSlide]);
 
-  // Initialize the slider
-  useEffect(() => {
-    showSlides(slideIndex);
-  }, []);
+  const handleSlideChange = (index) => {
+    setCurrentSlide(index);
+  };
 
   return (
-    <div className="slider-container">
-      {images.map((image) => (
-        <div key={image.id} id={`slide-${image.id}`} className="slide fade">
-          <img className="slide-image" src={image.src} alt={image.title} />
-          <div className="slide-content">
-            <Typography variant="h5" className="slide-title">{image.title}</Typography>
-            <Typography variant="body1" className="slide-desc">{image.desc}</Typography>
-            
-          </div>
-          <div className="slide-number-container">
-            <Typography variant="body1" className="slider-number">{image.id}</Typography>
-            <hr />
-            <Typography variant="body1" className="slider-number">{images.length}</Typography>
-          </div>
-        </div>
-      ))}
-    
-      <div className="slider-nav">
-        <Button className="slider-nav-btn" onClick={() => plusSlides(-1)}>
-          <ChevronLeftIcon style={{ color: 'white' }} />
-        </Button>
-        <Button className="slider-nav-btn" onClick={() => plusSlides(1)}>
-          <ChevronRightIcon style={{ color: 'white' }}/>
-        </Button>
-      </div>
+    <div id="default-carousel" className="relative w-100 mt-20 mb-20" data-carousel="slide">
+      {/* Carousel wrapper */}
+      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+        {CarouselImg.map((item, index) => (
+          <div
+            key={index}
+            className={`${
+              index === currentSlide ? 'duration-700 ease-in-out opacity-100' : 'hidden opacity-0'
+            } transition-opacity`}
+            data-carousel-item
+          >
+            {/* Centered title and content */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10 text-center">
+              <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl  font-bold text-black">
+                {item.title}
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl lg:text-1xl xl:text-2xl text-black sm:text-1rem">
+                {item.content}
+              </p>
 
-      
-      <div className="dot-container">
-        {images.map((_, index) => (
-          <span key={index} className={`dot ${index + 1 === slideIndex ? 'active' : ''}`} onClick={() => currentSlide(index + 1)}></span>
+            </div>
+
+
+            <img
+              src={item.imageUrl}
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 opacity-50"
+              alt={`Slide ${index + 1}`}
+            />
+          </div>
         ))}
       </div>
+      {/* Slider indicators */}
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        {CarouselImg.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            className={`w-8 h-2 rounded ${
+              index === currentSlide ? 'bg-black' : 'bg-gray-300'
+            }`}
+            aria-current={index === currentSlide}
+            aria-label={`Slide ${index + 1}`}
+            data-carousel-slide-to={index}
+            onClick={() => handleSlideChange(index)}
+          ></button>
+        ))}
+      </div>
+
+      {/* Slider controls */}
+      <button
+        type="button"
+        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+        onClick={() =>
+          handleSlideChange((currentSlide - 1 + CarouselImg.length) % CarouselImg.length)
+        }
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg
+            className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span className="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+        onClick={() => handleSlideChange((currentSlide + 1) % CarouselImg.length)}
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg
+            className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span className="sr-only">Next</span>
+        </span>
+      </button>
     </div>
   );
 };
 
-export default Casestudy;
+export default Carousel;

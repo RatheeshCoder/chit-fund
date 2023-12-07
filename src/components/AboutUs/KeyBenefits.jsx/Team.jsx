@@ -4,7 +4,7 @@ import { teamData } from '../../../data/data';
 
 const Team = () => {
   return (
-    <div className="p-10 max-w-screen-lg mt-40 mx-auto">
+    <div className="p-10 max-w-screen-lg  mx-auto">
       <div className="text-center mb-4">
         
         <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">

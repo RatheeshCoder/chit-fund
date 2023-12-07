@@ -57,6 +57,8 @@ import gallerystart8 from '../asset/imgs/galleryImg (8).jpg'
 
 
 
+
+
 export const gallaryImg =[
 
   { id: 1, url: gallerystart1 },
@@ -114,7 +116,7 @@ const blogData = {
   1: {
     title: 'Education – Schools & Colleges ....',
     image: blogimg1,
-    title_content:'TThe Transformative Journey of Education: Nurturing Knowledge, Skills, and Opportunities',
+    title_content:'The Transformative Journey of Education: Nurturing Knowledge, Skills, and Opportunities',
     heading_content:'The Power of Education: Nurturing Knowledge and Skills for a Bright Future',
    
     content1: "Education marks a pivotal stage in an individual's life, paving the way for personal growth and future opportunities. It is an important journey where students, parents, and educators collaborate to nurture knowledge and skills. In schools and colleges across the nation, diverse academic curricula, extracurricular activities, and aspirations guide the learning experience.",
@@ -145,7 +147,7 @@ const blogData = {
   3: {
     title: 'Life Insurance – For You & Your Loved One’s ....',
     image: blogimg3,
-    title_content:'Ensuring Financial Security and Peace of Mind: The Importance of Life Insurance in Coimbator ',
+    title_content:'Ensuring Financial Security and Peace of Mind: The Importance of Life Insurance in Coimbatore ',
     heading_content:'Understanding Life Insurance Types and Considerations in Coimbatore',
     
     content1: "Life insurance is a crucial financial tool that provides peace of mind, security, and support to individuals and their loved ones. It represents a promise of financial protection and a safety net for the uncertainties of life.",
@@ -1013,6 +1015,27 @@ export const ComparisonsCards = [
   { id: 8, title: 'No External Borrowing ', description: `Participants can access funds without  resorting to external borrowing.`},
   { id: 9, title: 'Financial Education', description: `Provides financial education through blogs  `},
 ];
+
+
+
+export const CarouselImg = [
+  {
+    imageUrl:blogimg1,
+    title: 'Education – Schools & Colleges ....',
+    content: 'The Transformative Journey of Education: Nurturing Knowledge, Skills, and Opportunities',
+  },
+  {
+    imageUrl:blogimg2,
+    title: 'Owning A Vehicle – Bikes & Cars ....',
+    content: 'Unlocking Your Vehicle Ownership Dreams: A Comprehensive Financial Guide',
+  },
+  {
+    imageUrl:blogimg3,
+    title: 'Life Insurance – For You & Your Loved One’s ....',
+    content: 'Ensuring Financial Security and Peace of Mind: The Importance of Life Insurance in Coimbatore',
+  },
+];
+
 
 
 

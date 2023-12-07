@@ -81,7 +81,7 @@ class Onetouch extends Component {
 
           <section className=" cta-list-top text-gray-700 body-font">
             <div className="container px-5 py-24 mx-auto">
-              <div className="flex cta-sub-list  text-center flex-row"> {/* Updated flex-wrap to flex-row */}
+              <div className="flex cta-sub-list  text-center flex-row"> 
                 <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
                   <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                     <img src={user} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
