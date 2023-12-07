@@ -51,7 +51,7 @@ const Carousel = () => {
         ))}
       </div>
       {/* Slider indicators */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      {/* <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         {CarouselImg.map((_, index) => (
           <button
             key={index}
@@ -65,7 +65,7 @@ const Carousel = () => {
             onClick={() => handleSlideChange(index)}
           ></button>
         ))}
-      </div>
+      </div> */}
 
       {/* Slider controls */}
       <button
