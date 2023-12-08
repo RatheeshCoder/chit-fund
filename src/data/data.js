@@ -883,7 +883,7 @@ export const FourCards = [
 export const keyFeaturesData = [
   {
     title: 'Professional Excellence',
-    description: ': Choose us for unmatched professionalism, ensuring trust and integrity in every financial step.',
+    description: 'Choose us for unmatched professionalism, ensuring trust and integrity in every financial step.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
@@ -901,7 +901,7 @@ export const keyFeaturesData = [
   },
   {
     title: 'Unlock 20% Profit Growth',
-    description: ': Opt for our savings scheme and guarantee a substantial 20% profit, maximising your financial gains',
+    description: 'Opt for our savings scheme and guarantee a substantial 20% profit, maximising your financial gains',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
