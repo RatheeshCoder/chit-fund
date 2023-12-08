@@ -151,10 +151,25 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
 }
+.gallery .ril__image,
+.gallery .ril__imagePrev,
+.gallery .ril__imageNext {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 50vh !important;
+  max-width: none;
+  -ms-content-zooming: none;
+  -ms-user-select: none;
+  -ms-touch-select: none;
+  touch-action: none;
+}
 .gallery .gallery-photo {
   width: 100%;
   height: auto;
-  margin: 50px 0px;
 }
 .gallery .gallery-photo .cta-title {
   width: 100%;
@@ -197,14 +212,12 @@ nav {
 }
 .gallery .gallery-photo .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 10px;
   justify-items: center;
   padding: 10px 100px;
 }
 .gallery .gallery-photo .gallery img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -252,7 +265,7 @@ nav {
   /* BlogPage.scss */
 }
 .casestudy .casestudy-bg {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   background-image: url("../asset/imgs/Case Study Main Image.webp");
   background-size: cover;
@@ -264,11 +277,13 @@ nav {
   padding: 10%;
 }
 .casestudy .casestudy-bg h1 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  color: #2532c1;
+  font-size: clamp(1rem, 4vw, 2rem);
+  color: #000;
   font-weight: 600;
   padding: 3%;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
   text-align: center;
 }
 .casestudy .blog-main {
@@ -666,7 +681,7 @@ nav {
 }
 .product-bg {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background-image: url("../asset/imgs/rupee-ends-higher-but-oil-companies-dollar-buys-cap-gains.png");
   background-size: cover;
   background-position: center;
@@ -678,18 +693,21 @@ nav {
   margin-top: 5%;
 }
 .product-bg .cta-product-title {
-  background-color: #fff;
-  padding: 5% 10%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2% 5%;
   border-radius: 10px;
 }
 .product-bg h1 {
-  font-size: 5vw;
-  color: #2532c1;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 600;
   text-align: center;
+  padding-bottom: 3%;
 }
 .product-bg p {
-  font-size: 5vw;
+  font-size: clamp(1rem, 4vw, 2rem);
   color: #000;
   font-weight: 400;
   text-align: center;
@@ -706,7 +724,6 @@ nav {
   padding: 5% 10%;
   background-color: #2532c1;
   color: #fff !important;
-  margin: 10% 0;
 }
 .Ad-main .cta-wrapper-ad {
   width: 50%;
@@ -729,6 +746,7 @@ nav {
   font-weight: 600;
   text-align: center;
   padding: 10px 0px;
+  line-height: 1.5;
 }
 .Ad-main .cta-wrapper-ad .cta-details p {
   font-size: clamp(0.8rem, 3vw, 1rem);
@@ -1054,7 +1072,6 @@ table td:first-child {
 }
 .Hiring h1 span {
   font-style: italic;
-  color: #2532c1;
   font-weight: 600;
 }
 .Hiring h1 span:hover {
@@ -1231,27 +1248,35 @@ table td:first-child {
   background-image: url("../asset/imgs/186597-lichfl.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .head .head-container {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   border-radius: 6px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 300px 250px 80px 250px;
+  width: 70%;
   text-align: center;
 }
 .head .head-container h2 {
-  color: #2532c1;
-  font-size: 28px;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 .head h1 {
   color: black;
-  font-size: 35px;
+  font-size: clamp(1rem, 4vw, 2rem);
   font-weight: 500;
   line-height: 50px;
   margin-bottom: 15px;
@@ -2666,7 +2691,7 @@ table td:first-child {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -2759,15 +2784,15 @@ table td:first-child {
   }
 }
 .cta-list-top {
-  margin-top: -200px;
+  margin-top: -100px;
 }
 
-.cta-sub-list {
-  background-color: #fff;
-  border-radius: 20px !important;
-  width: 100% !important;
-  height: -moz-fit-content !important;
-  height: fit-content !important;
+.cta-four-card {
+  margin-top: -50px;
+}
+
+.cta-h-half {
+  height: 50vh !important;
 }
 
 @media screen and (max-width: 1000px) {
@@ -2810,4 +2835,14 @@ table td:first-child {
 .cta-text-center {
   text-align: center !important;
   font-size: 20px !important;
+}
+
+.cta-card-height {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.cta-move-top {
+  margin-top: -5%;
+  margin-bottom: -5%;
 }/*# sourceMappingURL=style.css.map */

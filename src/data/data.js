@@ -1021,18 +1021,15 @@ export const ComparisonsCards = [
 export const CarouselImg = [
   {
     imageUrl:blogimg1,
-    title: 'Education – Schools & Colleges ....',
-    content: 'The Transformative Journey of Education: Nurturing Knowledge, Skills, and Opportunities',
+    
   },
   {
     imageUrl:blogimg2,
-    title: 'Owning A Vehicle – Bikes & Cars ....',
-    content: 'Unlocking Your Vehicle Ownership Dreams: A Comprehensive Financial Guide',
+   
   },
   {
     imageUrl:blogimg3,
-    title: 'Life Insurance – For You & Your Loved One’s ....',
-    content: 'Ensuring Financial Security and Peace of Mind: The Importance of Life Insurance in Coimbatore',
+   
   },
 ];
 

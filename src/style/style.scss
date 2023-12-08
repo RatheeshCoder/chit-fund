@@ -180,10 +180,26 @@ nav {
     background-repeat: no-repeat;
   }
 
+  .ril__image,
+  .ril__imagePrev,
+  .ril__imageNext {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 50vh !important;
+    max-width: none;
+    -ms-content-zooming: none;
+    -ms-user-select: none;
+    -ms-touch-select: none;
+    touch-action: none;
+  }
   .gallery-photo {
     width: 100%;
     height: auto;
-    margin: 50px 0px;
+    // margin: 50px 0px;
 
     .cta-title {
       width: 100%;
@@ -208,6 +224,7 @@ nav {
       flex-wrap: wrap;
       z-index: 1;
       padding: 10px 70px;
+      
 
       button {
         width: fit-content;
@@ -229,17 +246,25 @@ nav {
       }
     }
 
+
+   
+
+    
+
+   
+    
+    
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 10px;
+      // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      // grid-gap: 10px;
       justify-items: center;
       padding: 10px 100px;
 
 
       img {
         width: 100%; // Make all images the same width
-        height: 300px; // Set a fixed height for all images
+        height: 100%; // Set a fixed height for all images
         object-fit: cover;
 
       }
@@ -319,7 +344,7 @@ nav {
   width: 100%;
 
   .casestudy-bg {
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     background-image: url('../asset/imgs/Case\ Study\ Main\ Image.webp');
     background-size: cover;
@@ -331,11 +356,13 @@ nav {
     padding: 10%;
 
     h1 {
-      font-size: clamp(1.5rem,4vw,3rem);
-      color: $primary-color;
+      font-size: clamp(1rem,4vw,2rem);
+      color: $other-color;
       font-weight: 600;
       padding: 3%;
-      background-color: $secondary-color;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(30px); 
+      
       text-align: center;
 
 
@@ -855,7 +882,7 @@ ul{
 
 .product-bg {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background-image: url('../asset/imgs/rupee-ends-higher-but-oil-companies-dollar-buys-cap-gains.png');
   background-size: cover;
   background-position: center;
@@ -867,21 +894,24 @@ ul{
   margin-top: 5%;
 
   .cta-product-title {
-    background-color: $secondary-color;
-    padding: 5% 10%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2% 5%;
     border-radius: 10px;
   }
 
   h1 {
-    font-size: 5vw;
-    color: $primary-color;
+    font-size: clamp(1.5rem,4vw,2.5rem);
+    // color: $primary-color;
     font-weight: 600;
     text-align: center;
+    padding-bottom: 3%;
 
   }
 
   p {
-    font-size: 5vw;
+    font-size: clamp(1rem,4vw,2rem);
     color: $other-color;
     font-weight: 400;
     text-align: center;
@@ -898,7 +928,7 @@ ul{
   padding: 5% 10%;
   background-color: #2532c1;
   color: $secondary-color !important;
-  margin: 10% 0;
+ 
 
   .cta-wrapper-ad {
     width: 50%;
@@ -918,8 +948,9 @@ ul{
         font-weight: 600;
         text-align: center;
         padding: 10px 0px;
+        line-height: 1.5;
       }
-
+      
       p {
         font-size: clamp(.8rem, 3vw, 1rem);
         color: $secondary-color;
@@ -1316,7 +1347,7 @@ table {
 
     span {
       font-style: italic;
-      color: $primary-color;
+      // color: $primary-color;
       font-weight: 600;
 
     }
@@ -1524,20 +1555,29 @@ table {
   background-image: url('../asset/imgs/186597-lichfl.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .head-container {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     display: flex;
     border-radius: 6px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 300px 250px 80px 250px;
+    width: 70%;
+    // margin: 300px 250px 80px 250px;
     text-align: center;
 
     h2 {
-      color: $primary-color;
-      font-size: 28px;
+      // color: $primary-color;
+      font-size: clamp(1.5rem,4vw,2.5rem);
       font-weight: 600;
       margin-bottom: 20px;
       margin-top: 20px;
@@ -1546,7 +1586,7 @@ table {
 
   h1 {
     color: black;
-    font-size: 35px;
+    font-size:clamp(1rem,4vw,2rem);
     font-weight: 500;
     line-height: 50px;
     margin-bottom: 15px;
@@ -3468,7 +3508,7 @@ table {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -3565,15 +3605,17 @@ table {
 }
 
 .cta-list-top{
-  margin-top: -200px;
+  margin-top: -100px;
 }
 
-.cta-sub-list{
-  background-color: $secondary-color;
-  border-radius: 20px !important;
-  width: 100% !important;
-  height:  fit-content !important;
+.cta-four-card{
+  margin-top: -50px;
 }
+
+.cta-h-half{
+  height: 50vh !important;
+}
+
 
 @media screen and (max-width: 1000px){
   .cta-sub-list{
@@ -3618,4 +3660,14 @@ table {
 .cta-text-center{
   text-align: center !important;
   font-size: 20px !important;
+}
+
+.cta-card-height{
+  height: fit-content;
+  
+}
+
+.cta-move-top{
+  margin-top: -5%;
+  margin-bottom: -5%;
 }

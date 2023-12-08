@@ -29,7 +29,7 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <nav className={`nav ${navActive ? 'nav-active' : ''}`}>
+    <nav className={`nav font-sans text-lg ${navActive ? 'nav-active' : ''}`}>
       <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
@@ -47,22 +47,22 @@ const Header = () => {
           {showAboutDropdown && (
             <ul className={`dropdown absolute hidden bg-white border rounded-md mt-2 p-2`}>
               <li>
-                <Link to="/about/CompanyPro" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
+                <Link to="/about/CompanyPro" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800  menu-link">
                    Why choose us 
                 </Link>
               </li>
               <li>
-                <Link to="/about/Benefits" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
+                <Link to="/about/Benefits" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800  menu-link">
                 CompanyProfile
                 </Link>
               </li>
               <li>
-                <Link to="/about/Direction" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
+                <Link to="/about/Direction" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800  menu-link">
                   Direction
                 </Link>
               </li>
               <li>
-                <Link to="/about/Values" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
+                <Link to="/about/Values" onClick={() => { toggleNav(); toggleAboutDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800  menu-link">
                   Values
                 </Link>
               </li>
@@ -79,17 +79,17 @@ const Header = () => {
           {showHowItWorksDropdown && (
             <ul className={`dropdown absolute hidden bg-white border rounded-md mt-2 p-2`}>
               <li>
-                <Link to="/how-it-works/Blogs" onClick={() => { toggleNav(); toggleHowItWorksDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
+                <Link to="/how-it-works/Blogs" onClick={() => { toggleNav(); toggleHowItWorksDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800  menu-link">
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link to="/how-it-works/Comparisons" onClick={() => { toggleNav(); toggleHowItWorksDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
+                <Link to="/how-it-works/Comparisons" onClick={() => { toggleNav(); toggleHowItWorksDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800  menu-link">
                   Comparisons
                 </Link>
               </li>
               <li>
-                <Link to="/how-it-works/faq" onClick={() => { toggleNav(); toggleHowItWorksDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 menu-link">
+                <Link to="/how-it-works/faq" onClick={() => { toggleNav(); toggleHowItWorksDropdown(); closeNavbar(); }} className="block px-4 py-2 text-gray-800  menu-link">
                   FAQ
                 </Link>
               </li>

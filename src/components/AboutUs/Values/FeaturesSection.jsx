@@ -14,7 +14,7 @@ const FeaturesSection = () => {
           {featuresDatas.map((feature) => (
             <div key={feature.id} className="w-full md:w-1/3 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
-                <div className="text-4xl font-bold text-purple-600 mb-4">{feature.id}</div>
+                <div className="text-4xl font-bold text-purple-600 mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">{feature.id}</div>
                 <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.content}</p>
               </div>

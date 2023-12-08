@@ -86,25 +86,12 @@ function Footer2() {
                         Feel free to reach out with any questions or concerns; we're here to help.
                         </p>
                     </div>
-                    <form 
-                        onSubmit={(e) => e.preventDefault()}
-                    >
-                        <label className="block pt-4 pb-2">
-                            Stay up to date
-                        </label>
-                        <div className="max-w-sm flex items-center border rounded-md p-1">
-                            <input 
-                                type="email"
-                                placeholder="Enter your email"
-                                className="w-full p-2.5 outline-none"
-                            />
-                            <button
-                                className="p-2.5 rounded-md text-white bg-indigo-600 outline-none shadow-md focus:shadow-none sm:px-5"
-                            >
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
+                    <div className="mt-4">
+                        <p className="text-gray-800 font-medium">Contact Information</p>
+                        <p>123 Street, City, Country</p>
+                        <p>Phone: +123 456 7890</p>
+                        <p>Email: info@example.com</p>
+                    </div>
                 </div>
                 <div className="flex-1 mt-10 space-y-6  justify-between sm:flex md:space-y-0 md:mt-0">
                     {

@@ -7,8 +7,9 @@ const Jobs = () => {
   return (
     <main>
       <Head/>
+      <Bottom/>
         <Hiring/>
-        <Bottom/>
+        
     </main>
   )
 }

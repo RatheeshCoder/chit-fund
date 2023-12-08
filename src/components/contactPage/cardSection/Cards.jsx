@@ -8,7 +8,7 @@ const Cards = () => {
       <div className="relative  min-h-screen grid grid-cols-1 px-10  gap-10 overflow-hidden bg-gray-50 py-6 md:grid-cols-2 lg:grid-cols-3 sm:py-12">
       {BranchData.map((branch) => (<>
         <div className="group relative cursor-pointer justify-around overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-          <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#0c52a6] transition-all duration-1000 group-hover:scale-[40]"></span>
+          <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#0c52a6] transition-all duration-300 group-hover:scale-[10]"></span>
           <div className="relative z-10 mx-auto max-w-md">
             <span className="grid h-20 w-20 place-items-center rounded-full bg-[#0c52a6] transition-all duration-300 group-hover: bg-[#0c52a6]">
               <svg

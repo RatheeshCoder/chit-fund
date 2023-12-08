@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ComparisonsHero = () => {
   return (
-    <section className="sm:mt-40 lg:mt-20 mt-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="sm:mt-40 lg:mt-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
         <div className="sm:text-center lg:text-left">
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
