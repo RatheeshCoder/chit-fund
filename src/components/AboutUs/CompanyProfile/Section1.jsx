@@ -8,9 +8,9 @@ const CompanyPro = () => {
         <div className="mx-auto max-w-5xl lg:text-center flex flex-col justify-center items-center">
           
           <h1 className="lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-center">
-          Why Thrive with
+          Why Thrive with&nbsp;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
-            Vanmoh
+             Vanmoh
             </span>
           </h1>
           

@@ -7,7 +7,7 @@ import ProductHero from '../../components/products/Section5/productHero'
 
 const Product = () => {
   return (
-    <main>
+    <main className='font-sans text-lg'>
         <DynamicH1/>
         <ProductHero/>
         <MainProduct/>

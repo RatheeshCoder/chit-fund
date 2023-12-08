@@ -99,29 +99,63 @@ class GalleryPhoto extends Component {
           </button>
         </div>
 
-        <div className="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredPhotos.map((photo, index) => (
-            <div key={photo.id}>
-              <img
-                className='zoomIn w-full h-auto cursor-pointer'
-                src={photo.url}
-                alt={`Photo ${photo.id}`}
-                onClick={() => this.openLightbox(index)}
-              />
-            </div>
-          ))}
-        </div>
+        <div className="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-0">
+  {filteredPhotos.map((photo, index) => (
+    <div key={photo.id}>
+      <img
+        className='zoomIn  cursor-pointer'
+        src={photo.url}
+        alt={`Photo ${photo.id}`}
+        onClick={() => this.openLightbox(index)}
+        style={{ margin: '0', display: 'block' }}
+      />
+    </div>
+  ))}
+</div>
+
+
 
         {isOpen && currentPhoto && (
-          <Lightbox
-            mainSrc={currentPhoto.url}
-            nextSrc={filteredPhotos[(photoIndex + 1) % filteredPhotos.length].url}
-            prevSrc={filteredPhotos[(photoIndex + filteredPhotos.length - 1) % filteredPhotos.length].url}
-            onCloseRequest={this.closeLightbox}
-            onMovePrevRequest={this.movePrev}
-            onMoveNextRequest={this.moveNext}
-            imageTitle={`Photo ${photoIndex + 1}`}
-          />
+     <Lightbox
+     mainSrc={currentPhoto.url}
+     nextSrc={filteredPhotos[(photoIndex + 1) % filteredPhotos.length].url}
+     prevSrc={filteredPhotos[(photoIndex + filteredPhotos.length - 1) % filteredPhotos.length].url}
+     onCloseRequest={this.closeLightbox}
+     onMovePrevRequest={this.movePrev}
+     onMoveNextRequest={this.moveNext}
+     imageTitle={`Photo ${photoIndex + 1}`}
+     wrapperClassName="custom-lightbox-wrapper"
+     reactModalStyle={{ overlay: { zIndex: 1100 } }}
+     imageAlt={`Photo ${photoIndex + 1}`}
+     enableZoom={false}
+     shouldCloseOnEsc={true}
+     animationDuration={300}
+     animationDisabled={false}
+     nextLabel="Next"
+     prevLabel="Previous"
+     closeLabel="Close"
+     zoomInLabel="Zoom In"
+     zoomOutLabel="Zoom Out"
+     imagePadding={20}
+     clickOutsideToClose={true}
+     moveNextOnCloseRequest={false}
+     movePrevOnCloseRequest={false}
+     discourageDownloads={false}
+     toolbarButtons={[
+       <button key="close" className="lightbox-button" onClick={this.closeLightbox}>
+         Close
+       </button>,
+       <button key="prev" className="lightbox-button" onClick={this.movePrev} disabled={photoIndex === 0}>
+         Previous
+       </button>,
+       <button key="next" className="lightbox-button" onClick={this.moveNext} disabled={photoIndex === filteredPhotos.length - 1}>
+         Next
+       </button>,
+     ]}
+   />
+   
+       
+        
         )}
       </section>
     );

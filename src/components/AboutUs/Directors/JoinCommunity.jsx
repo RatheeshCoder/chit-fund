@@ -7,7 +7,7 @@ const JoinCommunity = () => {
             <div className="relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm">
 
                 <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Empowering Dreams !
+                <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900'>Empowering</span> Dreams !
                 </h2>
 
                 <h3 className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-500">

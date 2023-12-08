@@ -54,7 +54,7 @@ const Background = () => {
               <img
                 src={img.url}
                 alt={`Image ${index + 1}`}
-                style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+                style={{ height: '50vh', width: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>

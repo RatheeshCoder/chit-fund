@@ -79,60 +79,51 @@ class Onetouch extends Component {
           </div>
           </div>
 
-          <section className=" cta-list-top text-gray-700 body-font">
-            <div className="container px-5 py-24 mx-auto">
-              <div className="flex cta-sub-list  text-center flex-row"> 
-                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+          <section className=" cta-list-top  p-4">
+              <div className="container mx-auto pt-12 pb-20">
+                
+                <div className="grid bg-white grid-cols-1 md:grid-cols-6 gap-8 text-center">
+
+                  <div className="p-4 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
                     <img src={user} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
-                    <h2 className="title-font font-medium text-3xl text-gray-900"> <NumberCounter /></h2>
-                    <p className="leading-relaxed">Subscribers</p>
+                    <h2 className="text-xl font-bold text-gray-800 mb-4"> <NumberCounter /></h2>
+                    <p className="text-gray-700">Subscribers</p>
                   </div>
-                </div>
 
-                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                  <div className="p-4 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
                     <img src={trophy} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
-                    <h2 className="title-font font-medium text-3xl text-gray-900"> <Prize /></h2>
-                    <p className="leading-relaxed">Prized Customers</p>
+                    <h2 className="text-xl font-bold text-gray-800 mb-4"> <Prize /></h2>
+                    <p className="text-gray-700">Prized Customers</p>
                   </div>
-                </div>
 
-                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                  <div className="p-4 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
                     <img src={gift} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
-                    <h2 className="title-font font-medium text-3xl text-gray-900"><Gift /></h2>
-                    <p className="leading-relaxed">Schemes</p>
+                    <h2 className="text-xl font-bold text-gray-800 mb-4"> <Gift /></h2>
+                    <p className="text-gray-700">Schemes</p>
                   </div>
-                </div>
 
-                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                  <div className="p-4 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
                     <img src={heart} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
-                    <h2 className="title-font font-medium text-3xl text-gray-900"><Heart /></h2>
-                    <p className="leading-relaxed">Dedicated Kinds</p>
+                    <h2 className="text-xl font-bold text-gray-800 mb-4"> <Heart /></h2>
+                    <p className="text-gray-700">Dedicated Kinds</p>
                   </div>
-                </div>
 
-                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                  <div className="p-4 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
                     <img src={location} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
-                    <h2 className="title-font font-medium text-3xl text-gray-900"><Location /></h2>
-                    <p className="leading-relaxed">Locations</p>
+                    <h2 className="text-xl font-bold text-gray-800 mb-4"> <Location /></h2>
+                    <p className="text-gray-700">Locations</p>
                   </div>
-                </div>
 
-                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                  <div className="p-4 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
                     <img src={camera} alt="" className="text-indigo-500 w-12 h-12 mb-3 inline-block" />
-                    <h2 className="title-font font-medium text-3xl text-gray-900"><Camera /></h2>
-                    <p className="leading-relaxed">Repeat Business</p>
+                    <h2 className="text-xl font-bold text-gray-800 mb-4"> <Camera /></h2>
+                    <p className="text-gray-700">Repeat Business</p>
                   </div>
-                </div>
 
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+
 
 
       </>
