@@ -35,7 +35,7 @@ body {
 
 a:-webkit-any-link {
   text-decoration: none !important;
-  color: $primary-color;
+  // color: $primary-color;
 }
 
 // nav bar css
@@ -1362,6 +1362,8 @@ table {
     font-size: 20px;
     color: #7c7b7b;
     margin-bottom: 35px;
+    padding: 0 5%;
+    text-align: center;
   }
 }
 
@@ -3683,4 +3685,8 @@ table {
 
 .cta-job-card{
   margin: 0 3%;
+}
+
+.cta-faq-margin{
+  padding: 5%  0!important;
 }

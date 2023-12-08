@@ -34,13 +34,37 @@ const Cards = () => {
 
   return (
     <div className="Main">
-      <button onClick={toggleSidebar} className="sidebar-button cta-job-button" style={{ backgroundColor: 'white', color: 'white' }}>
-  {isSidebarHidden ? (
-    <img src={openimg} alt="Show Jobs Titles" style={{ width: '50px', marginLeft: '20px' }} />
-  ) : (
-    <img src={closeimg} alt="Hide Jobs Titles" style={{ width: '50px', marginLeft: '20px' }} />
-  )}
-</button>
+     {window.innerWidth < 720 && (
+        <button
+          onClick={toggleSidebar}
+          className="sidebar-button cta-job-button"
+          style={{ backgroundColor: 'white', color: 'white' }}
+        >
+          {isSidebarHidden ? (
+            <img
+              src={openimg}
+              alt="Show Jobs Titles"
+              style={{
+                width: '50px',
+                marginLeft: '20px',
+                transition: 'transform 0.5s ease-in-out',
+                transform: isSidebarHidden ? 'rotateY(0deg)' : 'rotateY(180deg)',
+              }}
+            />
+          ) : (
+            <img
+              src={closeimg}
+              alt="Hide Jobs Titles"
+              style={{
+                width: '50px',
+                marginLeft: '20px',
+                transition: 'transform 0.5s ease-in-out',
+                transform: isSidebarHidden ? 'rotateY(0deg)' : 'rotateY(180deg)',
+              }}
+            />
+          )}
+        </button>
+      )}
       {!isSidebarHidden && (
         <div className={`sidenavbar ${isActive ? 'active' : ''}`}>
           <div className='wrapper'>

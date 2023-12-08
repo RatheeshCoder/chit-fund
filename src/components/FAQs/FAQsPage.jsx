@@ -33,7 +33,7 @@ const FAQsPage = () => {
 
       {isFAQsVisible && (
         <div className="fixed inset-0 bg-white rounded-md overflow-y-auto shadow-md z-40 mt-12">
-          <div className="flex items-center justify-center h-full">
+          <div className="flex items-center justify-center ">
             <div className="max-w-5xl w-full">
               <div className="grid gap-4 py-8 md:grid-cols-2">
                 {faqsList.map((item, idx) => (
