@@ -7,7 +7,7 @@ const Carousel = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       handleSlideChange((currentSlide + 1) % CarouselImg.length);
-    }, 5000);
+    }, 2500);
 
     return () => clearInterval(intervalId);
   }, [currentSlide]);
@@ -53,29 +53,6 @@ const Carousel = () => {
           </div>
         ))}
       </div>
-
-      <button
-        type="button"
-        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev
-        onClick={() =>
-          handleSlideChange(
-            (currentSlide - 1 + CarouselImg.length) % CarouselImg.length
-          )
-        }
-      >
-        {/* ... Previous button content ... */}
-      </button>
-      <button
-        type="button"
-        className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next
-        onClick={() =>
-          handleSlideChange((currentSlide + 1) % CarouselImg.length)
-        }
-      >
-        {/* ... Next button content ... */}
-      </button>
     </div>
   );
 };

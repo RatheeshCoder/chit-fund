@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class DynamicH1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
       textIndex: 0,
-      texts: ['Earn High Returns ', 'Take Emergency Fund ', 'Feel financial freedom'],
+      texts: [
+        "Earn High Returns ",
+        "Take Emergency Fund ",
+        "Feel financial freedom",
+      ],
     };
   }
 
@@ -26,12 +30,13 @@ class DynamicH1 extends Component {
   render() {
     const { texts, textIndex } = this.state;
     return (
-      <section className='product-bg'>
-        <div className='cta-product-title'>
-            <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight'>{texts[textIndex]}</h1>
+      <section className="product-bg">
+        <div className="cta-product-title">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight">
+            {texts[textIndex]}
+          </h1>
           <p>With our Chit Fund Schemes</p>
         </div>
-        
       </section>
     );
   }

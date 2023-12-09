@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Heart() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
     const targetCount = 50;
-    const duration = 1000; // 1 second
-    const steps = 20; // Number of steps
+    const duration = 1000;
+    const steps = 20;
 
     const increment = Math.ceil(targetCount / steps);
     const interval = duration / steps;

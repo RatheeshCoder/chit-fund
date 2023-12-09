@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { gallaryImg } from '../../../data/data';
+import React, { useEffect, useState } from "react";
+import { gallaryImg } from "../../../data/data";
 
 const Background = () => {
   const [current, setCurrent] = useState(0);
@@ -46,15 +46,15 @@ const Background = () => {
             key={img.id}
             className={`slide slide${index + 1}`}
             style={{
-              display: index === current ? 'block' : 'none',
-              textAlign: 'center',
+              display: index === current ? "block" : "none",
+              textAlign: "center",
             }}
           >
-            <div className="slide-content" style={{ display: 'inline-block' }}>
+            <div className="slide-content" style={{ display: "inline-block" }}>
               <img
                 src={img.url}
                 alt={`Image ${index + 1}`}
-                style={{ height: '50vh', width: '100%', objectFit: 'cover' }}
+                style={{ height: "50vh", width: "100%", objectFit: "cover" }}
               />
             </div>
           </div>

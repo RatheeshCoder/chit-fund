@@ -1,14 +1,12 @@
-import React from 'react';
-import CompanyPro from '../../components/AboutUs/CompanyProfile/Section1';
-import HeroSection from '../../components/AboutUs/CompanyProfile/Section2';
+import React from "react";
+import CompanyPro from "../../components/AboutUs/CompanyProfile/Section1";
+import HeroSection from "../../components/AboutUs/CompanyProfile/Section2";
 
 function AboutUs() {
   return (
     <div>
-      <HeroSection/>
-      <CompanyPro/>
-
-      
+      <HeroSection />
+      <CompanyPro />
     </div>
   );
 }

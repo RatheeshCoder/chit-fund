@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Camera() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
     const targetCount = 1000;
-    const duration = 500; // 0.5 seconds
-    const steps = 60; // Number of steps
+    const duration = 500;
+    const steps = 60;
 
     const increment = Math.ceil(targetCount / steps);
     const interval = duration / steps;

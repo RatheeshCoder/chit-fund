@@ -56,21 +56,23 @@ import gallerystart7 from '../asset/imgs/galleryImg (7).jpg'
 import gallerystart8 from '../asset/imgs/galleryImg (8).jpg'
 
 
-import  growcardimg from '../asset/imgs/grow-growth-hand-svgrepo-com.svg'
-import  flexcardimg from '../asset/imgs/Flex.png'
-import  trustcardimg from '../asset/imgs/Trust.png'
-import  theivecardimg from '../asset/imgs/Thrive.png'
+import growcardimg from '../asset/imgs/grow-growth-hand-svgrepo-com.svg'
+import flexcardimg from '../asset/imgs/Flex.png'
+import trustcardimg from '../asset/imgs/Trust.png'
+import theivecardimg from '../asset/imgs/Thrive.png'
 
 
 import ProfessionalImg from '../asset/imgs/ProfessionalImg.png'
 import ServicesImg from '../asset/imgs/ServicesImg.png'
 import ProfitImg from '../asset/imgs/profitsImg.png'
 import SolutionsImg from '../asset/imgs/solutionImg.png'
+import FeaturesSection from '../components/AboutUs/Values/FeaturesSection'
+import { carousel } from '@material-tailwind/react'
 
 
+// Gallery start data
 
-
-export const gallaryImg =[
+export const gallaryImg = [
 
   { id: 1, url: gallerystart1 },
   { id: 2, url: gallerystart2 },
@@ -83,53 +85,55 @@ export const gallaryImg =[
 ]
 
 
+// Gallery photo data
+
 const photoData = [
-    // { id: 1, url: gallaryImg1, category: 'CustomerMeetups' },
-    { id: 2, url: gallaryImg2, category: 'CustomerMeetups' },
-    { id: 3, url: gallaryImg3, category: 'CustomerMeetups' },
-    { id: 4, url: gallaryImg4, category: 'CustomerMeetups' },
-    { id: 5, url: gallaryImg5, category: 'CustomerMeetups' },
-    { id: 6, url: gallaryImg6, category: 'CustomerMeetups'  },
-    { id: 7, url: gallaryImg7, category: 'CustomerMeetups' },
-    { id: 8, url: gallaryImg8, category: 'CustomerMeetups' },
-    { id: 9, url: gallaryImg9, category: 'CustomerMeetups '},
-    { id: 10, url: gallaryImg10, category: 'CustomerMeetups' },
-    { id: 11, url: gallaryImg11, category: 'CustomerMeetups'  },
-    { id: 12, url: gallaryImg12, category: 'CustomerMeetups' },
-    { id: 13, url: gallaryImg13, category: 'FestivalCelebrations' },
-    { id: 14, url: gallaryImg14,category: 'FestivalCelebrations' },
-    { id: 15, url: gallaryImg15, category: 'FestivalCelebrations' },
-    { id: 16, url: gallaryImg16, category: 'FestivalCelebrations'  },
-    { id: 17, url: gallaryImg17,category: 'FestivalCelebrations' },
-    { id: 18, url: gallaryImg18, category: 'FestivalCelebrations' },
-    { id: 19, url: gallaryImg19, category: 'anniversary' },
-    { id: 20, url: gallaryImg20, category: 'anniversary'  },
-    { id: 21, url: gallaryImg21, category: 'anniversary' },
-    { id: 22, url: gallaryImg22, category: 'anniversary' },
-    { id: 23, url: gallaryImg23,category: 'anniversary' },
-    { id: 24, url: gallaryImg24, category: 'anniversary' },
-    { id: 25, url: gallaryImg25, category: 'anniversary'  },
-    { id: 26, url: gallaryImg26,category: 'anniversary' },
-    { id: 27, url: gallaryImg27, category: 'anniversary' },
-    { id: 28, url: gallaryImg28, category: 'anniversary' },
-    { id: 29, url: gallaryImg29,category: 'anniversary' },
-   
-   
-   
-  ];
-  
-  export default photoData;
+  // { id: 1, url: gallaryImg1, category: 'CustomerMeetups' },
+  { id: 2, url: gallaryImg2, category: 'CustomerMeetups' },
+  { id: 3, url: gallaryImg3, category: 'CustomerMeetups' },
+  { id: 4, url: gallaryImg4, category: 'CustomerMeetups' },
+  { id: 5, url: gallaryImg5, category: 'CustomerMeetups' },
+  { id: 6, url: gallaryImg6, category: 'CustomerMeetups' },
+  { id: 7, url: gallaryImg7, category: 'CustomerMeetups' },
+  { id: 8, url: gallaryImg8, category: 'CustomerMeetups' },
+  { id: 9, url: gallaryImg9, category: 'CustomerMeetups ' },
+  { id: 10, url: gallaryImg10, category: 'CustomerMeetups' },
+  { id: 11, url: gallaryImg11, category: 'CustomerMeetups' },
+  { id: 12, url: gallaryImg12, category: 'CustomerMeetups' },
+  { id: 13, url: gallaryImg13, category: 'FestivalCelebrations' },
+  { id: 14, url: gallaryImg14, category: 'FestivalCelebrations' },
+  { id: 15, url: gallaryImg15, category: 'FestivalCelebrations' },
+  { id: 16, url: gallaryImg16, category: 'FestivalCelebrations' },
+  { id: 17, url: gallaryImg17, category: 'FestivalCelebrations' },
+  { id: 18, url: gallaryImg18, category: 'FestivalCelebrations' },
+  { id: 19, url: gallaryImg19, category: 'anniversary' },
+  { id: 20, url: gallaryImg20, category: 'anniversary' },
+  { id: 21, url: gallaryImg21, category: 'anniversary' },
+  { id: 22, url: gallaryImg22, category: 'anniversary' },
+  { id: 23, url: gallaryImg23, category: 'anniversary' },
+  { id: 24, url: gallaryImg24, category: 'anniversary' },
+  { id: 25, url: gallaryImg25, category: 'anniversary' },
+  { id: 26, url: gallaryImg26, category: 'anniversary' },
+  { id: 27, url: gallaryImg27, category: 'anniversary' },
+  { id: 28, url: gallaryImg28, category: 'anniversary' },
+  { id: 29, url: gallaryImg29, category: 'anniversary' },
 
 
 
-// blog data set
+];
+
+export default photoData;
+
+
+// Blog data
+
 const blogData = {
   1: {
     title: 'Education – Schools & Colleges ....',
     image: blogimg1,
-    title_content:'The Transformative Journey of Education: Nurturing Knowledge, Skills, and Opportunities',
-    heading_content:'The Power of Education: Nurturing Knowledge and Skills for a Bright Future',
-   
+    title_content: 'The Transformative Journey of Education: Nurturing Knowledge, Skills, and Opportunities',
+    heading_content: 'The Power of Education: Nurturing Knowledge and Skills for a Bright Future',
+
     content1: "Education marks a pivotal stage in an individual's life, paving the way for personal growth and future opportunities. It is an important journey where students, parents, and educators collaborate to nurture knowledge and skills. In schools and colleges across the nation, diverse academic curricula, extracurricular activities, and aspirations guide the learning experience.",
     content2: "Let's consider the costs associated with a typical school or college education in Coimbatore. Tuition, textbooks, and educational materials account for a significant portion of educational expenses. Beyond these, uniforms, stationery, and various academic and extracurricular necessities are essential.",
     content3: "In India, education is a significant commitment that parents strive to fulfill. Understanding this, families begin saving for their children's education. Various factors play a role in determining the cost of education. Regardless of the scale, preparing for your child's education entails careful financial planning.",
@@ -137,15 +141,15 @@ const blogData = {
     content5: "Did you know that everyone has inherent financial attitudes?",
     content6: "Major challenges that parents and students may face are often tied to financial aspects, not just academic concerns. These challenges might relate to how tuition fees are paid, how educational expenses are managed, or the capacity to save for future educational endeavors. Conversations surrounding these financial aspects are vital, and they are at the core of addressing educational needs effectively.",
     content7: "Join VanMoh ChitFunds and transform these conversations into educational savings, ensuring you can meet your child's academic aspirations with a well-planned financial approach."
-  
+
     ,
   },
   2: {
     title: 'Owning A Vehicle – Bikes & Cars ....',
     image: blogimg2,
-    title_content:'Unlocking Your Vehicle Ownership Dreams: A Comprehensive Financial Guide',
-    heading_content:'Financial Considerations for Vehicle Ownership in Coimbatore',
-   
+    title_content: 'Unlocking Your Vehicle Ownership Dreams: A Comprehensive Financial Guide',
+    heading_content: 'Financial Considerations for Vehicle Ownership in Coimbatore',
+
     content1: "Acquiring your own vehicle is a significant achievement, symbolizing personal mobility and convenience. This journey encompasses diverse preferences and financial considerations, as individuals explore various vehicle options to meet their specific needs and desires.",
     content2: "Let's consider the costs associated with owning a vehicle in Coimbatore, whether it's a car, a motorcycle, or another mode of transportation. The expenses include the vehicle's purchase price, insurance, fuel, maintenance, and regular servicing. Additional costs may involve licensing, registration, and any desired accessories.",
     content3: "In India, owning a vehicle is often a cherished aspiration, and individuals plan and save to realize this dream. The overall cost of vehicle ownership depends on factors such as the vehicle type, brand, and financing options. Regardless of the specific vehicle you aim to own, sound financial planning is essential to turn your ownership dreams into reality.",
@@ -153,14 +157,14 @@ const blogData = {
     content5: "Did you know that everyone possesses an inherent financial attitude? One common challenge individuals face after acquiring a vehicle is effectively managing the associated expenses. It's not just about the initial purchase; it involves financing, maintaining, and ensuring the vehicle aligns with your long-term financial goals. Conversations about these financial aspects are pivotal and are at the core of your ability to enjoy the benefits of vehicle ownership.",
     content6: "Partner with VanMoh ChitFunds to transform these conversations into savings, enabling you to realize your aspiration of owning a vehicle with a well-structured financial strategy."
 
- 
+
   },
   3: {
     title: 'Life Insurance – For You & Your Loved One’s ....',
     image: blogimg3,
-    title_content:'Ensuring Financial Security and Peace of Mind: The Importance of Life Insurance in Coimbatore ',
-    heading_content:'Understanding Life Insurance Types and Considerations in Coimbatore',
-    
+    title_content: 'Ensuring Financial Security and Peace of Mind: The Importance of Life Insurance in Coimbatore ',
+    heading_content: 'Understanding Life Insurance Types and Considerations in Coimbatore',
+
     content1: "Life insurance is a crucial financial tool that provides peace of mind, security, and support to individuals and their loved ones. It represents a promise of financial protection and a safety net for the uncertainties of life.",
     content2: "Consider the significance of life insurance and its associated considerations:",
     content3: "Life insurance offers various types and plans, each designed to cater to specific needs and goals. It is an important decision that involves weighing options and planning for the future. Here's a brief overview of life insurance in Coimbatore:",
@@ -168,24 +172,26 @@ const blogData = {
     content5: "Factors to Consider:\n\n- Assess your financial needs, including future expenses and outstanding liabilities.\n- Choose the right type of life insurance that aligns with your goals and budget.\n- Determine the appropriate coverage amount to secure your family's financial future.\n- Understand the premium structure and payment frequency.\n- Evaluate additional features and riders to enhance your policy's benefits.\n- Ensure clear communication with your insurance provider to meet your unique requirements.",
     content6: "Selecting the right life insurance plan is a significant decision, and it's crucial to take the time to assess your specific needs and financial circumstances. It offers a safeguard against unexpected events and provides financial stability for your family's well-being.",
     content7: "At VanMoh ChitFunds, we understand the importance of securing your family's future. We offer a range of life insurance products tailored to your unique needs, providing the peace of mind that comes from knowing your loved ones are protected. Our expert advisors are here to assist you in making informed choices and guiding you toward a financially secure future. Join us and transform these conversations into a solid foundation for your family's financial stability with a well-planned life insurance strategy."
-  
- 
+
+
   },
 };
 
-export { blogData }; 
+export { blogData };
 
-// small_fund.js
+
+// Servies small fund data
+
 export const small_fund = [
   {
     id: 1,
     amount: ' 10,000',
     timeline: '304 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'1000',
-    dailypay:'50',
-    weeklypay:250,
+    youpay: '-',
+    youget: '-',
+    monthlypay: '1000',
+    dailypay: '50',
+    weeklypay: 250,
     additionalInfo: {
       tableData: [
         ["Inst.no", "10,000"],
@@ -199,8 +205,8 @@ export const small_fund = [
         ['8', '9,400'],
         ['9', '10,200'],
         ['10', '11,000'],
-        
-       
+
+
       ],
     },
   },
@@ -208,11 +214,11 @@ export const small_fund = [
     id: 2,
     amount: ' 20,000',
     timeline: '304 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'2000',
-    dailypay:'50',
-    weeklypay:500,
+    youpay: '-',
+    youget: '-',
+    monthlypay: '2000',
+    dailypay: '50',
+    weeklypay: 500,
     additionalInfo: {
       tableData: [
         ["Inst.no", "20,000"],
@@ -225,7 +231,7 @@ export const small_fund = [
         ['7', '17,600'],
         ['8', '18,800'],
         ['9', '20,400'],
-        ['10',' 22,000'],
+        ['10', ' 22,000'],
       ],
     },
   },
@@ -233,11 +239,11 @@ export const small_fund = [
     id: 3,
     amount: ' 50,000',
     timeline: '304 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'5000',
-    dailypay:'250',
-    weeklypay:1250,
+    youpay: '-',
+    youget: '-',
+    monthlypay: '5000',
+    dailypay: '250',
+    weeklypay: 1250,
     additionalInfo: {
       tableData: [
         ["Inst.no", "50,000"],
@@ -250,26 +256,26 @@ export const small_fund = [
         ['7', '44,000'],
         ['8', '47,000'],
         ['9', '51,000'],
-        ['10',' 55,000'],
+        ['10', ' 55,000'],
       ],
     },
   },
- 
-  
+
+
 ];
 
+// Servies avg fund data
 
-// avg_fund.js
 export const avg_fund = [
   {
     id: 1,
     amount: ' 3,00,000',
     timeline: '912  days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'10000',
-    weeklypay:'2500',
-    dailypay:'400',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '10000',
+    weeklypay: '2500',
+    dailypay: '400',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -303,7 +309,7 @@ export const avg_fund = [
         ['28', 360000],
         ['29', 375000],
         ['30', 390000],
-       
+
       ],
     },
   },
@@ -311,11 +317,11 @@ export const avg_fund = [
     id: 2,
     amount: ' 6,00,000',
     timeline: '912  days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'5000',
-    dailypay:'800',
-    weeklypay:'20000',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '5000',
+    dailypay: '800',
+    weeklypay: '20000',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -349,24 +355,25 @@ export const avg_fund = [
         ['28', 720000],
         ['29', 750000],
         ['30', 780000],
-       
+
       ],
     },
   }
-  
+
 ];
 
+// Servies high fund data
 
 export const high_fund = [
   {
     id: 1,
     amount: ' 10,00,000',
     timeline: '1216 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'25,000',
-    dailypay:'1000',
-    weeklypay:'6250',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '25,000',
+    dailypay: '1000',
+    weeklypay: '6250',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -410,22 +417,24 @@ export const high_fund = [
         ['38', 1310000],
         ['39', 1360000],
         ['40', 1400000],
-       
+
       ],
     },
   },
 ];
-  
+
+// Servies mid fund data
+
 export const mid_fund = [
   {
     id: 1,
     amount: ' 50,000',
     timeline: '608 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'2500',
-    dailypay:'125',
-    weeklypay:'625',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '2500',
+    dailypay: '125',
+    weeklypay: '625',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -449,8 +458,8 @@ export const mid_fund = [
         ['18', '54,000'],
         ['19', '56,500'],
         ['20', '60,000'],
-        
-       
+
+
       ],
     },
   },
@@ -459,11 +468,11 @@ export const mid_fund = [
     id: 2,
     amount: ' 1,00,000',
     timeline: '608 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'5000',
-    dailypay:'250',
-    weeklypay:'1250',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '5000',
+    dailypay: '250',
+    weeklypay: '1250',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -487,8 +496,8 @@ export const mid_fund = [
         ['18', '1,08,000'],
         ['19', '1,13,000'],
         ['20', '1,20,000'],
-        
-       
+
+
       ],
     },
   },
@@ -497,11 +506,11 @@ export const mid_fund = [
     id: 3,
     amount: ' 2,00,000',
     timeline: '608 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'10000',
-    dailypay:'500',
-    weeklypay:'250',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '10000',
+    dailypay: '500',
+    weeklypay: '250',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -525,8 +534,8 @@ export const mid_fund = [
         ['18', '2,16,000'],
         ['19', '2,26,000'],
         ['20', '2,40,000'],
-        
-       
+
+
       ],
     },
   },
@@ -535,11 +544,11 @@ export const mid_fund = [
     id: 4,
     amount: ' 3,00,000',
     timeline: '608 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'15000',
-    dailypay:'750',
-    weeklypay:'3750',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '15000',
+    dailypay: '750',
+    weeklypay: '3750',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -563,8 +572,8 @@ export const mid_fund = [
         ['18', '3,24,000'],
         ['19', '3,39,000'],
         ['20', '3,60,000'],
-        
-       
+
+
       ],
     },
   },
@@ -573,11 +582,11 @@ export const mid_fund = [
     id: 5,
     amount: ' 5,00,000',
     timeline: '608 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'25000',
-    dailypay:'1250',
-    weeklypay:'6250',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '25000',
+    dailypay: '1250',
+    weeklypay: '6250',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -601,8 +610,8 @@ export const mid_fund = [
         ['18', '5,40,000'],
         ['19', '5,65,000'],
         ['20', '6,00,000'],
-        
-       
+
+
       ],
     },
   },
@@ -611,11 +620,11 @@ export const mid_fund = [
     id: 6,
     amount: ' 10,00,000',
     timeline: '608 days',
-    youpay:'-',
-    youget:'-',
-    monthlypay:'50000',
-    dailypay:'2500',
-    weeklypay:'12500',
+    youpay: '-',
+    youget: '-',
+    monthlypay: '50000',
+    dailypay: '2500',
+    weeklypay: '12500',
     additionalInfo: {
       tableData: [
         ["Inst.no", "Price Amount"],
@@ -639,273 +648,271 @@ export const mid_fund = [
         ['18', '10,80,000'],
         ['19', '11,30,000'],
         ['20', '12,00,000'],
-        
-       
+
+
       ],
     },
   },
 
-  
+
 ];
 
+// Job data
 
 export const jobData = [
   {
     id: 1,
     title: "HR admin",
-    office:"Coimbatore",
-    experience:"Experience: 5+ Years",
+    office: "Coimbatore",
+    experience: "Experience: 5+ Years",
     description: "We are looking for a talented frontend developer to join our team and work on cutting-edge web applicatio....",
   },
   {
     id: 2,
     title: "Customer Relationship Manager(Female)",
-    office:"Coimbatore",
-    experience:"Experience: 5+ Years",
+    office: "Coimbatore",
+    experience: "Experience: 5+ Years",
     description: "We are seeking a skilled UI/UX designer with a strong understanding of React to help create v....",
   },
   {
     id: 3,
     title: "Collection Manager",
-    office:"Coimbatore",
-    experience:"Experience: 5+ Years",
+    office: "Coimbatore",
+    experience: "Experience: 5+ Years",
     description: "We are hiring a full-stack developer proficient in React to work on end-to....",
   },
   {
     id: 4,
     title: "Field Sales Manager ",
-    office:"Coimbatore",
-    experience:"Experience: 5+ Years",
+    office: "Coimbatore",
+    experience: "Experience: 5+ Years",
     description: "Join our backend development team and work on building robust and sca....",
   },
   {
     id: 5,
     title: "Business Development executive",
-    office:"Coimbatore",
-    experience:"Experience: 5+ Years",
+    office: "Coimbatore",
+    experience: "Experience: 5+ Years",
     description: "We are looking for a product manager to lead the development and relea....",
   },
   {
     id: 6,
     title: "Collection executive",
-    office:"Coimbatore",
-    experience:"Experience: 5+ Years",
+    office: "Coimbatore",
+    experience: "Experience: 5+ Years",
     description: "Join our quality assurance team and help ensure the high qual....",
   },
   {
     id: 7,
     title: "Collection Manager",
-    office:"Karamadai",
-    experience:"Experience: 5+ Years",
+    office: "Karamadai",
+    experience: "Experience: 5+ Years",
     description: "We are hiring a DevOps engineer with experience in deplo....",
   },
   {
     id: 8,
     title: "Field Sales Manager",
-    office:"Karamadai",
-    experience:"Experience: 5+ Years",
+    office: "Karamadai",
+    experience: "Experience: 5+ Years",
     description: "Join our mobile app development team and work on Reac....",
   },
   {
     id: 9,
     title: "Business Development executives",
-    office:"Karamadai",
-    experience:"Experience: 5+ Years",
+    office: "Karamadai",
+    experience: "Experience: 5+ Years",
     description: "We're seeking a data analyst to work with React-bas....",
   },
   {
     id: 10,
     title: "Collection executives",
-    office:"Karamadai",
-    experience:"Experience: 5+ Years",
+    office: "Karamadai",
+    experience: "Experience: 5+ Years",
     description: "Join our customer support team and assist users of our React-powere....",
   },
   {
     id: 11,
     title: "Collection Manager",
-    office:"Coonoor",
-    experience:"Experience: 5+ Years",
+    office: "Coonoor",
+    experience: "Experience: 5+ Years",
     description: "Join our customer support team and assist users of our React-powere....",
   },
   {
     id: 12,
     title: "Field sales executives",
-    office:"Coonoor",
-    experience:"Experience: 5+ Years",
+    office: "Coonoor",
+    experience: "Experience: 5+ Years",
     description: "Join our customer support team and assist users of our React-powere....",
   },
   {
     id: 13,
     title: "Collection executives",
-    office:"Coonoor",
-    experience:"Experience: 5+ Years",
+    office: "Coonoor",
+    experience: "Experience: 5+ Years",
     description: "Join our customer support team and assist users of our React-powere....",
   },
 ];
 
-
-
-// contact data
+// Company branch data
 
 export const BranchData = [
-  {   id:"1",
-      location: "Race Course",
-      address: "1437, Ground floor Red Rose Chambers, Trichy road (Opp to welcome ITC hotel, Race course) Coimbatore-641018",
-      link:"https://maps.app.goo.gl/EzD6GxfBn2mUy8HV7"
+  {
+    id: "1",
+    location: "Race Course",
+    address: "1437, Ground floor Red Rose Chambers, Trichy road (Opp to welcome ITC hotel, Race course) Coimbatore-641018",
+    link: "https://maps.app.goo.gl/EzD6GxfBn2mUy8HV7"
   },
-  {   id:"2",
-      location: "Gounder Mills",
-      address: "G11 Ground floor IndusInd bank Mayura complex, Gounder mills Coimbatore-641029",
-      link:"https://maps.app.goo.gl/saPrN7RZu4JYdc5z5"
+  {
+    id: "2",
+    location: "Gounder Mills",
+    address: "G11 Ground floor IndusInd bank Mayura complex, Gounder mills Coimbatore-641029",
+    link: "https://maps.app.goo.gl/saPrN7RZu4JYdc5z5"
   },
-  {   id:"3",
-      location:"Karamadai",
-      address:"4/4, Krishna towers SRK nagar, teachers colony, Karamadai Coimbatore-641104",
-      link:"https://maps.app.goo.gl/HVvpj7mi82G3xeoZ8"
+  {
+    id: "3",
+    location: "Karamadai",
+    address: "4/4, Krishna towers SRK nagar, teachers colony, Karamadai Coimbatore-641104",
+    link: "https://maps.app.goo.gl/HVvpj7mi82G3xeoZ8"
   },
-  {   id:"4",
-      location:"Connor",
-      address:"7/1, 1st floor SS Sekar complex, Mount Road, Coonoor The Nilgiris-643102",
-      link: "https://maps.app.goo.gl/KaTBZd6LdtXv9K35A"
+  {
+    id: "4",
+    location: "Connor",
+    address: "7/1, 1st floor SS Sekar complex, Mount Road, Coonoor The Nilgiris-643102",
+    link: "https://maps.app.goo.gl/KaTBZd6LdtXv9K35A"
   }
 ];
 
+// My Team data
+
+// export const people = [
+//   {
+//     id: 1,
+//     image: img1,
+//     name: "Haryy Stamper",
+//     title: "manager",
+
+//   },
+//   {
+//     id: 2,
+//     image: img2,
+//     name: "James Gun",
+//     title: "Project Manager",
+//   },
+//   {
+//     id: 3,
+//     image: img3,
+//     name: "Michael Mosely",
+//     title: "Product Manager",
+//   },
+// ]
 
 
-
-
-
-export const people = [
-   { 
-    id: 1,
-    image: img1,
-    name: "Haryy Stamper",
-    title: "manager",
-
-    },
-    {
-    id: 2,
-    image: img2,
-    name: "James Gun",
-    title: "Project Manager",
-    },
-    {
-    id: 3,
-    image: img3,
-    name: "Michael Mosely",
-    title: "Product Manager",
-    },
-]
-
-
-
-export const faqsList =[
+// FAQs data
+export const faqsList = [
   {
     q: "What are some random questions to ask?",
     a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question."
-},
-{
+  },
+  {
     q: "Do you include common questions?",
     a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator."
-},
-{
+  },
+  {
     q: "Can I use this for 21 questions?",
     a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated."
-},
-{
+  },
+  {
     q: "Are these questions for girls or for boys?",
     a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with)."
-},
-{
+  },
+  {
     q: "What do you wish you had more talent doing?",
     a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
-},
+  },
 ]
 
-
-
-
+// Features data
 export const featuresData = [
   {
     iconType: 'AccountBalanceIcon',
     title: 'High Interest Loan & Low Interest Returns',
-    
+
   },
   {
     iconType: 'AccountBalanceIcon',
     title: 'Upto 4% of Returns',
-    
+
   },
   {
     iconType: 'AccountBalanceIcon',
     title: 'Tedious Disbursement Process',
-    
+
   },
   {
     iconType: 'AccountBalanceIcon',
     title: 'More Security Documents for Loan',
-    
+
   },
   {
     iconType: 'SavingsIcon',
     title: 'Low Interest Loan & High Interest Returns',
-    
+
   },
   {
     iconType: 'SavingsIcon',
     title: 'Upto 12% of Returns',
-    
+
   },
   {
     iconType: 'SavingsIcon',
     title: 'Simple Disbursement Process',
-    
+
   },
   {
     iconType: 'SavingsIcon',
     title: 'Unsecure Loan',
-    
+
   },
 ];
 
 
-
+// Home page four card
 export const FourCards = [
   {
     title: "Grow",
     content: " Cultivate wealth with Vanmoh chitfunds. Invest smartly, reap benefits.",
     imageSrc: growcardimg,
-   
+
   },
   {
     title: "Flex",
     content: " Flexible chitfund plans tailored for your financial freedom.",
-    imageSrc:flexcardimg,
+    imageSrc: flexcardimg,
   },
   {
     title: "Trust",
     content: "Transparent chitfund management fostering trust and financial clarity.",
-    imageSrc:trustcardimg,
+    imageSrc: trustcardimg,
   },
   {
     title: "Thrive",
     content: "Join a community where financial growth and benefits thrive.",
-    imageSrc:theivecardimg,
+    imageSrc: theivecardimg,
   },
 ];
 
 
-
+// Key Features data
 export const keyFeaturesData = [
   {
     title: 'Professional Excellence',
     description: 'Choose us for unmatched professionalism, ensuring trust and integrity in every financial step.',
-    icon:ProfessionalImg
+    icon: ProfessionalImg
   },
   {
     title: 'Effortless, Doorstep Services',
     description: 'Enjoy seamless chitfund experiences with free documentation and convenient doorstep services.',
-    icon:ServicesImg
+    icon: ServicesImg
   },
   {
     title: 'Unlock 20% Profit Growth',
@@ -915,13 +922,12 @@ export const keyFeaturesData = [
   {
     title: 'Tech-Driven, App-Powered Solutions',
     description: "Experience the future of finance with our technology-driven approach, leveraging advanced apps and software for a secure and transparent financial journey",
-    icon:SolutionsImg
+    icon: SolutionsImg
   },
 ];
 
 
-
-// data.js
+// Company profile details data
 export const CompanyProfiles = [
   {
     id: 1,
@@ -944,13 +950,12 @@ export const CompanyProfiles = [
       "Vanmoh Chitfunds invites you to a future where dreams find a home. Operating strategically from Racecourse, Thudiyalur, Karamadai, and Coonoor, we bring chitfund solutions closer to you. Join us in a journey where dreams get a chance, and lives get a lift, since 2020.",
     imageUrl: gallerystart8,
   },
-  
+
 ];
 
 
 
-
-// data.js
+// Our team data
 export const teamData = [
   {
     id: 1,
@@ -959,24 +964,24 @@ export const teamData = [
     description: `"My goal is to make Vanmoh Chitfunds a trusted partner in your chitfund journey, ensuring 
     simplicity and prosperity for every subscriber." - Kannan Mohan `,
     image: 'https://images.pexels.com/photos/3785084/pexels-photo-3785084.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    linkedin: '#',
     
+
   },
   {
     id: 2,
     name: 'Vanitha Mohan',
     role: 'Chairman',
-    description:   `"As Chairman, my commitment is to uphold the values that define Vanmoh Chitfunds -
+    description: `"As Chairman, my commitment is to uphold the values that define Vanmoh Chitfunds -
     transparency, integrity, and dedication to your chitfund success." - Vanitha Mohan `,
     image: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    linkedin: '#',
-   
+    
+
   },
- 
+
 ];
 
 
-
+// About page Features Data
 export const featuresDatas = [
   {
     id: 1,
@@ -1002,34 +1007,33 @@ export const featuresDatas = [
   },
 ];
 
-
-// data.js
+// Comparisons Data
 export const ComparisonsCards = [
   { id: 1, title: 'Community-Driven Growth ', description: 'Fosters collaboration for collective financial growth.' },
   { id: 2, title: 'Flexible Contribution', description: `Allows varying monthly contributions, accommodating diverse financial capacities.` },
   { id: 3, title: 'Equal Chance of Winning ', description: `Provides an equitable chance for all participants to receive the prized amount.` },
-  { id: 4, title: 'Transparent Process ', description: `Follows a clear monthly auction process, ensuring transparency`},
+  { id: 4, title: 'Transparent Process ', description: `Follows a clear monthly auction process, ensuring transparency` },
   { id: 5, title: 'No Interest Rates ', description: `Eliminates the need for high-interest rates common in traditional savings methods` },
-  { id: 6, title: 'Variety of Schemes', description: `Offers diverse schemes to cater to  individual financial goals and preferences. `},
+  { id: 6, title: 'Variety of Schemes', description: `Offers diverse schemes to cater to  individual financial goals and preferences. ` },
   { id: 7, title: 'Regulated by Chit Fund Act ', description: `Governed by a regulatory framework,  ensuring legal and secure operations. ` },
-  { id: 8, title: 'No External Borrowing ', description: `Participants can access funds without  resorting to external borrowing.`},
-  { id: 9, title: 'Financial Education', description: `Provides financial education through blogs  `},
+  { id: 8, title: 'No External Borrowing ', description: `Participants can access funds without  resorting to external borrowing.` },
+  { id: 9, title: 'Financial Education', description: `Provides financial education through blogs  ` },
 ];
 
 
-
+// Home page carousel data
 export const CarouselImg = [
   {
-    imageUrl:blogimg1,
-    
+    imageUrl: blogimg1,
+
   },
   {
-    imageUrl:blogimg2,
-   
+    imageUrl: blogimg2,
+
   },
   {
-    imageUrl:blogimg3,
-   
+    imageUrl: blogimg3,
+
   },
 ];
 

@@ -11,8 +11,7 @@ const EmailForms = () => {
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
-    // Initialize EmailJS with your user ID
-    emailjs.init("user_yourEmailJSUserId");
+    emailjs.init("Vrq45MC3_UMSVzZRK");
   }, []);
 
   const handleChange = (e) => {
