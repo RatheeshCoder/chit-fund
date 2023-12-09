@@ -16,4 +16,6 @@ const Hiring = () => {
   );
 };
 
+
 export default Hiring;
+
