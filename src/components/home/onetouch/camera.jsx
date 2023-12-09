@@ -4,14 +4,26 @@ function Camera() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (count < 1000) {
-        setCount(count + 1);
+    const targetCount = 1000;
+    const duration = 500; // 0.5 seconds
+    const steps = 60; // Number of steps
+
+    const increment = Math.ceil(targetCount / steps);
+    const interval = duration / steps;
+
+    const updateCount = () => {
+      if (count + increment < targetCount) {
+        setCount((prevCount) => prevCount + increment);
+      } else {
+        setCount(targetCount);
+        clearInterval(timer);
       }
-    }, .5); 
+    };
+
+    const timer = setInterval(updateCount, interval);
 
     return () => {
-      clearInterval(interval); 
+      clearInterval(timer);
     };
   }, [count]);
 

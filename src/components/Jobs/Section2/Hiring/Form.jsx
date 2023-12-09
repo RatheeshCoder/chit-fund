@@ -58,7 +58,7 @@ export default function RegistrationForm() {
   return (
     <div className='cta-reg-form  cta-hiring-form' >
       <Button className='cta-know-more-btn cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  '  variant="contained" onClick={handleDialogOpen}>
-        Know More
+        Apply Now
       </Button>
 
       <Dialog open={openDialog} onClose={handleDialogClose}>

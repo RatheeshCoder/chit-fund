@@ -64,7 +64,7 @@ const AvgFund = () => {
   className=' cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  '
   onClick={() => openContentPopup(product)}
 >
-  Get Started
+More Details
 </Button>
 
 

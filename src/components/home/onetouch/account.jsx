@@ -4,14 +4,26 @@ function NumberCounter() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (count < 3000) {
-        setCount(count + 1);
+    const targetCount = 3000;
+    const duration = 1000; // 1 second
+    const steps = 60; // Number of steps
+
+    const increment = Math.ceil(targetCount / steps);
+    const interval = duration / steps;
+
+    const updateCount = () => {
+      if (count + increment < targetCount) {
+        setCount((prevCount) => prevCount + increment);
+      } else {
+        setCount(targetCount);
+        clearInterval(timer);
       }
-    }, .01); 
+    };
+
+    const timer = setInterval(updateCount, interval);
 
     return () => {
-      clearInterval(interval); 
+      clearInterval(timer);
     };
   }, [count]);
 

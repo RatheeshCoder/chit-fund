@@ -4,14 +4,26 @@ function Gift() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (count < 10) {
-        setCount(count + 1);
+    const targetCount = 10;
+    const duration = 1000; // 1 second
+    const steps = 10; // Number of steps
+
+    const increment = Math.ceil(targetCount / steps);
+    const interval = duration / steps;
+
+    const updateCount = () => {
+      if (count + increment < targetCount) {
+        setCount((prevCount) => prevCount + increment);
+      } else {
+        setCount(targetCount);
+        clearInterval(timer);
       }
-    }, 100); 
+    };
+
+    const timer = setInterval(updateCount, interval);
 
     return () => {
-      clearInterval(interval); 
+      clearInterval(timer);
     };
   }, [count]);
 

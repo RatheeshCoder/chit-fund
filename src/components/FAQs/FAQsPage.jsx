@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { faqsList } from '../../data/data';
-import openImage from '../../asset/imgs/FAQsOpenImg.png';
-import closeImage from '../../asset/imgs/faqCloseImg.png'; 
+import openImage from '../../asset/imgs/openImage.png';
+import closeImage from '../../asset/imgs/closeImage.png'; 
 
 
 const FAQsPage = () => {
@@ -20,13 +20,13 @@ const FAQsPage = () => {
 
   
   return (
-    <div className="leading-relaxed mt-12 mx-4 md:mx-8 font-sans text-lg">
-      <div className="fixed bottom-4 right-4 z-50"> 
-        <button className="focus:outline-none" onClick={toggleFAQsVisibility}>
+    <div className="leading-relaxed mt-12 mx-4 md:mx-8 font-sans text-lg ">
+      <div className="fixed  bottom-4 right-4 z-50"> 
+        <button className="focus:outline-none " onClick={toggleFAQsVisibility}>
           <img
             src={isFAQsVisible ? closeImage : openImage}
             alt={isFAQsVisible ? 'Close FAQs' : 'Show FAQs'}
-            className="w-14 h-14 z-999999"
+            className="w-14 h-14  "
           />
         </button>
       </div>

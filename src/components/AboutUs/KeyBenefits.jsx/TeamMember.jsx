@@ -2,9 +2,9 @@ import React from 'react';
 
 const TeamMember = ({ member }) => {
   return (
-    <div className="max-w-sm w-full lg:max-w-full lg:flex mx-auto my-10">
+    <div className="max-w-lg w-full lg:max-w-full lg:flex mx-auto my-10">
       <div
-        className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+        className="h-64 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
         style={{ backgroundImage: `url('${member.image}')` }}
         title={member.name}
       ></div>
@@ -18,10 +18,6 @@ const TeamMember = ({ member }) => {
           </a>
           <p className="text-sm text-gray-600">{member.role}</p>
           <p className="text-gray-500 text-base mt-4">{member.description}</p>
-
-          <div className="my-4 flex">
-            {/* Add social media links here */}
-          </div>
         </div>
       </div>
     </div>

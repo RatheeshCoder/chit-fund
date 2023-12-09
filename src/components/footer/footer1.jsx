@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer1 = () => {
   return (
-    <section className="py-28 relative bg-blue-600 text-center ">
+    <section className="py-28 relative bg-[#0c52a6] text-center ">
         <div className="relative max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
             <div className="max-w-xl md:mx-auto text-center">
                 <p className=" cta-footer-text text-white text-3xl font-semibold sm:text-4xl">
