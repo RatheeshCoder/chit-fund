@@ -2584,7 +2584,8 @@ table td:first-child {
 }
 
 .Imgslider {
-  height: 400px; /* Adjust the height as needed */
+  height: 400px;
+  /* Adjust the height as needed */
 }
 
 .py-14 .bg-gray-100 button.text-4xl.text-gray-500.focus\:outline-none.absolute.top-1\/2.right-4.transform.-translate-y-1\/2 {
@@ -2599,12 +2600,16 @@ table td:first-child {
 }
 
 @media screen and (max-width: 650px) {
-  #slider, .wrap, .slide-content {
+  #slider,
+  .wrap,
+  .slide-content {
     height: 50vh;
   }
 }
 @media screen and (max-width: 420px) {
-  #slider, .wrap, .slide-content {
+  #slider,
+  .wrap,
+  .slide-content {
     height: 30vh;
   }
 }
@@ -2674,12 +2679,16 @@ table td:first-child {
 }
 
 @media screen and (max-width: 650px) {
-  #slider, .wrap, .slide-content {
+  #slider,
+  .wrap,
+  .slide-content {
     height: 50vh;
   }
 }
 @media screen and (max-width: 420px) {
-  #slider, .wrap, .slide-content {
+  #slider,
+  .wrap,
+  .slide-content {
     height: 30vh;
   }
 }
@@ -2744,7 +2753,8 @@ table td:first-child {
 /* Your existing styles */
 /* Style for the drop-down menu */
 .dropdown {
-  display: none; /* Initially hide the dropdown */
+  display: none;
+  /* Initially hide the dropdown */
   position: absolute;
   top: 50%;
   right: 0 !important;
@@ -2773,7 +2783,8 @@ table td:first-child {
 }
 
 .nav-links li.active a {
-  color: #2532c1; /* Set your desired active color */
+  color: #2532c1;
+  /* Set your desired active color */
 }
 
 .menu-link {

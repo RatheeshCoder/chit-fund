@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Location() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
     const targetCount = 4;
-    const duration = 1000; // 1 second
-    const steps = 40; // Number of steps
+    const duration = 1000;
+    const steps = 40;
 
     const increment = Math.ceil(targetCount / steps);
     const interval = duration / steps;

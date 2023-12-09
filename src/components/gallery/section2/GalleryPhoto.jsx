@@ -157,10 +157,10 @@ class GalleryPhoto extends Component {
             wrapperClassName="custom-lightbox-wrapper"
             reactModalStyle={{ overlay: { zIndex: 1100 } }}
             imageAlt={`Photo ${photoIndex + 1}`}
-            enableZoom={false}
+            enableZoom={true}
             shouldCloseOnEsc={true}
             animationDuration={300}
-            animationDisabled={false}
+            animationDisabled={true}
             nextLabel="Next"
             prevLabel="Previous"
             closeLabel="Close"
@@ -168,9 +168,9 @@ class GalleryPhoto extends Component {
             zoomOutLabel="Zoom Out"
             imagePadding={20}
             clickOutsideToClose={true}
-            moveNextOnCloseRequest={false}
-            movePrevOnCloseRequest={false}
-            discourageDownloads={false}
+            moveNextOnCloseRequest={true}
+            movePrevOnCloseRequest={true}
+            discourageDownloads={true}
             toolbarButtons={[
               <button
                 key="close"

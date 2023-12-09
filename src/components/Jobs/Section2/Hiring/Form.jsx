@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Button,
   TextField,
@@ -11,16 +11,16 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-} from '@mui/material';
+} from "@mui/material";
 
 export default function RegistrationForm() {
   const [openDialog, setOpenDialog] = React.useState(false);
 
   const [formData, setFormData] = React.useState({
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
-    email: '',
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
     selectedFile: null,
   });
 
@@ -49,22 +49,24 @@ export default function RegistrationForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // You can handle form submission here, e.g., send data to a server.
 
-    // For demonstration purposes, log the form data to the console:
     console.log(formData);
   };
 
   return (
-    <div className='cta-reg-form  cta-hiring-form' >
-      <Button className='cta-know-more-btn cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  '  variant="contained" onClick={handleDialogOpen}>
+    <div className="cta-reg-form  cta-hiring-form">
+      <Button
+        className="cta-know-more-btn cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  "
+        variant="contained"
+        onClick={handleDialogOpen}
+      >
         Apply Now
       </Button>
 
       <Dialog open={openDialog} onClose={handleDialogClose}>
-        <DialogTitle className='cta-form-title'>Join Our Team!</DialogTitle>
+        <DialogTitle className="cta-form-title">Join Our Team!</DialogTitle>
         <DialogContent>
-          <form className='.form' onSubmit={handleSubmit}>
+          <form className=".form" onSubmit={handleSubmit}>
             <TextField
               fullWidth
               label="First Name"

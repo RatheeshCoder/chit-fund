@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Prize() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
     const targetCount = 500;
-    const duration = 1000; // 1 second
-    const steps = 100; // Number of steps
+    const duration = 1000;
+    const steps = 100;
 
     const increment = Math.ceil(targetCount / steps);
     const interval = duration / steps;

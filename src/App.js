@@ -12,36 +12,29 @@ import Jobs from './page/jobs/Jobs';
 import ContactMain from './page/Contact/Contact';
 import Home from './page/Home/pages';
 import FAQsPage from './components/FAQs/FAQsPage';
-
 import AboutUs from './page/AboutUs/CompanyProfile';
 import Directors from './page/AboutUs/Directors';
 import KeyBenefits from './page/AboutUs/KeyBenefits';
 import Values from './page/AboutUs/Values';
-
-
 import FAQs from './page/HowWeWorks/FAQs';
 import ComparisonsHero from './page/HowWeWorks/Comparisons';
-
-
-
-
 
 function App() {
   return (
     <BrowserRouter>
 
       <Header />
-     
-      <FAQsPage/>
+
+      <FAQsPage />
       <Routes>
-      <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
         <Route path="/Product" element={<Product />} />
         <Route path="/Gallery" element={<Gallery />} />
 
-       
-        <Route path="/about/Benefits" element={< Directors/>} />
-        <Route path="/about/CompanyPro" element={< AboutUs/>} />
+
+        <Route path="/about/Benefits" element={< Directors />} />
+        <Route path="/about/CompanyPro" element={< AboutUs />} />
         <Route path="/about/Direction" element={<KeyBenefits />} />
         <Route path="/about/Values" element={<Values />} />
 
@@ -52,9 +45,9 @@ function App() {
         <Route path="/how-it-works/faq" element={<FAQs />} />
         <Route path="/how-it-works/Comparisons" element={<ComparisonsHero />} />
 
-        <Route path="/Jobs" element={<Jobs />} /> 
-        <Route path="/ContactMain" element={<ContactMain />} /> 
-        
+        <Route path="/Jobs" element={<Jobs />} />
+        <Route path="/ContactMain" element={<ContactMain />} />
+
       </Routes>
       <Footermain />
     </BrowserRouter>

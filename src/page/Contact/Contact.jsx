@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 // import ContactUs from '../../components/contactPage/contactSection/contactForm'
-import ContactPage from '../../components/contactPage/contactSection/ContactMain'
-import ContactCard from '../../components/contactPage/cardSection/contactCard'
-import Cards from '../../components/contactPage/cardSection/Cards'
+import ContactPage from "../../components/contactPage/contactSection/ContactMain";
+import ContactCard from "../../components/contactPage/cardSection/contactCard";
+import Cards from "../../components/contactPage/cardSection/Cards";
 const ContactMain = () => {
   return (
-    <section className='cta-contact-main'>
+    <section className="cta-contact-main">
       {/* <ContactUs /> */}
-      <ContactPage/>
+      <ContactPage />
       <ContactCard />
-      <Cards/>
+      <Cards />
     </section>
-  )
-}
+  );
+};
 
-export default ContactMain
+export default ContactMain;

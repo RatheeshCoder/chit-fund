@@ -1,7 +1,7 @@
-import React from 'react';
-import MapComponent from './MapComponent';
-import EmailForms from './EmailForm';
-import ContactDetails from './ContactDetails';
+import React from "react";
+import MapComponent from "./MapComponent";
+import EmailForms from "./EmailForm";
+import ContactDetails from "./ContactDetails";
 
 const ContactPage = () => {
   return (

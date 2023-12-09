@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../asset/imgs/logo-img.png";
-import { Facebook, LinkedIn, WhatsApp, Instagram } from "@mui/icons-material";
+// import { Facebook, LinkedIn, WhatsApp, Instagram } from "@mui/icons-material";
 
 function Footer2() {
   const footerNavs = [

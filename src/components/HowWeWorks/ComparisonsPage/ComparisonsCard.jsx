@@ -1,5 +1,5 @@
-import React from 'react';
-import { ComparisonsCards } from '../../../data/data';
+import React from "react";
+import { ComparisonsCards } from "../../../data/data";
 
 const CardComponent = () => {
   return (

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function NumberCounter() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
     const targetCount = 3000;
-    const duration = 1000; // 1 second
-    const steps = 60; // Number of steps
+    const duration = 1000;
+    const steps = 60;
 
     const increment = Math.ceil(targetCount / steps);
     const interval = duration / steps;

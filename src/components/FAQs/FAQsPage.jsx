@@ -1,10 +1,9 @@
 // FAQsPage.js
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { faqsList } from '../../data/data';
-import openImage from '../../asset/imgs/openImage.png';
-import closeImage from '../../asset/imgs/closeImage.png'; 
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { faqsList } from "../../data/data";
+import openImage from "../../asset/imgs/openImage.png";
+import closeImage from "../../asset/imgs/closeImage.png";
 
 const FAQsPage = () => {
   const [isFAQsVisible, setIsFAQsVisible] = useState(false);
@@ -15,17 +14,16 @@ const FAQsPage = () => {
   };
 
   const goBack = () => {
-    navigate('/');
+    navigate("/");
   };
 
-  
   return (
     <div className="leading-relaxed mt-12 mx-4 md:mx-8 font-sans text-lg ">
-      <div className="fixed  bottom-4 right-4 z-50"> 
+      <div className="fixed  bottom-4 right-4 z-50">
         <button className="focus:outline-none " onClick={toggleFAQsVisibility}>
           <img
             src={isFAQsVisible ? closeImage : openImage}
-            alt={isFAQsVisible ? 'Close FAQs' : 'Show FAQs'}
+            alt={isFAQsVisible ? "Close FAQs" : "Show FAQs"}
             className="w-14 h-14  "
           />
         </button>
@@ -38,7 +36,9 @@ const FAQsPage = () => {
               <div className="grid gap-4 py-8 md:grid-cols-2">
                 {faqsList.map((item, idx) => (
                   <div className="space-y-3 mt-6 px-8" key={idx}>
-                    <h4 className="text-gray-800 text-xl font-semibold">{item.q}</h4>
+                    <h4 className="text-gray-800 text-xl font-semibold">
+                      {item.q}
+                    </h4>
                     <p className="text-gray-500">{item.a}</p>
                   </div>
                 ))}
