@@ -56,6 +56,17 @@ import gallerystart7 from '../asset/imgs/galleryImg (7).jpg'
 import gallerystart8 from '../asset/imgs/galleryImg (8).jpg'
 
 
+import  growcardimg from '../asset/imgs/grow-growth-hand-svgrepo-com.svg'
+import  flexcardimg from '../asset/imgs/Flex.png'
+import  trustcardimg from '../asset/imgs/Trust.png'
+import  theivecardimg from '../asset/imgs/Thrive.png'
+
+
+import ProfessionalImg from '../asset/imgs/ProfessionalImg.png'
+import ServicesImg from '../asset/imgs/ServicesImg.png'
+import ProfitImg from '../asset/imgs/profitsImg.png'
+import SolutionsImg from '../asset/imgs/solutionImg.png'
+
 
 
 
@@ -863,18 +874,23 @@ export const FourCards = [
   {
     title: "Grow",
     content: " Cultivate wealth with Vanmoh chitfunds. Invest smartly, reap benefits.",
+    imageSrc: growcardimg,
+   
   },
   {
     title: "Flex",
     content: " Flexible chitfund plans tailored for your financial freedom.",
+    imageSrc:flexcardimg,
   },
   {
     title: "Trust",
     content: "Transparent chitfund management fostering trust and financial clarity.",
+    imageSrc:trustcardimg,
   },
   {
     title: "Thrive",
     content: "Join a community where financial growth and benefits thrive.",
+    imageSrc:theivecardimg,
   },
 ];
 
@@ -884,38 +900,22 @@ export const keyFeaturesData = [
   {
     title: 'Professional Excellence',
     description: 'Choose us for unmatched professionalism, ensuring trust and integrity in every financial step.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
-      </svg>
-    ),
+    icon:ProfessionalImg
   },
   {
     title: 'Effortless, Doorstep Services',
     description: 'Enjoy seamless chitfund experiences with free documentation and convenient doorstep services.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"></path>
-      </svg>
-    ),
+    icon:ServicesImg
   },
   {
     title: 'Unlock 20% Profit Growth',
     description: 'Opt for our savings scheme and guarantee a substantial 20% profit, maximising your financial gains',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-      </svg>
-    ),
+    icon: ProfitImg
   },
   {
     title: 'Tech-Driven, App-Powered Solutions',
     description: "Experience the future of finance with our technology-driven approach, leveraging advanced apps and software for a secure and transparent financial journey",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" className="h-6 w-6 text-white">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg>
-    ),
+    icon:SolutionsImg
   },
 ];
 

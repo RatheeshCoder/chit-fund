@@ -20,8 +20,8 @@ const CompanyPro = () => {
             {keyFeaturesData.map((feature, index) => (
               <div className="relative pl-16" key={index}>
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-700">
-                    {feature.icon}
+                  <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-[#0c52a6]">
+                  <img src={feature.icon} alt={feature.title} className="h-8 w-8 text-white" />
                   </div>
                   {feature.title}
                 </dt>

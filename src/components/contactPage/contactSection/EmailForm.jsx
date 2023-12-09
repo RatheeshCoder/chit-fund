@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
 
 const EmailForms = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [successMessage, setSuccessMessage] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
+
+  useEffect(() => {
+    // Initialize EmailJS with your user ID
+    emailjs.init("user_yourEmailJSUserId");
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,23 +26,20 @@ const EmailForms = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-   
-    const serviceId = 'service_kli8s2n';
-    const templateId = 'template_9aez2q';
-    const userId = 'Vrq45MC3_UMSVzZRK';
+    const serviceId = "service_kli8s2n";
+    const templateId = "template_9aez2q";
 
-    
     emailjs
-      .send(serviceId, templateId, formData, userId)
+      .send(serviceId, templateId, formData)
       .then((response) => {
-        console.log('Email sent successfully:', response);
-        setSuccessMessage('Email sent successfully!');
+        console.log("Email sent successfully:", response);
+        setSuccessMessage("Email sent successfully!");
         setErrorMessage(null);
       })
       .catch((error) => {
-        console.error('Error sending email:', error);
+        console.error("Error sending email:", error);
         setSuccessMessage(null);
-        setErrorMessage('Error sending email. Please try again later.');
+        setErrorMessage("Error sending email. Please try again later.");
       });
   };
 
@@ -56,7 +58,10 @@ const EmailForms = () => {
           </div>
         )}
         <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-700"
+          >
             Name
           </label>
           <input
@@ -70,7 +75,10 @@ const EmailForms = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
             Email
           </label>
           <input
@@ -84,7 +92,10 @@ const EmailForms = () => {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-gray-700"
+          >
             Message
           </label>
           <textarea
@@ -100,7 +111,7 @@ const EmailForms = () => {
         <div className="flex items-center">
           <button
             type="submit"
-            className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+            className="bg-[#0c52a6] text-white font-semibold px-6 py-3 rounded-md focus:outline-none focus:ring focus:border-blue-300"
           >
             Submit
           </button>

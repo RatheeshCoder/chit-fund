@@ -6,9 +6,9 @@ const ComparisonsHero = () => {
     <section className="md:mt-60 lg:mt-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="my-10 mt-20 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
         <div className="sm:text-center lg:text-left">
-          <h1 className="text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
+          <h1 className="lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight">
             <span className="block xl:inline">Knowledge fuels financial </span>
-            <span className="block text-indigo-600 xl:inline">success journey</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900  xl:inline">success journey</span>
           </h1>
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
            Chitfunds combine the power of community, flexibility, and transparency, offering a unique 

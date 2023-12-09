@@ -68,7 +68,7 @@ const Cards = () => {
       {!isSidebarHidden && (
         <div className={`sidenavbar ${isActive ? 'active' : ''}`}>
           <div className='wrapper'>
-            <li onClick={toggleActive} className={`brand-dropdown ${isActive ? 'active' : ''}`}>
+            <li onClick={toggleActive} className={`bg-[#0c52a6] brand-dropdown ${isActive ? 'active' : ''}`}>
               JOB'S TITLES ↓
             </li>
             {jobTitles.map((office) => (

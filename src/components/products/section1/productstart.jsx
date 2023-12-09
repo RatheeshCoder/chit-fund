@@ -28,7 +28,7 @@ class DynamicH1 extends Component {
     return (
       <section className='product-bg'>
         <div className='cta-product-title'>
-            <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900'>{texts[textIndex]}</h1>
+            <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight'>{texts[textIndex]}</h1>
           <p>With our Chit Fund Schemes</p>
         </div>
         

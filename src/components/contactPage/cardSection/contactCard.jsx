@@ -4,16 +4,13 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import RoomIcon from '@mui/icons-material/Room';
 
 const VisionSection = () => {
-  const blackAndWhiteIconStyle = {
-    filter: 'grayscale(100%)',
-  };
-
+  
   return (
     <section className="bg-gray-100 py-16" style={{ marginTop: '-100px' }}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="border p-4 flex flex-col items-center">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" style={blackAndWhiteIconStyle}>
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#0c52a6] text-white" >
               <PhoneIcon className="w-6 h-6" />
             </div>
             <div className="mt-5 text-center">
@@ -25,7 +22,7 @@ const VisionSection = () => {
             </div>
           </div>
           <div className="border p-4 flex flex-col items-center">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" style={blackAndWhiteIconStyle}>
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#0c52a6] text-white" >
               <MailOutlineIcon className="w-6 h-6" />
             </div>
             <div className="mt-5 text-center">
@@ -34,7 +31,7 @@ const VisionSection = () => {
             </div>
           </div>
           <div className="border p-4 flex flex-col items-center">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white" style={blackAndWhiteIconStyle}>
+            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#0c52a6] text-white" >
               <RoomIcon className="w-6 h-6" />
             </div>
             <div className="mt-5 text-center">

@@ -45,8 +45,8 @@ nav {
   width: fit-content;
 }
 .logo img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
 }
 
 .nav-links {
@@ -2578,7 +2578,7 @@ table td:first-child {
 }
 
 .cta-view-more-product {
-  background-color: #2532c1 !important;
+  background-color: #0c52a6 !important;
   color: white !important;
   border-radius: 25px !important;
 }

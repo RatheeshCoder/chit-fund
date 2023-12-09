@@ -4,7 +4,7 @@ import ad_img from '../../../asset/imgs/Ad_img.png'
 
 const ProductAd = () => {
   return (
-    <section className='Ad-main bg-blue-600 '>
+    <section className='Ad-main bg-[#0c52a6] '>
 
     <div className='cta-wrapper-ad'>
           <div className='cta-details'>

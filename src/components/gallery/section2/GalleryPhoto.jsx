@@ -125,7 +125,7 @@ class GalleryPhoto extends Component {
           </button>
         </div>
 
-        <div className="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-0">
+        <div className="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           {filteredPhotos.map((photo, index) => (
             <div key={photo.id}>
               <img
