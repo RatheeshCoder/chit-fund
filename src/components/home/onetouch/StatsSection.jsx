@@ -5,12 +5,12 @@ import Gift from "./gift";
 import Location from "./location";
 import Camera from "./camera";
 import Heart from "./heart";
-import user from "../../../asset/imgs/user.png";
-import trophy from "../../../asset/imgs/trophy.png";
-import gift from "../../../asset/imgs/gift.png";
-import location from "../../../asset/imgs/location.png";
-import heart from "../../../asset/imgs/heart.png";
-import camera from "../../../asset/imgs/camera.png";
+import user from "../../../asset/imgs/subscribeImg.png";
+import trophy from "../../../asset/imgs/giftImg.png";
+import gift from "../../../asset/imgs/schemeImg.png";
+import location from "../../../asset/imgs/locationImg.png";
+import heart from "../../../asset/imgs/kindImg.png";
+import camera from "../../../asset/imgs/BusinessImg.png";
 
 const StatsSection = () => {
   return (
