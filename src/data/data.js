@@ -34,9 +34,7 @@ import gallaryImg29 from '../asset/imgs/3-year (9).jpeg'
 
 // home data 
 
-import img1 from '../asset/imgs/img1.jpg';
-import img2 from '../asset/imgs/img2.jpg';
-import img3 from '../asset/imgs/img3.jpg';
+
 
 // blog dataset
 
@@ -1037,6 +1035,88 @@ export const CarouselImg = [
   },
 ];
 
+
+
+
+// data.js
+
+// data.js
+
+export const Benefitoptions = ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'];
+
+export const Benefitcontent = {
+  'Option 1': {
+    image: gallerystart1,
+    data: [
+      { id: 1, title: `If you’ve ever signed up for a complex SaaS product, there’s a good chance you’ve seen demo content without realizing it.
+
+      SaaS businesses use demo content because they know that it’s incredibly demoralizing for customers to get excited about using a new product, only to find that there’s no existing data on the site that would lead them to understand the value of the product faster.
+      
+      The value of demo content is perhaps most apparent for early-stage SaaS products with few users, or for products where the value is directly correlated with the presence of other users, such as a social network.` },
+     
+    ],
+  },
+  'Option 2': {
+    image: gallerystart2,
+    data: [
+      { id: 2, title: `What demo content and templates have in common is that both are used to fill so-called “empty states.”
+
+      In UX design, an empty state is the blank screen users experience when signing up for a new product. The user has no friends on the platform, and no history of activity, so there’s just nothing there for them to see.
+      
+      It doesn’t take a genius to realize that this is a depressing state of affairs for a new user.
+      
+      Imagine that you’ve spent ages looking for a new project management tool to supercharge the team you’re leading. You’ve read all the reviews, talked to industry leaders, and are ready to make your decision.` },
+     
+    ],
+  },
+  'Option 3': {
+    image: gallerystart3,
+    data: [
+      { id: 3, title:`I’ve seen several businesses deal with the problem of empty states by showing their excited new users messages like “You haven’t set up any projects yet.” Or, worse yet, “You don’t have any friends.”
+
+      Although well-intentioned, these messages don’t help the user get started with your product. All they achieve is to highlight the user’s solitude in a rather demeaning way.
+      
+      Sounds like a recipe for churn.
+      
+      But in every problem lies an opportunity. And in this case, an empty state is a chance to show customers what life on your product could be like — if they were using it to its full potential.` },
+     
+    ],
+  },
+  'Option 4': {
+    image: gallerystart5,
+    data: [
+      { id: 4, title: `Showing users templates that they can fill in is one way to solve this problem. This is how the marketing automation tool Autopilot doubled their product activation rate: by replacing empty states with customer journey templates. You can read more about Autopilot’s story here.
+
+      Showing users demo content is an equally valid solution. It’s a smart way to capture your users’ imagination and have them think about what their product experience might look like a few months from now.
+      
+      Ideally, you’ll use their answers to your onboarding survey and welcome screen to sort them into a customer segment, and then show them demo content that is specific to that segment’s individual use case.`},
+    
+    ],
+  },
+  'Option 5': {
+    image: gallerystart6,
+    data: [
+      { id: 5, title: `It’s great if your demo content is relevant to your user’s individual use case. Many SaaS companies don’t go as far as to personalize their demo content by use case, so you’ll set yourself apart if you do it.
+
+      But it’s even better if your demo content actively teaches your user how to get the most out of your product, step by step. This is sometimes referred to as the “content-as-tutorial” approach.
+      
+      A company that uses the “content-as-tutorial” approach exceptionally well is Todoist.` },
+    
+    ],
+  },
+};
+
+
+
+// data.js
+export const imageServies = [
+  { id: 1, src: "https://source.unsplash.com/collection/1346951/150x150?sig=1", alt: "Image 1" },
+  { id: 2, src: "https://source.unsplash.com/collection/1346951/150x150?sig=2", alt: "Image 2" },
+  { id: 3, src: "https://source.unsplash.com/collection/1346951/150x150?sig=3", alt: "Image 3" },
+  { id: 4, src: "https://source.unsplash.com/collection/1346951/150x150?sig=4", alt: "Image 4" },
+  { id: 5, src: "https://source.unsplash.com/collection/1346951/150x150?sig=5", alt: "Image 5" },
+  { id: 6, src: "https://source.unsplash.com/collection/1346951/150x150?sig=6", alt: "Image 6" },
+];
 
 
 

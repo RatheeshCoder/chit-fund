@@ -21,7 +21,7 @@ const FourCard = () => {
                 />
               </span>
               <div className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
-                <h1>{section.title}</h1>
+                <h1 className="font-bold">{section.title}</h1>
                 <p>{section.content}</p>
               </div>
             </div>

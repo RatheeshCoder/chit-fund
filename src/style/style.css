@@ -47,6 +47,7 @@ nav {
 .logo img {
   width: 90%;
   height: 90%;
+  margin-left: 10px;
 }
 
 .nav-links {
@@ -2874,4 +2875,21 @@ table td:first-child {
 
 .cta-faq-margin {
   padding: 5% 0 !important;
+}
+
+.cta-half-effect {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  padding: 5%;
+}
+
+@media screen and (max-width: 745px) {
+  .cta-half-effect {
+    width: 100%;
+  }
+}
+.custom-icon-color {
+  color: #0c52a6;
 }/*# sourceMappingURL=style.css.map */

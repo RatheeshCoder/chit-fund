@@ -8,6 +8,7 @@ import Carousel from "../../components/home/casestudy/casestudy";
 import FourCard from "../../components/home/FinancialFreedom/FourCard";
 import StatsSection from "../../components/home/onetouch/StatsSection";
 import DoorstepHero from "../../components/home/Doorstep/DoorstepHero";
+import Benefit from "../../components/home/KeyBenefits/Benefit";
 
 const Home = () => {
   return (
@@ -17,9 +18,11 @@ const Home = () => {
       <StatsSection />
       {/* <Secure /> */}
       {/* <Read /> */}
-
+      <Benefit/>
       <DoorstepHero />
       <Product />
+
+      
     </section>
   );
 };

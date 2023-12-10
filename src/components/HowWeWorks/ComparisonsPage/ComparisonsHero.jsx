@@ -19,15 +19,15 @@ const ComparisonsHero = () => {
             transparency, offering a unique and advantageous approach to
             savings.
           </p>
-          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div className="mt-3 sm:mt-0 sm:ml-3">
-              <Link
-                to="/ContactMain"
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-              >
-                Get Connect
-              </Link>
-            </div>
+          <div className="mt-5 sm:mt-8 ">
+            <div className=" mt-10">
+        <Link
+          to="/Product"
+          className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring "
+        >
+          Get Connect
+        </Link>
+      </div>
           </div>
         </div>
         <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 my-4">

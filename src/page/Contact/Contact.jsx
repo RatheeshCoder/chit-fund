@@ -8,8 +8,9 @@ const ContactMain = () => {
     <section className="cta-contact-main">
       {/* <ContactUs /> */}
       <ContactPage />
-      <ContactCard />
       <Cards />
+      <ContactCard />
+      
     </section>
   );
 };

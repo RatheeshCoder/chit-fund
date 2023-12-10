@@ -118,9 +118,9 @@ class GalleryPhoto extends Component {
             onClick={() => this.handleFilterChange("anniversary")}
           >
             {selectedFilter === "anniversary" ? (
-              <span className="text-blue-500">3rd Year Anniversary</span>
+              <span className="text-blue-500"> Anniversary celebration</span>
             ) : (
-              "3rd Year Anniversary"
+              "Anniversary celebration"
             )}
           </button>
         </div>
