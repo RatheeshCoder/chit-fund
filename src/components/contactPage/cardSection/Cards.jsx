@@ -40,7 +40,7 @@ const Cards = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className=" group-hover:text-white/90">
+                    <button className=" group-hover:text-white/90 text-gray-600">
                       <RoomIcon /> Get Direction
                     </button>
                   </a>

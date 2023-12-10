@@ -18,6 +18,8 @@ import KeyBenefits from './page/AboutUs/KeyBenefits';
 import Values from './page/AboutUs/Values';
 import FAQs from './page/HowWeWorks/FAQs';
 import ComparisonsHero from './page/HowWeWorks/Comparisons';
+import ServiesMain from './page/Servies/ServiesMain';
+import FloatingButton from './components/Floating/Floating';
 
 function App() {
   return (
@@ -26,10 +28,12 @@ function App() {
       <Header />
 
       <FAQsPage />
+      <FloatingButton/>
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/Product" element={<Product />} />
+        <Route path="/Products/Product" element={<Product />} />
+        <Route path="/Products/Services" element={<ServiesMain />} />
         <Route path="/Gallery" element={<Gallery />} />
 
 

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../asset/company-logo-img.PNG";
+import openarrow from '../../asset/imgs/openarrrowimg.png'
+import closearrow from '../../asset/imgs/closearrowimg.png'
 
 const Header = () => {
   const [navActive, setNavActive] = useState(false);
   const [showAboutDropdown, setShowAboutDropdown] = useState(false);
   const [showHowItWorksDropdown, setShowHowItWorksDropdown] = useState(false);
+  const [showProductDropdown, setShowProductDropdown] = useState(false);
   const location = useLocation();
 
   const toggleNav = () => {
@@ -14,6 +17,10 @@ const Header = () => {
 
   const toggleAboutDropdown = () => {
     setShowAboutDropdown(!showAboutDropdown);
+  };
+
+  const toggleProductDropdown = () => {
+    setShowProductDropdown(!showProductDropdown);
   };
 
   const toggleHowItWorksDropdown = () => {
@@ -33,9 +40,9 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
-      <ul className={`nav-links ${navActive ? "nav-active" : ""}`}>
+      <ul className={`nav-links  ${navActive ? "nav-active" : ""}`}>
         <li
-          className={`group relative ${
+          className={`group relative font-bold ${
             location.pathname === "/" ? "active" : ""
           }`}
         >
@@ -45,7 +52,7 @@ const Header = () => {
               toggleNav();
               closeNavbar();
             }}
-            className="menu-link"
+            className="menu-link font-bold"
           >
             Home
           </Link>
@@ -61,12 +68,13 @@ const Header = () => {
             onClick={() => {
               toggleAboutDropdown();
             }}
+            style={{ display: "inline-flex", alignItems: "center" }}
           >
-            About Us {showAboutDropdown ? "▼" : "►"}
+            About Us {showAboutDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
           </span>
           {showAboutDropdown && (
             <ul
-              className={`dropdown absolute hidden bg-white border rounded-md mt-2 p-2`}
+              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2`}
             >
               <li>
                 <Link
@@ -104,7 +112,7 @@ const Header = () => {
                   }}
                   className="block px-4 py-2 text-gray-800  menu-link"
                 >
-                  Direction
+                  Directors
                 </Link>
               </li>
               <li>
@@ -123,6 +131,8 @@ const Header = () => {
             </ul>
           )}
         </li>
+
+
         <li
           className={`group relative ${
             location.pathname.startsWith("/how-it-works") ? "active" : ""
@@ -133,12 +143,13 @@ const Header = () => {
             onClick={() => {
               toggleHowItWorksDropdown();
             }}
+            style={{ display: "inline-flex", alignItems: "center" }}
           >
-            How We Works {showHowItWorksDropdown ? "▼" : "►"}
+            How We Works {showHowItWorksDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
           </span>
           {showHowItWorksDropdown && (
             <ul
-              className={`dropdown absolute hidden bg-white border rounded-md mt-2 p-2`}
+              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2`}
             >
               <li>
                 <Link
@@ -192,15 +203,58 @@ const Header = () => {
             Gallery
           </Link>
         </li>
+        
         <li
           className={`group relative ${
-            location.pathname === "/Product" ? "active" : ""
+            location.pathname.startsWith("/about") ? "active" : ""
           }`}
         >
-          <Link to="/Product" onClick={toggleNav} className="menu-link">
-            Service
-          </Link>
+          <span
+            className={`cursor-pointer menu-link`}
+            onClick={() => {
+              toggleProductDropdown();
+            }}
+            style={{ display: "inline-flex", alignItems: "center" }}
+          >
+            Products {showProductDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
+          </span>
+          {showProductDropdown && (
+            <ul
+              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2`}
+            >
+              <li>
+                <Link
+                  to="/Products/Services"
+                  onClick={() => {
+                    toggleNav();
+                    toggleProductDropdown();
+                    closeNavbar();
+                  }}
+                  className="block px-4 py-2 text-gray-800  menu-link"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Products/Product"
+                  onClick={() => {
+                    toggleNav();
+                    toggleProductDropdown();
+                    closeNavbar();
+                  }}
+                  className="block px-4 py-2 text-gray-800  menu-link"
+                >
+                  Schemes
+                </Link>
+              </li>
+              
+             
+            </ul>
+          )}
         </li>
+
+
         <li
           className={`group relative ${
             location.pathname === "/Jobs" ? "active" : ""
