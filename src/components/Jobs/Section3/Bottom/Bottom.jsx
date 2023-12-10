@@ -3,7 +3,7 @@ import React from "react";
 const Bottom = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32 cta-move-top">
-      <h1 className="mx-auto font-display  tracking-tight lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight">
+      <h1 className="mx-auto font-display  tracking-tight lg:text-7xl text-3xl md:text-3xl font-bold tracking-tight">
         <span className="inline-block">
           We always
           <span className="relative whitespace-nowrap text-blue-600">
