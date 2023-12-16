@@ -21,6 +21,11 @@ import ComparisonsHero from './page/HowWeWorks/Comparisons';
 import ServiesMain from './page/Servies/ServiesMain';
 import FloatingButton from './components/Floating/Floating';
 
+import Login from './components/Login/Login';
+import DashboardJobs from './components/Dashboard/AddJob/Jobs';
+import BranchList from './components/Dashboard/AddBranch/Branch';
+import MainDashBoard from './components/Dashboard/MainDashBoard/MainDashBoard';
+
 function App() {
   return (
     <BrowserRouter>
@@ -30,7 +35,15 @@ function App() {
       <FAQsPage />
       <FloatingButton/>
       <Routes>
+
+      <Route path="/Login" element={<Login />} />
+        
         <Route path="/" element={<Home />} />
+
+        <Route path="/MainDashBoard" element={<MainDashBoard />} />
+        <Route path="/MainDashBoard/DashBoard/AddJobs" element={<DashboardJobs />} />
+        <Route path="MainDashBoard/DashBoard/AddBranch" element={<BranchList />} />
+
 
         <Route path="/Products/Product" element={<Product />} />
         <Route path="/Products/Services" element={<ServiesMain />} />
