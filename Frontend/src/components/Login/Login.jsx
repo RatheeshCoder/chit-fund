@@ -1,32 +1,25 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume the user is initially not logged in
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/login', { email, password })
-      .then(result => {
+    axios
+      .post('http://localhost:3001/login', { email, password })
+      .then((result) => {
         console.log(result);
         if (result.data === 'Success') {
-          // If login is successful, set isLoggedIn to true and navigate to MainDashBoard
-          setIsLoggedIn(true);
           navigate('/MainDashBoard');
         }
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
-
-  if (isLoggedIn) {
-    // If already logged in, redirect to MainDashBoard
-    navigate('/MainDashBoard');
-    return null; // or render a loading spinner, as you're redirecting
-  }
 
   return (
     <div
@@ -38,7 +31,10 @@ const Login = () => {
           <h1 className="text-3xl font-bold mb-8 text-center">Login</h1>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label className="block font-semibold text-gray-700 mb-2" htmlFor="email">
+              <label
+                className="block font-semibold text-gray-700 mb-2"
+                htmlFor="email"
+              >
                 Email Address
               </label>
               <input
@@ -50,7 +46,10 @@ const Login = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block font-semibold text-gray-700 mb-2" htmlFor="password">
+              <label
+                className="block font-semibold text-gray-700 mb-2"
+                htmlFor="password"
+              >
                 Password
               </label>
               <input
@@ -70,7 +69,7 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <Link to="/signup">Signup</Link>
+         
         </div>
       </div>
     </div>
