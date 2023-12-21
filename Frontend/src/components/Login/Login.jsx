@@ -7,6 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume the user is initially not logged in
   const navigate = useNavigate();
+  axios.defaults.withCredentials = true
 
   const handleSubmit = (e) => {
     e.preventDefault();
