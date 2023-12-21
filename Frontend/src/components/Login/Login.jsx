@@ -5,22 +5,30 @@ import axios from 'axios';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume the user is initially not logged in
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
-  axios.defaults.withCredentials = true
 
-  const handleSubmit = (e) => {
+  axios.defaults.withCredentials = true;
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post('https://chit-fund-server.vercel.app/login', { email, password })
-      .then(result => {
-        console.log(result);
-        if (result.data === 'Success') {
-          // If login is successful, set isLoggedIn to true and navigate to MainDashBoard
-          setIsLoggedIn(true);
-          navigate('/MainDashBoard');
-        }
-      })
-      .catch(err => console.log(err));
+
+    try {
+      const response = await axios.post('https://chit-fund-server.vercel.app/login', { email, password });
+
+      // Assuming the server responds with a JSON object containing a 'message' property
+      if (response.data.message === 'Success') {
+        setIsLoggedIn(true);
+        navigate('/MainDashBoard');
+      } else {
+        console.log('Login failed. Server response:', response.data);
+        // You might want to set an error state here and show a user-friendly error message.
+      }
+    } catch (error) {
+      console.error('An error occurred during the login request:', error);
+
+      // Handle the error, e.g., show an error message to the user
+    }
   };
 
   if (isLoggedIn) {
