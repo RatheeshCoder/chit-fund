@@ -1,41 +1,25 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  axios.defaults.withCredentials = true;
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await axios.post('https://chit-fund-server.vercel.app/login', { email, password });
-
-      // Assuming the server responds with a JSON object containing a 'message' property
-      if (response.data.message === 'Success') {
-        setIsLoggedIn(true);
-        navigate('/MainDashBoard');
-      } else {
-        console.log('Login failed. Server response:', response.data);
-        // You might want to set an error state here and show a user-friendly error message.
-      }
-    } catch (error) {
-      console.error('An error occurred during the login request:', error);
-
-      // Handle the error, e.g., show an error message to the user
-    }
+    axios
+      .post('http://localhost:3001/login', { email, password })
+      .then((result) => {
+        console.log(result);
+        if (result.data === 'Success') {
+          navigate('/MainDashBoard');
+        }
+      })
+      .catch((err) => console.log(err));
   };
-
-  if (isLoggedIn) {
-    // If already logged in, redirect to MainDashBoard
-    navigate('/MainDashBoard');
-    return null; // or render a loading spinner, as you're redirecting
-  }
 
   return (
     <div
@@ -47,7 +31,10 @@ const Login = () => {
           <h1 className="text-3xl font-bold mb-8 text-center">Login</h1>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label className="block font-semibold text-gray-700 mb-2" htmlFor="email">
+              <label
+                className="block font-semibold text-gray-700 mb-2"
+                htmlFor="email"
+              >
                 Email Address
               </label>
               <input
@@ -59,7 +46,10 @@ const Login = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block font-semibold text-gray-700 mb-2" htmlFor="password">
+              <label
+                className="block font-semibold text-gray-700 mb-2"
+                htmlFor="password"
+              >
                 Password
               </label>
               <input
@@ -79,7 +69,7 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <Link to="/signup">Signup</Link>
+         
         </div>
       </div>
     </div>
