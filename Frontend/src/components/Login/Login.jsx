@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('chit-fund-server.vercel.app/login', { email, password })
+    axios.post('https://chit-fund-server.vercel.app/login', { email, password })
       .then(result => {
         console.log(result);
         if (result.data === 'Success') {
