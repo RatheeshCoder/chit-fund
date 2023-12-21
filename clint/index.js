@@ -4,10 +4,16 @@ const cors = require('cors')
 const UserModel = require('./model/user')
 
 const app = express()
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://chit-fund-qfvc.vercel.app/"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 app.use(express.json())
 // Connect to MongoDB database
-mongoose.connect('mongodb+srv://ratheesh:ratheesh@cluster0.fjqeoph.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Ratheesh:Ratheesh2003@cluster0.eyn87yh.mongodb.net/?retryWrites=true&w=majority')
     .then(() => console.log('MongoDB connected'))
 
 app.post('/Login',(req,res)=>{
