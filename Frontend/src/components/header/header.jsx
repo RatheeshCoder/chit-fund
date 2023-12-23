@@ -151,6 +151,19 @@ const Header = () => {
             <ul
               className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2`}
             >
+               <li>
+                <Link
+                  to="/how-it-works/HowWeWorks"
+                  onClick={() => {
+                    toggleNav();
+                    toggleHowItWorksDropdown();
+                    closeNavbar();
+                  }}
+                  className="block px-4 py-2 text-gray-800  menu-link"
+                >
+                  How We Works
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/how-it-works/Blogs"
