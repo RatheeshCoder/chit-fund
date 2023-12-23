@@ -21,9 +21,10 @@ import FAQs from './page/HowWeWorks/FAQs';
 import ComparisonsHero from './page/HowWeWorks/Comparisons';
 import ServiesMain from './page/Servies/ServiesMain';
 import FloatingButton from './components/Floating/Floating';
+import HowWeWork from './page/HowWeWorks/HowWeWork';
 
 import Login from './components/Login/Login';
-import DashboardJobs from './components/Dashboard/AddJob/Jobs';
+import MainJobs from './components/Dashboard/AddJob/MainJobs';
 import BranchList from './components/Dashboard/AddBranch/Branch';
 import MainDashBoard from './components/Dashboard/MainDashBoard/MainDashBoard';
 
@@ -42,7 +43,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/MainDashBoard" element={<MainDashBoard />} />
-        <Route path="/MainDashBoard/DashBoard/AddJobs" element={<DashboardJobs />} />
+        <Route path="/MainDashBoard/DashBoard/AddJobs" element={<MainJobs />} />
         <Route path="MainDashBoard/DashBoard/AddBranch" element={<BranchList />} />
 
 
@@ -58,6 +59,7 @@ function App() {
 
 
 
+        <Route path="/how-it-works/HowWeWorks" element={<HowWeWork />} />
         <Route path="/how-it-works/Blogs" element={<CaseStudy />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/how-it-works/faq" element={<FAQs />} />
