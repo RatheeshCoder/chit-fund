@@ -1,38 +1,43 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const UserModel = require('./model/user');
+const socketio = require('socket.io');
+const JobsRoutes = require('./routes/jobRoutes');
+const userRoutes = require('./routes/userRoutes');
+const branchsRoutes = require('./routes/branchsRoutes');
 
 const app = express();
+const PORT = process.env.PORT || 3002;
+
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB database
-mongoose.connect('mongodb+srv://ratheesh:ratheesh@cluster0.fjqeoph.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://ratheesh:ratheesh@cluster0.fjqeoph.mongodb.net/new-database?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
     .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error(err));
+    .catch((err) => console.error('MongoDB connection error:', err));
 
-    app.post('/login', (req, res) => {
-    const { email, password } = req.body;
-    UserModel.findOne({ email: email })
-        .then(User => {
-            if (User) {
-                if (password === User.password) {
-                    res.status(200).json({ message: 'Success' });
-                } else {
-                    res.status(401).json({ error: 'Password is incorrect' });
-                }
-            } else {
-                res.status(404).json({ error: 'User does not exist' });
-            }
-        })
-        .catch(err => res.status(500).json({ error: err.message }));
-});
-
-
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+const io = socketio(server);
+
+io.on('connection', (socket) => {
+    console.log('Client connected');
+
+    socket.on('disconnect', () => {
+        console.log('Client disconnected');
+    });
+});
+
+// Use the routes
+const jobsRouter = JobsRoutes(io);
+const branchsRouter = branchsRoutes(io);
+app.use('/jobs', jobsRouter);
+app.use('/branches', branchsRouter);
+app.use('/users', userRoutes);
+
+module.exports = app; 

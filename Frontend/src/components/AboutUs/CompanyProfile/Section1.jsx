@@ -2,7 +2,6 @@ import React from "react";
 import { keyFeaturesData } from "../../../data/data";
 import { Link } from "react-router-dom";
 
-
 const CompanyPro = () => {
   return (
     <div className="bg-white py-12">

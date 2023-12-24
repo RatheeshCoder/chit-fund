@@ -1,181 +1,312 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import axios from "axios";
+import { useAuth } from "../../Auth/AuthContext";
 
-const BranchList = () => {
+const MainBranches = () => {
+  const { isAuthenticated } = useAuth();
+
   const [branches, setBranches] = useState([]);
-  const [formData, setFormData] = useState({
-    location: '',
-    address: '',
-    mapUrl: '',
-    description: '',
+  const [newBranch, setNewBranch] = useState({
+    location: "",
+    address: "",
+    googleMap: "",
+    description: "",
   });
-  const [editMode, setEditMode] = useState(false);
-  const [editTarget, setEditTarget] = useState(null);
+  const [formMode, setFormMode] = useState("add"); // 'add' or 'edit'
+  const [branchId, setBranchId] = useState(null); // Added branchId state
 
   useEffect(() => {
-    const storedBranches = JSON.parse(localStorage.getItem('branches')) || [];
-    setBranches(storedBranches);
-  }, []);
-
-  const addBranch = () => {
-    if (!formData.location || !formData.address || !formData.mapUrl || !formData.description) {
-      alert('Please fill in all fields');
-      return;
-    }
-
-    const newBranch = {
-      location: formData.location,
-      address: formData.address,
-      mapUrl: formData.mapUrl,
-      description: formData.description,
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3002/branches/get");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const result = await response.json();
+        setBranches(result);
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
+      }
     };
 
-    if (editMode) {
-      const updatedBranches = branches.map((branch) =>
-        branch.location === editTarget ? newBranch : branch
-      );
-      setBranches(updatedBranches);
-      setEditMode(false);
-      setEditTarget(null);
-    } else {
-      setBranches([...branches, newBranch]);
-    }
+    fetchData();
+  }, []);
 
-    localStorage.setItem('branches', JSON.stringify(branches));
-    setFormData({ location: '', address: '', mapUrl: '', description: '' });
-  };
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
 
-  const removeBranch = (location) => {
-    const updatedBranches = branches.filter((branch) => branch.location !== location);
-    setBranches(updatedBranches);
-    localStorage.setItem('branches', JSON.stringify(updatedBranches));
-  };
+  const handleEdit = (branchId) => {
+    const branchToEdit = branches.find((branch) => branch._id === branchId);
 
-  const editBranch = (location) => {
-    const branchToEdit = branches.find((branch) => branch.location === location);
-    setFormData({
+    setNewBranch({
       location: branchToEdit.location,
       address: branchToEdit.address,
-      mapUrl: branchToEdit.mapUrl,
+      googleMap: branchToEdit.googleMap,
       description: branchToEdit.description,
     });
-    setEditMode(true);
-    setEditTarget(location);
+
+    setBranchId(branchId); // Set branchId state
+    setFormMode("edit");
   };
 
-  const submitForm = (e) => {
-    e.preventDefault();
-    addBranch();
+  const handleUpdate = async () => {
+    try {
+      if (formMode === "edit") {
+        // Update existing branch
+        const response = await axios.put(
+          `http://localhost:3002/branches/update/${branchId}`,
+          newBranch
+        );
+
+        if (response.status === 200) {
+          setBranches((prevBranches) =>
+            prevBranches.map((branch) =>
+              branch._id === branchId ? { ...branch, ...newBranch } : branch
+            )
+          );
+          setNewBranch({
+            location: "",
+            address: "",
+            googleMap: "",
+            description: "",
+          });
+          setBranchId(null); // Reset branchId state
+          setFormMode("add");
+        } else {
+          console.error(
+            "Failed to update branch. Unexpected status code:",
+            response.status
+          );
+        }
+      } else {
+        // Add new branch
+        const response = await axios.post(
+          "http://localhost:3002/branches/add",
+          newBranch
+        );
+
+        if (response.status === 201) {
+          setBranches((prevBranches) => [...prevBranches, response.data]);
+          setNewBranch({
+            location: "",
+            address: "",
+            googleMap: "",
+            description: "",
+          });
+        } else {
+          console.error(
+            "Failed to add branch. Unexpected status code:",
+            response.status
+          );
+        }
+      }
+    } catch (error) {
+      console.error("Error updating or adding branch:", error);
+
+      if (error.response) {
+        console.error("Error response from server:", error.response.data);
+        console.error("Status code:", error.response.status);
+      } else if (error.request) {
+        console.error("No response received from server");
+      } else {
+        console.error("Error setting up the request:", error.message);
+      }
+    }
+  };
+
+  const handleDelete = async (branchId) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3002/branches/delete/${branchId}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (response.status === 200) {
+        setBranches((prevBranches) =>
+          prevBranches.filter((branch) => branch._id !== branchId)
+        );
+      } else {
+        console.error("Failed to delete branch:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error deleting branch:", error);
+    }
+  };
+
+  const addBranch = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:3002/branches/add",
+        newBranch
+      );
+
+      if (response.status === 201) {
+        setBranches((prevBranches) => [...prevBranches, response.data]);
+        setNewBranch({
+          location: "",
+          address: "",
+          googleMap: "",
+          description: "",
+        });
+      } else {
+        console.error(
+          "Failed to add branch. Unexpected status code:",
+          response.status
+        );
+      }
+    } catch (error) {
+      console.error("Error adding branch:", error);
+
+      if (error.response) {
+        console.error("Error response from server:", error.response.data);
+        console.error("Status code:", error.response.status);
+      } else if (error.request) {
+        console.error("No response received from server");
+      } else {
+        console.error("Error setting up the request:", error.message);
+      }
+    }
   };
 
   return (
-    <div className="container mx-auto mt-20 p-8 bg-gray-100 rounded-lg shadow-lg">
-      <h1 className="text-4xl font-bold text-center mb-6">Add Branch</h1>
-
-      <form onSubmit={submitForm} className="mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="form-group">
-            <label htmlFor="location" className="block text-sm font-medium text-gray-600">
-              Main Location
-            </label>
+    <div className="max-w-2xl mx-auto my-8 p-6 bg-white rounded-md shadow-md">
+      <div className="mx-4 md:mx-14 mt-10 border-2 border-blue-400 rounded-lg">
+        <div className="mt-6 md:mt-10 text-center font-bold">Branches</div>
+        <div className="mt-3 text-center text-4xl font-bold">
+          Add Your New Branches
+        </div>
+        <div className="p-4 md:p-8">
+          <div className="flex flex-col md:flex-row gap-4">
             <input
               type="text"
-              className="mt-1 p-2 border rounded-md w-full focus:outline-none focus:border-indigo-500"
-              id="location"
               name="location"
-              value={formData.location}
-              onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              placeholder="Location *"
+              value={newBranch.location}
+              onChange={(e) =>
+                setNewBranch({ ...newBranch, location: e.target.value })
+              }
             />
-          </div>
-          <div className="form-group">
-            <label htmlFor="address" className="block text-sm font-medium text-gray-600">
-              Full Address
-            </label>
             <input
               type="text"
-              className="mt-1 p-2 border rounded-md w-full focus:outline-none focus:border-indigo-500"
-              id="address"
-              name="address"
-              value={formData.address}
-              onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+              name="googleMap"
+              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              placeholder="Google Map *"
+              value={newBranch.googleMap}
+              onChange={(e) =>
+                setNewBranch({ ...newBranch, googleMap: e.target.value })
+              }
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="mapUrl" className="block text-sm font-medium text-gray-600">
-              Google Map URL
-            </label>
-            <input
-              type="text"
-              className="mt-1 p-2 border rounded-md w-full focus:outline-none focus:border-indigo-500"
-              id="mapUrl"
-              name="mapUrl"
-              value={formData.mapUrl}
-              onChange={(e) => setFormData({ ...formData, mapUrl: e.target.value })}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="description" className="block text-sm font-medium text-gray-600">
-              Description
-            </label>
+          <div className="my-4 md:my-6 md:flex md:flex-col md:gap-4">
+            {/* <input
+                            type="text"
+                            name="googleMap"
+                            className="block w-full rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+                            placeholder="Google Map *"
+                            value={newBranch.googleMap}
+                            onChange={(e) => setNewBranch({ ...newBranch, googleMap: e.target.value })}
+                        /> */}
             <textarea
-              className="mt-1 p-2 border rounded-md w-full focus:outline-none focus:border-indigo-500"
-              id="description"
-              name="description"
-              value={formData.description}
-              onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-            />
+              name="address"
+              id="text"
+              cols="30"
+              rows="5"
+              className="mb-4 h-32 md:h-40 w-full resize-none rounded-md border border-slate-300 p-3 md:p-5 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm "
+              placeholder="Address *"
+              value={newBranch.address}
+              onChange={(e) =>
+                setNewBranch({ ...newBranch, address: e.target.value })
+              }
+            ></textarea>
+          </div>
+          <div className="text-center ">
+            {formMode === "add" ? (
+              <button
+                className="cursor-pointer rounded-lg bg-blue-700 px-4 md:px-8 py-3 md:py-5 w-full md:w-auto text-sm font-semibold text-white"
+                type="button"
+                onClick={addBranch}
+              >
+                Add Branch
+              </button>
+            ) : (
+              <button
+                className="cursor-pointer rounded-lg bg-green-500 px-4 md:px-8 py-3 md:py-5 w-full md:w-auto text-sm font-semibold text-white"
+                type="button"
+                onClick={handleUpdate}
+              >
+                Update
+              </button>
+            )}
           </div>
         </div>
-        <button
-          type="submit"
-          className="mt-4 p-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:shadow-outline-indigo active:bg-indigo-800"
-        >
-          {editMode ? 'Edit Branch' : 'Add Branch'}
-        </button>
-      </form>
-
-      <div className="overflow-x-auto">
-  <table className="table-auto min-w-full">
-    <thead className="bg-gray-200">
-      <tr>
-        <th className="p-2 sm:p-3">Main Location</th>
-        <th className="p-2 sm:p-3">Full Address</th>
-        <th className="p-2 sm:p-3">Google Map</th>
-        <th className="p-2 sm:p-3">Description</th>
-        <th className="p-2 sm:p-3"></th>
-        <th className="p-2 sm:p-3"></th>
-      </tr>
-    </thead>
-    <tbody>
-      {branches.map((branch) => (
-        <tr key={branch.location}>
-          <td className="p-2 sm:p-3">{branch.location}</td>
-          <td className="p-2 sm:p-3">{branch.address}</td>
-          <td className="p-2 sm:p-3">{branch.mapUrl}</td>
-          <td className="p-2 sm:p-3">{branch.description}</td>
-          <td className="p-2 sm:p-3">
-            <button
-              onClick={() => removeBranch(branch.location)}
-              className="text-red-600 hover:text-red-800 focus:outline-none"
-            >
-              Remove
-            </button>
-          </td>
-          <td className="p-2 sm:p-3">
-            <button
-              onClick={() => editBranch(branch.location)}
-              className="text-blue-600 hover:text-blue-800 focus:outline-none"
-            >
-              Edit
-            </button>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
-
+      </div>
+      {branches.length === 0 ? (
+        <div>No Record</div>
+      ) : (
+        <div className="max-w-full overflow-x-auto mt-4">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead>
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Location
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Address
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Google Map
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Description
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {branches
+                .slice()
+                .reverse()
+                .map((branch) => (
+                  <tr key={branch._id}>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {branch.location}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {branch.googleMap}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {branch.address}
+                    </td>
+                    {/* <td className="px-6 py-4 whitespace-nowrap">{branch.description}</td> */}
+                    <td className="px-6 py-4 whitespace-nowrap space-x-2">
+                      <button
+                        className="px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out"
+                        onClick={() => handleEdit(branch._id)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="ml-2 px-4 py-2 font-medium text-white bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600 transition duration-150 ease-in-out"
+                        onClick={() => handleDelete(branch._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };
 
-export default BranchList;
+export default MainBranches;

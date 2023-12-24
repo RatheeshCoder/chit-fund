@@ -1,4 +1,3 @@
-// FeaturesSection.js
 import React from "react";
 import { featuresDatas } from "../../../data/data";
 

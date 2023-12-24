@@ -3,8 +3,10 @@ import { jobData } from "../../../../data/data";
 import RegistrationForm from "./Form";
 import openimg from "../../../../asset/imgs/jobOpenimg.png";
 import closeimg from "../../../../asset/imgs/jobCloseimg.png";
+import axios from "axios";
 
 const Cards = () => {
+  const [jobs, setJobs] = useState([]);
   const [filter, setFilter] = useState("all");
   const [isActive, setActive] = useState(false);
   const [isSidebarHidden, setSidebarHidden] = useState(window.innerWidth < 720);
@@ -18,8 +20,8 @@ const Cards = () => {
     setSidebarHidden(!isSidebarHidden);
   };
 
-  const filteredJobs = jobData.filter(
-    (job) => filter === "all" || job.office === filter
+  const filteredJobs = jobs.filter(
+    (job) => filter === "all" || job.branch === filter
   );
 
   useEffect(() => {
@@ -32,6 +34,19 @@ const Cards = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3002/jobs/get");
+        setJobs(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -82,16 +97,18 @@ const Cards = () => {
             >
               JOB'S TITLES ↓
             </li>
-            {jobTitles.map((office) => (
+            {jobTitles.map((branch) => (
               <li
-                className="jobFilter"
-                key={office}
+                className={`jobFilter ${
+                  filter === branch ? "bg-blue-800 text-white" : ""
+                }`}
+                key={branch}
                 onClick={() => {
-                  setFilter(office);
+                  setFilter(branch);
                   setActive(false);
                 }}
               >
-                {office === "all" ? "All Jobs" : office}
+                {branch === "all" ? "All Jobs" : branch}
               </li>
             ))}
           </div>
@@ -101,15 +118,15 @@ const Cards = () => {
       <div className="job-listings">
         {filteredJobs.map((job) => (
           <div
-            key={job.id}
+            key={job._id}
             className="relative flex-1 flex items-stretch flex-col p-8 rounded-xl border-2 cta-job-card"
           >
             <div>
               <h4 className="text-indigo-600 text-2xl font-medium text-center text-black">
-                {job.title}
+                {job.jobTitle}
               </h4>
               <p className="mt-4 text-gray-800 text-xl font-semibold">
-                {job.office}
+                {job.branch}
               </p>
               <p className="text-sm text-gray-600">{job.experience}</p>
             </div>
