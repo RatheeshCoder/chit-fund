@@ -3729,27 +3729,27 @@ table {
   padding: 5% 0 !important;
 }
 
-.cta-half-effect{
+.cta-half-effect {
   width: 50%;
   background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(30px);
-      padding: 5%;
+  backdrop-filter: blur(30px);
+  padding: 5%;
 }
 
-@media screen and (max-width: 745px){
-  .cta-half-effect{
+@media screen and (max-width: 745px) {
+  .cta-half-effect {
     width: 100%;
   }
 }
 
 
-.custom-icon-color{
+.custom-icon-color {
   color: #0c52a6;
 }
 
-.caption{
+.caption {
   text-align: center;
-  font-size:clamp(1rem,4vw,2rem);
+  font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .modal-overlay {
@@ -3792,7 +3792,8 @@ table {
 }
 
 .close-btn {
-  left: 90%; /* Adjust as needed */
+  left: 90%;
+  /* Adjust as needed */
   top: 20%;
 }
 
@@ -3818,9 +3819,10 @@ table {
     font-size: 16px;
     padding: 12px;
   }
-  
+
   .close-btn {
-    left: 80%; /* Adjust as needed */
+    left: 80%;
+    /* Adjust as needed */
   }
 }
 
@@ -3834,15 +3836,17 @@ table {
 }
 
 .filter-options button {
-  background-color: transparent; /* Remove background color */
+  background-color: transparent;
+  /* Remove background color */
   color: #0c52a6;
   border: none;
   padding: 10px 20px;
   margin: 0 5px;
-  font-size: clamp(1.2rem , 4vw, .8rem);
+  font-size: clamp(1.2rem, 4vw, .8rem);
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s; /* Add color transition */
+  transition: color 0.3s;
+  /* Add color transition */
 }
 
 .filter-options button:hover {
@@ -3870,5 +3874,3 @@ table {
     font-size: 14px;
   }
 }
-
-

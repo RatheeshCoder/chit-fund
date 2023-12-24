@@ -1,23 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import React, { useEffect, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { useAuth } from "../../Auth/AuthContext";
 
 const MainDashBoard = () => {
-  const [greeting, setGreeting] = useState('');
+  const { isAuthenticated } = useAuth();
+  const [greeting, setGreeting] = useState("");
 
   useEffect(() => {
     const time = new Date().getHours();
     let greetingText;
 
     if (time < 10) {
-      greetingText = 'Good morning';
+      greetingText = "Good morning";
     } else if (time < 20) {
-      greetingText = 'Good day';
+      greetingText = "Good day";
     } else {
-      greetingText = 'Good evening';
+      greetingText = "Good evening";
     }
 
     setGreeting(greetingText);
   }, []);
+
+  // If not authenticated, redirect to the login page
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -25,18 +32,17 @@ const MainDashBoard = () => {
         <h1 className="text-lg mb-4 text-center">
           Hey Vanmoh<span className="mx-2">{greeting}</span>😄,
           <br />
-          
         </h1>
 
         <div className="flex flex-col justify-center w-full text-center mt-8 gap-6 sm:flex-row text-lg font-semibold">
           <Link
-            to="DashBoard/AddJobs"
+            to="/MainDashBoard/DashBoard/AddJobs"
             className="bg-blue-600 w-full sm:w-40 py-4 rounded-lg text-white hover:bg-blue-700 shadow-lg"
           >
             Add Jobs
           </Link>
           <Link
-            to="DashBoard/AddBranch"
+            to="/MainDashBoard/DashBoard/AddBranch"
             className="bg-blue-600 w-full sm:w-40 py-4 rounded-lg text-white hover:bg-blue-700 shadow-lg"
           >
             Add Branch
