@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img from '../../../asset/imgs/NewImg (20).jpg'
+
 const ProductHero = () => {
   return (
     <section className="text-gray-600 body-font">
@@ -36,7 +38,7 @@ const ProductHero = () => {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src={img}
           />
         </div>
       </div>

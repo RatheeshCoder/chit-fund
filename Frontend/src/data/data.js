@@ -1,4 +1,8 @@
-// gallery dataset
+// Home page slider 
+
+import HomeSlider1 from '../asset/imgs/NewImg (2).jpg'
+import HomeSlider2 from '../asset/imgs/NewImg (7).jpg'
+import HomeSlider3 from '../asset/imgs/NewImg (8).jpg'
 
 // import gallaryImg1 from '../asset/imgs/186597-lichfl.jpg'
 import gallaryImg2 from '../asset/imgs/Customer meetups 1.jpg'
@@ -32,8 +36,10 @@ import gallaryImg29 from '../asset/imgs/3-year (9).jpeg'
 
 // gallery dataset
 
-// home data 
-
+// abouts as Company profile
+import companyProfile1 from '../asset/imgs/NewImg (12).jpg'
+import companyProfile2 from '../asset/imgs/NewImg (3).jpg'
+import companyProfile3 from '../asset/imgs/NewImg (6).jpg'
 
 
 // blog dataset
@@ -932,21 +938,21 @@ export const CompanyProfiles = [
     title: "Empowering Dreams, Enriching Lives Since 2020.",
     content:
       "Embark on a journey with Vanmoh Chitfunds, your trusted companion since September 11, 2020. We're not just about chitfunds; we're your friendly guide to stress-free financial growth. Our commitment to honesty and openness makes growing your money with us a seamless experience.",
-    imageUrl: gallerystart2,
+    imageUrl: companyProfile1,
   },
   {
     id: 2,
     title: "Simplifying Finance for You.",
     content:
       "Vanmoh Chitfunds, born on September 11, 2020, is on a mission to simplify chitfund matters. Say goodbye to complicated finance talk – we're here to make growing your savings easy and fun. With fancy technology and a commitment to simplicity, managing your money becomes a breeze.",
-    imageUrl: gallerystart5,
+    imageUrl: companyProfile2,
   },
   {
     id: 3,
     title: "Where Dreams Soar Since 2020.",
     content:
       "Vanmoh Chitfunds invites you to a future where dreams find a home. Operating strategically from Racecourse, Thudiyalur, Karamadai, and Coonoor, we bring chitfund solutions closer to you. Join us in a journey where dreams get a chance, and lives get a lift, since 2020.",
-    imageUrl: gallerystart8,
+    imageUrl: companyProfile3,
   },
 
 ];
@@ -1022,15 +1028,15 @@ export const ComparisonsCards = [
 // Home page carousel data
 export const CarouselImg = [
   {
-    imageUrl: blogimg1,
+    imageUrl: HomeSlider1,
 
   },
   {
-    imageUrl: blogimg2,
+    imageUrl: HomeSlider2,
 
   },
   {
-    imageUrl: blogimg3,
+    imageUrl: HomeSlider3,
 
   },
 ];
