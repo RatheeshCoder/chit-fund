@@ -8,10 +8,8 @@ const Online = () => {
       <div className="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
         <div className="lg:w-1/2">
           <div
-            className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97')",
-            }}
+            className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none border lg:rounded-lg Online-img"
+           
           />
         </div>
         <div className="py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none border lg:rounded-lg">

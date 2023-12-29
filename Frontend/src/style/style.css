@@ -2940,7 +2940,8 @@ table td:first-child {
 }
 
 .close-btn {
-  left: 90%; /* Adjust as needed */
+  left: 90%;
+  /* Adjust as needed */
   top: 20%;
 }
 
@@ -2965,7 +2966,8 @@ table td:first-child {
     padding: 12px;
   }
   .close-btn {
-    left: 80%; /* Adjust as needed */
+    left: 80%;
+    /* Adjust as needed */
   }
 }
 /* YourStylesheet.css */
@@ -2976,7 +2978,8 @@ table td:first-child {
 }
 
 .filter-options button {
-  background-color: transparent; /* Remove background color */
+  background-color: transparent;
+  /* Remove background color */
   color: #0c52a6;
   border: none;
   padding: 10px 20px;
@@ -2984,7 +2987,8 @@ table td:first-child {
   font-size: clamp(1.2rem, 4vw, 0.8rem);
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s; /* Add color transition */
+  transition: color 0.3s;
+  /* Add color transition */
 }
 
 .filter-options button:hover {
@@ -3006,4 +3010,25 @@ table td:first-child {
     padding: 8px 16px;
     font-size: 14px;
   }
+}
+.Doorstep-img {
+  background-image: url("../asset/imgs/NewImg (10).jpg");
+}
+
+.Monthly-img {
+  background-image: url("../asset/imgs/NewImg (16).jpg");
+}
+
+.Online-img {
+  background-image: url("../asset/imgs/NewImg (14).jpg");
+}
+
+.Diverse-img {
+  background-image: url("../asset/imgs/Case Study Insurance_.jpg");
+}
+
+.carousel-img {
+  width: 100% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=style.css.map */

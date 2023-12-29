@@ -5,6 +5,7 @@ const socketio = require('socket.io');
 const JobsRoutes = require('./routes/jobRoutes');
 const userRoutes = require('./routes/userRoutes');
 const branchsRoutes = require('./routes/branchsRoutes');
+require('dotenv').config(); 
 
 const app = express();
 const PORT = process.env.PORT || 3002;
@@ -12,10 +13,7 @@ const PORT = process.env.PORT || 3002;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://ratheesh:ratheesh@cluster0.fjqeoph.mongodb.net/new-database?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch((err) => console.error('MongoDB connection error:', err));
 
@@ -36,8 +34,9 @@ io.on('connection', (socket) => {
 // Use the routes
 const jobsRouter = JobsRoutes(io);
 const branchsRouter = branchsRoutes(io);
+
 app.use('/jobs', jobsRouter);
 app.use('/branches', branchsRouter);
 app.use('/users', userRoutes);
 
-module.exports = app; 
+module.exports = app;

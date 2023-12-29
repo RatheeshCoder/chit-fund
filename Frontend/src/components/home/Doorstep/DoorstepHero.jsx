@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img from '../../../asset/imgs/NewImg (1).jpg'
 
 const DoorstepHero = () => {
   return (
@@ -37,7 +38,7 @@ const DoorstepHero = () => {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src={img}
           />
         </div>
       </div>

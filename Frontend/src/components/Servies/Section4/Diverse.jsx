@@ -9,17 +9,17 @@ const Diverse = () => {
         
         <div className="py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none border lg:rounded-lg">
           <h2 className="text-3xl text-gray-800 font-bold">
-          Monthly 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900  font-bold tracking-tight"> Auctions</span>
+          Diverse 
+
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900  font-bold tracking-tight"> Schemes</span>
           </h2>
           <p className="mt-4 text-gray-600">
-          Immerse yourself in the excitement of monthly chitfund auctions. Schedules are promptly 
-            shared after group enrollment, allowing you to actively participate and enhance your financial 
-            journey.
+          Discover chitfund schemes designed to suit your financial goals. Choose the one that suits 
+you and explore the possibilities to elevate your financial future
           </p>
           <div className="mt-8">
         <Link to="/ContactMain" className="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">
-        Join the Auction
+        Chit Fund Schemes
 
         </Link>
     </div>
@@ -27,10 +27,8 @@ const Diverse = () => {
 
         <div className="lg:w-1/2">
           <div
-            className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97')",
-            }}
+            className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none border lg:rounded-lg Diverse-img"
+           
           />
         </div>
       </div>

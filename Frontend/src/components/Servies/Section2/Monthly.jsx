@@ -27,10 +27,8 @@ const Monthly = () => {
 
         <div className="lg:w-1/2">
           <div
-            className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none border lg:rounded-lg"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97')",
-            }}
+            className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none border lg:rounded-lg Monthly-img"
+            
           />
         </div>
       </div>

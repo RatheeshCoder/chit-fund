@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img from '../../../asset/imgs/NewImg (11).jpg'
 
 const ChitAct = () => {
   return (
@@ -31,7 +32,7 @@ const ChitAct = () => {
         </div>
       </div>
       <img
-        src="https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        src={img}
         alt="Leafs"
         className="w-full  object-cover sm:h-screen sm:w-4/12"
         style={{ height: "25rem" }}

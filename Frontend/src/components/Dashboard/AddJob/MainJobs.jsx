@@ -6,7 +6,7 @@ import { useAuth } from "../../Auth/AuthContext";
 const MainJobs = () => {
   const { isAuthenticated } = useAuth();
 
-  const [todo, setTodo] = useState([]);
+  const [jobs, setjobs] = useState([]);
   const [newTask, setNewTask] = useState({
     jobTitle: "",
     branch: "",
@@ -21,7 +21,7 @@ const MainJobs = () => {
       try {
         const response = await fetch("http://localhost:3002/jobs/get");
         const result = await response.json();
-        setTodo(result);
+        setjobs(result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -34,16 +34,16 @@ const MainJobs = () => {
       const data = JSON.parse(event.data);
 
       if (data.newTask) {
-        setTodo((prevTodo) => [...prevTodo, data.newTask]);
+        setjobs((prevjobs) => [...prevjobs, data.newTask]);
       } else if (data.updatedTask) {
-        setTodo((prevTodo) =>
-          prevTodo.map((task) =>
+        setjobs((prevjobs) =>
+          prevjobs.map((task) =>
             task._id === data.updatedTask._id ? data.updatedTask : task
           )
         );
       } else if (data.deletedTask) {
-        setTodo((prevTodo) =>
-          prevTodo.filter((task) => task._id !== data.deletedTask._id)
+        setjobs((prevjobs) =>
+          prevjobs.filter((task) => task._id !== data.deletedTask._id)
         );
       }
     });
@@ -58,7 +58,7 @@ const MainJobs = () => {
   }
 
   const handleEdit = (taskId) => {
-    const taskToEdit = todo.find((task) => task._id === taskId);
+    const taskToEdit = jobs.find((task) => task._id === taskId);
 
     setNewTask({
       jobTitle: taskToEdit.jobTitle,
@@ -81,8 +81,8 @@ const MainJobs = () => {
         );
 
         if (response.status === 200) {
-          setTodo((prevTodo) =>
-            prevTodo.map((task) =>
+          setjobs((prevjobs) =>
+            prevjobs.map((task) =>
               task._id === taskId ? { ...task, ...newTask } : task
             )
           );
@@ -108,7 +108,7 @@ const MainJobs = () => {
         );
 
         if (response.status === 201) {
-          setTodo((prevTodo) => [...prevTodo, response.data]);
+          setjobs((prevjobs) => [...prevjobs, response.data]);
           setNewTask({
             jobTitle: "",
             branch: "",
@@ -123,7 +123,7 @@ const MainJobs = () => {
         }
       }
     } catch (error) {
-      console.error("Error updating or adding task:", error);
+      console.error("Error to adding task:", error);
 
       if (error.response) {
         console.error("Error response from server:", error.response.data);
@@ -146,7 +146,7 @@ const MainJobs = () => {
       );
 
       if (response.status === 200) {
-        setTodo((prevTodo) => prevTodo.filter((task) => task._id !== taskId));
+        setjobs((prevjobs) => prevjobs.filter((task) => task._id !== taskId));
       } else {
         console.error("Failed to delete task:", response.statusText);
       }
@@ -163,7 +163,7 @@ const MainJobs = () => {
       );
 
       if (response.status === 201) {
-        setTodo((prevTodo) => [...prevTodo, response.data]);
+        setjobs((prevjobs) => [...prevjobs, response.data]);
         setNewTask({
           jobTitle: "",
           branch: "",
@@ -191,7 +191,7 @@ const MainJobs = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto my-8 p-6 bg-white rounded-md shadow-md">
+    <div className=" mx-auto my-8 p-6 bg-white rounded-md shadow-md">
       <div className="mx-4 md:mx-14 mt-10 border-2 border-blue-400 rounded-lg">
         <div className="mt-6 md:mt-10 text-center font-bold">Jobs</div>
         <div className="mt-3 text-center text-4xl font-bold">
@@ -265,32 +265,32 @@ const MainJobs = () => {
           </div>
         </div>
       </div>
-      {todo.length === 0 ? (
+      {jobs.length === 0 ? (
         <div>No Record</div>
       ) : (
-        <div className="max-w-full overflow-x-auto mt-4">
+        <div className="max-w-full overflow-x-auto mt-4 ">
           <table className="min-w-full divide-y divide-gray-200">
             <thead>
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
                   Job Title
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
                   Branch
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
                   Experience
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
                   Description
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
                   Action
                 </th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {todo
+              {jobs
                 .slice()
                 .reverse()
                 .map((task) => (
