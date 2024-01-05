@@ -145,7 +145,7 @@ const Header = () => {
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            How We Works {showHowItWorksDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
+            How We Work {showHowItWorksDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
           </span>
           {showHowItWorksDropdown && (
             <ul
@@ -161,7 +161,7 @@ const Header = () => {
                   }}
                   className="block px-4 py-2 text-gray-800  menu-link"
                 >
-                  How We Works
+                  How We Work
                 </Link>
               </li>
               <li>

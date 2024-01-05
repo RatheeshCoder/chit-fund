@@ -17,12 +17,13 @@ const StatsSection = () => {
     <section className=" p-4">
       <div className="container mx-auto pt-12 pb-20 ">
         <h1 className="text-4xl font-bold text-gray-800 text-center mb-8">
-          Welcome to my website
+        Welcome Segment
         </h1>
 
         <p className="text-gray-700 text-lg text-center mb-12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit
-          amet magna id ex hendrerit semper.
+        Your pathway to straightforward savings and brighter financial horizons. <br /> Join Vanmoh for a simplified approach to financial well-being!
+
+
         </p>
         <div className="grid bg-white grid-cols-1 md:grid-cols-6 gap-8 text-center">
           {renderStatBlock(user, "Subscribers", <NumberCounter />)}

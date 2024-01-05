@@ -42,10 +42,11 @@ const FaqSection = () => {
       <div className="mx-auto px-5">
         <div className="flex flex-col items-center">
           <h2 className="mt-20 text-center text-3xl font-bold tracking-tight md:text-5xl">
-            FAQ
+          ChitFund FAQs
           </h2>
-          <p className="mt-3 text-lg text-neutral-500 md:text-xl">
-            Frequently asked questions
+          <p className="mt-3 text-lg text-neutral-500 md:text-xl text-center">
+          Find answers to common queries about chitfunds. Our FAQs provide clarity on various aspects, ensuring you have the information needed to make informed decisions.
+
           </p>
         </div>
         <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">

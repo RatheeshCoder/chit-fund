@@ -1,4 +1,3 @@
-// SideTab.js
 
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ const SideTab = ({ options, contentData }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100 mb-20">
+    <div className="flex flex-col md:flex-row  mb-20 ">
       <div className="w-full md:w-1/4 p-4 text-black relative">
         {options.map((option) => (
           <div

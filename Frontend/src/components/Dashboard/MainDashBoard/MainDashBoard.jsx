@@ -47,6 +47,12 @@ const MainDashBoard = () => {
           >
             Add Branch
           </Link>
+          <Link
+            to="/MainDashBoard/DashBoard/AddProducts"
+            className="bg-blue-600 w-full sm:w-40 py-4 rounded-lg text-white hover:bg-blue-700 shadow-lg"
+          >
+            Add Products
+          </Link>
         </div>
       </div>
     </div>
