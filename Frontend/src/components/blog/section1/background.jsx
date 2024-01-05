@@ -15,11 +15,10 @@ const Background = () => {
 
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
         <h1 className="text-5xl font-bold leading-tight mb-4">
-          Savings & Chit funds
+        Maximize Chit Gains
         </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          {" "}
-          A fantastic synergy!! Below is the solution!
+        <p className="text-lg text-gray-300 mb-8 lg:w-1/2 sm:w-full">
+        Dive into insightful blogs covering financial tips, success stories, and chitfund wisdom. Enhance your understanding and maximize your chitfund experience.
         </p>
       </div>
     </div>

@@ -38,10 +38,10 @@ const Carousel = () => {
           >
             <img
               src={item.imageUrl}
-              className="absolute block h-full object-contain"
+              className="absolute block h-full cta-home-img object-contain"
               alt={`Slide ${index + 1}`}
             />
-            <div className="absolute inset-0 bg-black opacity-50 w-full h-96 md:h-80 lg:h-96 xl:h-96"></div>
+            <div className="absolute inset-0 bg-black opacity-50  h-96 md:h-80 lg:h-96 xl:h-96"></div>
           </div>
         ))}
       </div>

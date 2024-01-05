@@ -28,6 +28,7 @@ import Login from './components/Login/Login';
 import MainJobs from './components/Dashboard/AddJob/MainJobs';
 import BranchList from './components/Dashboard/AddBranch/Branch';
 import MainDashBoard from './components/Dashboard/MainDashBoard/MainDashBoard';
+import Products from './components/Dashboard/AddProducts/Products';
 
 
 
@@ -47,6 +48,8 @@ function App() {
           <Route path="/MainDashBoard" element={<MainDashBoard />} />
           <Route path="/MainDashBoard/DashBoard/AddJobs" element={<MainJobs />} />
           <Route path="/MainDashBoard/DashBoard/AddBranch" element={<BranchList />} />
+          <Route path="/MainDashBoard/DashBoard/AddProducts" element={<Products />} />
+
 
           <Route path="/Products/Product" element={<Product />} />
           <Route path="/Products/Services" element={<ServiesMain />} />

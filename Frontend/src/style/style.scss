@@ -97,11 +97,11 @@ nav {
 
 @media screen and (max-width: 1024px) {
   .nav-links {
-    width: 60%;
+    width: 80%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   body {
     overflow-x: hidden;
   }
@@ -3896,4 +3896,10 @@ table {
   width: 100% !important;
   object-fit: contain;
   
+}
+
+
+.cta-home-img{
+  width: 100wh;
+  text-align: center;
 }

@@ -814,24 +814,24 @@ export const BranchData = [
 // FAQs data
 export const faqsList = [
   {
-    q: "What are some random questions to ask?",
-    a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question."
+    q: "What is a chitfund, and how does it work at Vanmoh ?",
+    a: "  Vanmoh Chitfunds operates as a community-driven savings platform. Participants contribute a fixed amount monthly, and one member receives the total sum through a monthly auction."
   },
   {
-    q: "Do you include common questions?",
-    a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator."
+    q: " How can I join a chitfund group at Vanmoh?",
+    a: " Joining is easy! Simply register on our platform, explore available chitfund groups, and choose one that aligns with your financial goals. Follow the on-screen instructions to become a member.    "
   },
   {
-    q: "Can I use this for 21 questions?",
-    a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated."
+    q: "What are the benefits of joining a chitfund at Vanmoh?    ",
+    a: "Enjoy high returns, transparent processes, and a community-driven approach. Vanmoh Chitfunds provide a platform for financial growth, flexibility, and exciting monthly rewards.    "
   },
   {
-    q: "Are these questions for girls or for boys?",
-    a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with)."
+    q: " Can I participate in more than one chitfund group simultaneously?    ",
+    a: "Yes, you can! Vanmoh allows participants to join multiple chitfund groups based on their preferences and financial capacities.    "
   },
   {
-    q: "What do you wish you had more talent doing?",
-    a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
+    q: "How are the auction winners determined?    ",
+    a: "Winners are selected through a transparent lucky draw system during the monthly auction. Every participant has an equal chance to receive the prize amount.    "
   },
 ]
 
@@ -1048,70 +1048,46 @@ export const CarouselImg = [
 
 // data.js
 
-export const Benefitoptions = ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'];
+export const Benefitoptions = ['Unity in Savings', 'Crystal Clear Processes', 'Tailored to You', 'Luck is Fair', 'Guidance Beyond Savings'];
 
 export const Benefitcontent = {
-  'Option 1': {
+  'Unity in Savings': {
     image: gallerystart1,
     data: [
       {
-        id: 1, title: `If you’ve ever signed up for a complex SaaS product, there’s a good chance you’ve seen demo content without realizing it.
-
-      SaaS businesses use demo content because they know that it’s incredibly demoralizing for customers to get excited about using a new product, only to find that there’s no existing data on the site that would lead them to understand the value of the product faster.
-      
-      The value of demo content is perhaps most apparent for early-stage SaaS products with few users, or for products where the value is directly correlated with the presence of other users, such as a social network.` },
+        id: 1, title: ` Vanmoh Chitfunds brings people together for shared financial growth. Your savings journey becomes a community effort, where everyone benefits from collective prosperity` },
 
     ],
   },
-  'Option 2': {
+  'Crystal Clear Processes': {
     image: gallerystart2,
     data: [
       {
-        id: 2, title: `What demo content and templates have in common is that both are used to fill so-called “empty states.”
-
-      In UX design, an empty state is the blank screen users experience when signing up for a new product. The user has no friends on the platform, and no history of activity, so there’s just nothing there for them to see.
-      
-      It doesn’t take a genius to realize that this is a depressing state of affairs for a new user.
-      
-      Imagine that you’ve spent ages looking for a new project management tool to supercharge the team you’re leading. You’ve read all the reviews, talked to industry leaders, and are ready to make your decision.` },
+        id: 2, title: ` No hidden tricks here! Vanmoh is all about clear and simple processes. Your savings are handled transparently, ensuring you always know where your money is and how it's working for you` },
 
     ],
   },
-  'Option 3': {
+  'Tailored to You': {
     image: gallerystart3,
     data: [
       {
-        id: 3, title: `I’ve seen several businesses deal with the problem of empty states by showing their excited new users messages like “You haven’t set up any projects yet.” Or, worse yet, “You don’t have any friends.”
-
-      Although well-intentioned, these messages don’t help the user get started with your product. All they achieve is to highlight the user’s solitude in a rather demeaning way.
-      
-      Sounds like a recipe for churn.
-      
-      But in every problem lies an opportunity. And in this case, an empty state is a chance to show customers what life on your product could be like — if they were using it to its full potential.` },
+        id: 3, title: `Your savings, your way. Vanmoh understands that one size doesn't fit all. We offer flexible savings options designed to suit your unique financial goals and preferences` },
 
     ],
   },
-  'Option 4': {
+  'Luck is Fair': {
     image: gallerystart5,
     data: [
       {
-        id: 4, title: `Showing users templates that they can fill in is one way to solve this problem. This is how the marketing automation tool Autopilot doubled their product activation rate: by replacing empty states with customer journey templates. You can read more about Autopilot’s story here.
-
-      Showing users demo content is an equally valid solution. It’s a smart way to capture your users’ imagination and have them think about what their product experience might look like a few months from now.
-      
-      Ideally, you’ll use their answers to your onboarding survey and welcome screen to sort them into a customer segment, and then show them demo content that is specific to that segment’s individual use case.`},
+        id: 4, title: `In Vanmoh Chitfunds, luck is impartial. Our lucky draw system ensures everyone has an equal chance to be rewarded. It's a fair game where every participant stands a shot at success.`},
 
     ],
   },
-  'Option 5': {
+  'Guidance Beyond Savings': {
     image: gallerystart6,
     data: [
       {
-        id: 5, title: `It’s great if your demo content is relevant to your user’s individual use case. Many SaaS companies don’t go as far as to personalize their demo content by use case, so you’ll set yourself apart if you do it.
-
-      But it’s even better if your demo content actively teaches your user how to get the most out of your product, step by step. This is sometimes referred to as the “content-as-tutorial” approach.
-      
-      A company that uses the “content-as-tutorial” approach exceptionally well is Todoist.` },
+        id: 5, title: ` Vanmoh is not just about chitfunds; it's about your financial well-being. We offer personalized guidance to empower you on your journey, making sure you have the support you need to achieve your financial dreams` },
 
     ],
   },
