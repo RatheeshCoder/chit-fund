@@ -72,8 +72,8 @@ function Footer2() {
   ];
 
   return (
-    <footer className=" footer2 text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
-      <div className="gap-6 justify-between md:flex">
+    <footer className="max-w-screen-xl px-4 py-5 mx-auto text-gray-500 bg-white footer2 md:px-8">
+      <div className="justify-between gap-6 md:flex">
         <div className="flex-1">
           <div className="max-w-xs">
             <img src={logo} className="w-40" />
@@ -83,17 +83,17 @@ function Footer2() {
             </p>
           </div>
           <div className="mt-4">
-            <p className="text-gray-800 font-medium">Contact Information</p>
-            <p>123 Street, City, Country</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Email: info@example.com</p>
+            <p className="font-medium text-gray-800">Contact Information</p>
+            <p>1437, Ground floor red rose chambers  trichy road <br /> Coimbatore-641018</p>
+            <p>Phone: +91 93618 05480</p>
+            <p>Email: reach@vanmohchitfunds.com</p>
           </div>
         </div>
-        <div className="flex-1 mt-10 space-y-6 justify-between sm:flex md:space-y-0 md:mt-0">
+        <div className="justify-between flex-1 mt-10 space-y-6 sm:flex md:space-y-0 md:mt-0">
           <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-20 gap-y-4 md:grid-cols-3">
             {footerNavs.map((item, idx) => (
               <div className="space-y-4" key={idx}>
-                <h4 className="text-gray-800 font-medium">{item.label}</h4>
+                <h4 className="font-medium text-gray-800">{item.label}</h4>
                 {item.items.map((el, idx) => (
                   <a
                     key={idx}
@@ -108,31 +108,31 @@ function Footer2() {
           </div>
         </div>
       </div>
-      <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
+      <div className="items-center justify-between py-6 mt-8 border-t sm:flex">
         <div className="mt-4 sm:mt-0">
           &copy; ©2023. Vanmoh chit funds Pvt.Ltd, All Rights Reserved.
         </div>
         <div className="mt-6 sm:mt-0">
           <ul className="flex items-center space-x-4">
-            <li className="w-10 h-10 border rounded-full flex items-center justify-center">
+            <li className="flex items-center justify-center w-10 h-10 border rounded-full">
               <a href="javascript:void()">
                 <Facebook/>
               </a>
             </li>
 
-            <li className="w-10 h-10 border rounded-full flex items-center justify-center">
+            <li className="flex items-center justify-center w-10 h-10 border rounded-full">
               <a href="javascript:void()">
                 <Instagram/>
               </a>
             </li>
 
-            <li className="w-10 h-10 border rounded-full flex items-center justify-center">
+            <li className="flex items-center justify-center w-10 h-10 border rounded-full">
               <a href="javascript:void()">
                 <WhatsApp/>
               </a>
             </li>
 
-            <li className="w-10 h-10 border rounded-full flex items-center justify-center">
+            <li className="flex items-center justify-center w-10 h-10 border rounded-full">
               <a href="javascript:void()">
                 <LinkedIn/>
               </a>
