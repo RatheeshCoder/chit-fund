@@ -3,6 +3,8 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../Auth/AuthContext";
 
+import { API_BASE_URL,WEBSOCKET_URL } from "../apiConfig";
+
 const MainBranches = () => {
   const { isAuthenticated } = useAuth();
 
@@ -19,7 +21,7 @@ const MainBranches = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3002/branches/get");
+        const response = await fetch(`${API_BASE_URL}/branches/get`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -56,7 +58,7 @@ const MainBranches = () => {
       if (formMode === "edit") {
         // Update existing branch
         const response = await axios.put(
-          `http://localhost:3002/branches/update/${branchId}`,
+          `${API_BASE_URL}/branches/update/${branchId}`,
           newBranch
         );
 
@@ -83,7 +85,7 @@ const MainBranches = () => {
       } else {
         // Add new branch
         const response = await axios.post(
-          "http://localhost:3002/branches/add",
+          `${API_BASE_URL}/branches/add`,
           newBranch
         );
 
@@ -119,7 +121,7 @@ const MainBranches = () => {
   const handleDelete = async (branchId) => {
     try {
       const response = await fetch(
-        `http://localhost:3002/branches/delete/${branchId}`,
+        `${API_BASE_URL}/branches/delete/${branchId}`,
         {
           method: "DELETE",
         }
@@ -140,7 +142,7 @@ const MainBranches = () => {
   const addBranch = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3002/branches/add",
+        `${API_BASE_URL}/branches/add`,
         newBranch
       );
 
@@ -173,7 +175,7 @@ const MainBranches = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto my-8 p-6 bg-white rounded-md shadow-md">
+    <div className="mx-auto my-8 p-6 bg-white rounded-md shadow-md">
       <div className="mx-4 md:mx-14 mt-10 border-2 border-blue-400 rounded-lg">
         <div className="mt-6 md:mt-10 text-center font-bold">Branches</div>
         <div className="mt-3 text-center text-4xl font-bold">
@@ -248,8 +250,8 @@ const MainBranches = () => {
       {branches.length === 0 ? (
         <div>No Record</div>
       ) : (
-        <div className="max-w-full overflow-x-auto mt-4">
-          <table className="min-w-full divide-y divide-gray-200">
+        <div className="w-full overflow-x-auto mt-4">
+          <table className="w-full divide-y divide-gray-200">
             <thead>
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -261,9 +263,7 @@ const MainBranches = () => {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Google Map
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Description
-                </th>
+               
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Action
                 </th>

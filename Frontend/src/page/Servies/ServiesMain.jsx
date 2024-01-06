@@ -4,7 +4,7 @@ import Monthly from '../../components/Servies/Section2/Monthly'
 import Online from '../../components/Servies/Section3/Online'
 import Diverse from '../../components/Servies/Section4/Diverse'
 import TitleHero from '../../components/Servies/ServicesHero/TitleHero'
-import ImageServies from '../../components/Servies/Section5/gallery'
+// import ImageServies from '../../components/Servies/Section5/gallery'
 const ServiesMain = () => {
   return (
     <div>
@@ -13,7 +13,7 @@ const ServiesMain = () => {
       <Monthly/>
       <Online/>
       <Diverse/>
-      <ImageServies/>
+      {/* <ImageServies/> */}
     </div>
   )
 }

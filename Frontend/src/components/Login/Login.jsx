@@ -4,6 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Auth/AuthContext";
 
+import { API_BASE_URL } from "../Dashboard/apiConfig";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +16,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3002/users/login", { email, password })
+      .post(`${API_BASE_URL}/users/login`, { email, password })
       .then((result) => {
         if (result.data.message === "Success") {
           login();

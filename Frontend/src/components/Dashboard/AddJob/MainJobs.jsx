@@ -3,6 +3,8 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../Auth/AuthContext";
 
+import { API_BASE_URL,WEBSOCKET_URL } from "../apiConfig";
+
 const MainJobs = () => {
   const { isAuthenticated } = useAuth();
 
@@ -16,10 +18,11 @@ const MainJobs = () => {
   const [formMode, setFormMode] = useState("add"); // 'add' or 'edit'
   const [taskId, setTaskId] = useState(null); // Added taskId state
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3002/jobs/get");
+        const response = await fetch(`${API_BASE_URL}/jobs/get`);
         const result = await response.json();
         setjobs(result);
       } catch (error) {
@@ -29,7 +32,7 @@ const MainJobs = () => {
 
     fetchData();
 
-    const socket = new WebSocket("ws://localhost:3002");
+    const socket = new WebSocket(WEBSOCKET_URL);
     socket.addEventListener("message", (event) => {
       const data = JSON.parse(event.data);
 
@@ -76,7 +79,7 @@ const MainJobs = () => {
       if (formMode === "edit") {
         // Update existing task
         const response = await axios.put(
-          `http://localhost:3002/jobs/update/${taskId}`,
+          `${API_BASE_URL}/jobs/update/${taskId}`,
           newTask
         );
 
@@ -103,7 +106,7 @@ const MainJobs = () => {
       } else {
         // Add new task
         const response = await axios.post(
-          "http://localhost:3002/jobs/add",
+          `${API_BASE_URL}/jobs/add`,
           newTask
         );
 
@@ -139,7 +142,7 @@ const MainJobs = () => {
   const handleDelete = async (taskId) => {
     try {
       const response = await fetch(
-        `http://localhost:3002/jobs/delete/${taskId}`,
+        `${API_BASE_URL}/jobs/delete/${taskId}`,
         {
           method: "DELETE",
         }
@@ -158,7 +161,7 @@ const MainJobs = () => {
   const addTask = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3002/jobs/add",
+        `${API_BASE_URL}/jobs/add`,
         newTask
       );
 
