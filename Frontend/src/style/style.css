@@ -3059,4 +3059,13 @@ table td:first-child {
 
 .half-img {
   height: 50vh;
+}
+
+.cta-dropdown-option {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.cta-team-top {
+  margin-top: 20%;
 }/*# sourceMappingURL=style.css.map */

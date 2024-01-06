@@ -4,8 +4,8 @@ import { teamData } from "../../../data/data";
 
 const Team = () => {
   return (
-    <div className="p-10 max-w-screen-lg  mx-auto">
-      <div className="sm:grid grid-cols-2 gap-6 my-10">
+    <div className="max-w-screen-lg p-10 mx-auto ">
+      <div className="flex flex-col gap-7">
         {teamData.map((member) => (
           <TeamMember key={member.id} member={member} />
         ))}

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
@@ -8,54 +7,45 @@ const SideTab = ({ options, contentData }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
   return (
-    <div className="flex flex-col md:flex-row  mb-20 ">
-      <div className="w-full md:w-1/4 p-4 text-black relative">
+    <div className="flex flex-col mb-20 md:flex-row ">
+      <div className="relative w-full p-4 text-black md:w-1/4">
         {options.map((option) => (
           <div
-          key={option}
-          className={`p-2 cursor-pointer relative  ${
-            selectedOption === option
-              ? 'bg-gray-200 text-black'
-              : 'hover:bg-[#0c52a6] hover:text-white'
-          }`}
-          onClick={() => setSelectedOption(option)}
-        >
-          {option}
-          {selectedOption === option && (
-          <div
-          className="absolute top-0 left-0 border-l-4 border-[#0c52a6]"
-          style={{ width: '4px' }}
-        />
-        
-          )}
-        </div>
+            key={option}
+            className={`p-2 cursor-pointer relative  ${
+              selectedOption === option
+                ? 'bg-gray-200 text-black border-l-4 border-[#0c52a6]'
+                : 'hover:bg-[#0c52a6] hover:text-white'
+            }`}
+            onClick={() => setSelectedOption(option)}
+          >
+            {option}
+          </div>
         ))}
       </div>
 
-      <div className="flex-1 relative   p-0">
+      <div className="relative flex-1 p-0">
         <div
-          className="absolute left-0 top-0 h-full w-full bg-cover bg-center"
+          className="absolute top-0 left-0 w-full h-full bg-center bg-cover"
           style={{
             backgroundImage: `url('${contentData[selectedOption].image}')`,
           }}
         />
-        <div className="relative z-10 text-white h-full cta-half-effect">
-          <h2 className="text-2xl font-bold mb-4">{selectedOption}</h2>
+        <div className="relative z-10 h-full text-white cta-half-effect">
+          <h2 className="mb-4 text-2xl font-bold">{selectedOption}</h2>
           {contentData[selectedOption].data.map((item) => (
             <div key={item.id} className="mb-2 ">
               {item.title}
             </div>
-
-            
           ))}
-          <div className=" mt-10">
-        <Link
-          to="/Product"
-          className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500 hover:bg-white hover:text-black focus:outline-none focus:ring "
-        >
-          Know More
-        </Link>
-      </div>
+          <div className="mt-10">
+            <Link
+              to="/Product"
+              className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500 hover:bg-white hover:text-black focus:outline-none focus:ring "
+            >
+              Know More
+            </Link>
+          </div>
         </div>
       </div>
     </div>
