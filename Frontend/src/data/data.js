@@ -976,7 +976,7 @@ export const teamData = [
     name: 'Kannan Mohan',
     role: 'Managing Director',
     description: `"My goal is to make Vanmoh Chitfunds a trusted partner in your chitfund journey, ensuring 
-    simplicity and prosperity for every subscriber." - Kannan Mohan `,
+    simplicity and prosperity for every subscriber."  `,
     image: 'https://images.pexels.com/photos/3785084/pexels-photo-3785084.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 
 
@@ -986,7 +986,7 @@ export const teamData = [
     name: 'Vanitha Mohan',
     role: 'Chairman',
     description: `"As Chairman, my commitment is to uphold the values that define Vanmoh Chitfunds -
-    transparency, integrity, and dedication to your chitfund success." - Vanitha Mohan `,
+    transparency, integrity, and dedication to your chitfund success."  `,
     image: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 
 

@@ -52,7 +52,7 @@ const Header = () => {
               toggleNav();
               closeNavbar();
             }}
-            className="menu-link font-bold"
+            className="font-bold menu-link"
           >
             Home
           </Link>
@@ -70,11 +70,11 @@ const Header = () => {
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            About Us {showAboutDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
+            About Us {showAboutDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50 " /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
           </span>
           {showAboutDropdown && (
             <ul
-              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2`}
+              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2 cta-dropdown-option`}
             >
               <li>
                 <Link
@@ -84,7 +84,7 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
                   Why choose us
                 </Link>
@@ -97,9 +97,9 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
-                  CompanyProfile
+                  Company Profile
                 </Link>
               </li>
               <li>
@@ -110,7 +110,7 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
                   Directors
                 </Link>
@@ -123,7 +123,7 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
                   Values
                 </Link>
@@ -145,11 +145,11 @@ const Header = () => {
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            How We Work {showHowItWorksDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
+            How We Work {showHowItWorksDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50" /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
           </span>
           {showHowItWorksDropdown && (
             <ul
-              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2`}
+              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2 cta-dropdown-option`}
             >
                <li>
                 <Link
@@ -159,9 +159,9 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
-                  How We Work
+                  All About Chits
                 </Link>
               </li>
               <li>
@@ -172,7 +172,7 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
                   Blogs
                 </Link>
@@ -185,9 +185,9 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
-                  Comparisons
+                  ChitFund Act
                 </Link>
               </li>
               <li>
@@ -198,7 +198,7 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
                   FAQ
                 </Link>
@@ -229,11 +229,11 @@ const Header = () => {
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            Products {showProductDropdown ? <img src={closearrow} alt="Open" className="w-5 " /> : <img src={openarrow} alt="Closed" className="w-5"/>}
+            Products {showProductDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50 " /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
           </span>
           {showProductDropdown && (
             <ul
-              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2`}
+              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2 cta-dropdown-option`}
             >
               <li>
                 <Link
@@ -243,7 +243,7 @@ const Header = () => {
                     toggleProductDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
                   Services
                 </Link>
@@ -256,7 +256,7 @@ const Header = () => {
                     toggleProductDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800  menu-link"
+                  className="block px-4 py-2 text-gray-800 menu-link"
                 >
                   Schemes
                 </Link>
