@@ -1,65 +1,37 @@
-import React, { useEffect, useState } from "react";
+
+import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import { gallaryImg } from "../../../data/data";
 
 const Background = () => {
-  const [current, setCurrent] = useState(0);
-
-  const reset = () => {
-    const sliderImages = document.querySelectorAll(".slide");
-    sliderImages.forEach((image) => {
-      image.style.display = "none";
-    });
-  };
-
-  const startSlide = () => {
-    reset();
-    const sliderImages = document.querySelectorAll(".slide");
-    sliderImages[0].style.display = "block";
-  };
-
-  const slideNext = () => {
-    reset();
-    const sliderImages = document.querySelectorAll(".slide");
-    const nextIndex = (current + 1) % sliderImages.length;
-    sliderImages[nextIndex].style.display = "block";
-    setCurrent(nextIndex);
-  };
+  const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(slideNext, 3000);
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % gallaryImg.length);
+    }, 5000);
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [current]);
-
-  useEffect(() => {
-    startSlide();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="wrap">
-      <div id="slider">
-        {gallaryImg.map((img, index) => (
-          <div
-            key={img.id}
-            className={`slide slide${index + 1}`}
-            style={{
-              display: index === current ? "block" : "none",
-              textAlign: "center",
-            }}
-          >
-            <div className="slide-content" style={{ display: "inline-block" }}>
-              <img
-                src={img.url}
-                alt={`Image ${index + 1}`}
-                style={{ height: "50vh", width: "100%", objectFit: "cover" }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="relative mt-20 half-img"> 
+      {gallaryImg.map((image, index) => (
+        <CSSTransition
+          key={index}
+          in={index === currentImage}
+          timeout={1000}
+          classNames="fade"
+          unmountOnExit
+        >
+          <img
+             className="absolute top-0 left-0 object-cover w-full h-full" 
+             style={{ top: index === currentImage ? '0' : '-100%' }} // Adjust top property
+             src={image.url}
+             alt={`Slider ${index + 1}`}
+          />
+        </CSSTransition>
+      ))}
     </div>
   );
 };

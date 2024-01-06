@@ -48,16 +48,13 @@ import blogimg1 from '../asset/imgs/Case Study Education_.jpg'
 import blogimg2 from '../asset/imgs/Case Study Own Vehicle_.webp'
 import blogimg3 from '../asset/imgs/Case Study Insurance_.jpg'
 
+import BenefitImg1 from '../asset/imgs/BenefitImg (1).jpg'
+import BenefitImg2 from '../asset/imgs/BenefitImg (4).jpg'
+import BenefitImg3 from '../asset/imgs/BenefitImg (3).jpg'
+import BenefitImg4 from '../asset/imgs/BenefitImg (2).jpg'
+import BenefitImg5 from '../asset/imgs/BenefitImg (5).jpg'
 
 
-import gallerystart1 from '../asset/imgs/galleryImg (1).jpg'
-import gallerystart2 from '../asset/imgs/galleryImg (2).jpg'
-import gallerystart3 from '../asset/imgs/galleryImg (3).jpg'
-import gallerystart4 from '../asset/imgs/galleryImg (4).jpg'
-import gallerystart5 from '../asset/imgs/galleryImg (5).jpg'
-import gallerystart6 from '../asset/imgs/galleryImg (6).jpg'
-import gallerystart7 from '../asset/imgs/galleryImg (7).jpg'
-import gallerystart8 from '../asset/imgs/galleryImg (8).jpg'
 
 
 import growcardimg from '../asset/imgs/grow-growth-hand-svgrepo-com.svg'
@@ -74,18 +71,31 @@ import FeaturesSection from '../components/AboutUs/Values/FeaturesSection'
 import { carousel } from '@material-tailwind/react'
 
 
+import galleryhero1 from '../asset/imgs/gallery/3-year (1).jpg'
+import galleryhero2 from '../asset/imgs/gallery/3-year (11).jpg'
+import galleryhero3 from '../asset/imgs/gallery/3-year (5).jpg'
+import galleryhero4 from '../asset/imgs/gallery/3-year (8).jpg'
+import galleryhero5 from '../asset/imgs/gallery/Customer meetups 1.jpg'
+import galleryhero6 from '../asset/imgs/gallery/Customer meetups 6.jpg'
+import galleryhero7 from '../asset/imgs/gallery/Pongal Celebrations 1.jpg'
+import galleryhero8 from '../asset/imgs/gallery/Pongal Celebrations 7.jpg'
+import galleryhero9 from '../asset/imgs/gallery/Pongal Celebrations 4.jpg'
+import galleryhero10 from '../asset/imgs/gallery/Pongal Celebrations 8.jpg'
+
 // Gallery start data
 
 export const gallaryImg = [
 
-  { id: 1, url: gallerystart1 },
-  { id: 2, url: gallerystart2 },
-  { id: 3, url: gallerystart3 },
-  { id: 4, url: gallerystart4 },
-  { id: 5, url: gallerystart5 },
-  { id: 6, url: gallerystart6 },
-  { id: 7, url: gallerystart7 },
-  { id: 8, url: gallerystart8 },
+  { id: 1, url:galleryhero1 },
+  { id: 2, url: galleryhero2 },
+  { id: 3, url: galleryhero3 },
+  { id: 4, url: galleryhero4 },
+  { id: 5, url: galleryhero5 },
+  { id: 6, url: galleryhero6},
+  { id: 7, url: galleryhero7 },
+  { id: 8, url: galleryhero8 },
+  { id: 9, url: galleryhero9 },
+  { id: 10, url: galleryhero10 },
 ]
 
 
@@ -1052,7 +1062,7 @@ export const Benefitoptions = ['Unity in Savings', 'Crystal Clear Processes', 'T
 
 export const Benefitcontent = {
   'Unity in Savings': {
-    image: gallerystart1,
+    image: BenefitImg1,
     data: [
       {
         id: 1, title: ` Vanmoh Chitfunds brings people together for shared financial growth. Your savings journey becomes a community effort, where everyone benefits from collective prosperity` },
@@ -1060,7 +1070,7 @@ export const Benefitcontent = {
     ],
   },
   'Crystal Clear Processes': {
-    image: gallerystart2,
+    image: BenefitImg2,
     data: [
       {
         id: 2, title: ` No hidden tricks here! Vanmoh is all about clear and simple processes. Your savings are handled transparently, ensuring you always know where your money is and how it's working for you` },
@@ -1068,7 +1078,7 @@ export const Benefitcontent = {
     ],
   },
   'Tailored to You': {
-    image: gallerystart3,
+    image: BenefitImg3,
     data: [
       {
         id: 3, title: `Your savings, your way. Vanmoh understands that one size doesn't fit all. We offer flexible savings options designed to suit your unique financial goals and preferences` },
@@ -1076,7 +1086,7 @@ export const Benefitcontent = {
     ],
   },
   'Luck is Fair': {
-    image: gallerystart5,
+    image: BenefitImg4,
     data: [
       {
         id: 4, title: `In Vanmoh Chitfunds, luck is impartial. Our lucky draw system ensures everyone has an equal chance to be rewarded. It's a fair game where every participant stands a shot at success.`},
@@ -1084,7 +1094,7 @@ export const Benefitcontent = {
     ],
   },
   'Guidance Beyond Savings': {
-    image: gallerystart6,
+    image: BenefitImg5,
     data: [
       {
         id: 5, title: ` Vanmoh is not just about chitfunds; it's about your financial well-being. We offer personalized guidance to empower you on your journey, making sure you have the support you need to achieve your financial dreams` },
