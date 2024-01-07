@@ -70,12 +70,12 @@ const Header = () => {
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            About Us {showAboutDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50 " /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
+            About Us &nbsp; {showAboutDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50" /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
           </span>
           {showAboutDropdown && (
             <ul
-              className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2 cta-dropdown-option`}
-            >
+            className={`dropdown absolute hidden bg-white border rounded-md mt-4 p-2 cta-dropdown-option ${showAboutDropdown ? 'dropdown' : ''}`}
+>
               <li>
                 <Link
                   to="/about/CompanyPro"
@@ -145,7 +145,7 @@ const Header = () => {
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            How We Work {showHowItWorksDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50" /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
+            How We Work &nbsp; {showHowItWorksDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50" /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
           </span>
           {showHowItWorksDropdown && (
             <ul
@@ -229,7 +229,7 @@ const Header = () => {
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            Products {showProductDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50 " /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
+            Products&nbsp; {showProductDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50 " /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
           </span>
           {showProductDropdown && (
             <ul

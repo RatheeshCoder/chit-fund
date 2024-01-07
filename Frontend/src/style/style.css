@@ -3068,4 +3068,17 @@ table td:first-child {
 
 .cta-team-top {
   margin-top: 20%;
+}
+
+/* Add this to your existing CSS file or component */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.dropdown {
+  animation: zoomIn 0.3s ease-out;
 }/*# sourceMappingURL=style.css.map */
