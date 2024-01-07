@@ -3,7 +3,7 @@ import { CompanyProfiles } from "../../../data/data";
 
 const CompanyProfile = () => {
   return (
-    <div className="text-center p-8">
+    <div className="p-8 text-center">
       {CompanyProfiles.map((item, index) => (
         <div
           key={item.id}
@@ -11,18 +11,18 @@ const CompanyProfile = () => {
             index % 2 === 0 ? "" : "md:flex-row-reverse"
           }`}
         >
-          <div className="w-full md:w-3/5 lg:w-1/2 px-4">
-            <img
+          <div className="w-full px-4 md:w-3/5 lg:w-1/2">
+            <img data-aos="zoom-in-left"
               src={item.imageUrl}
               alt={item.title}
-              className="inline-block rounded shadow-lg border border-merino-400"
+              className="inline-block border rounded shadow-lg border-merino-400"
             />
           </div>
-          <div className="w-full md:w-2/5 lg:w-1/2 px-4 text-center md:text-left lg:pl-12">
-            <h3 className="font-bold mt-8 text-xl md:mt-0 sm:text-2xl">
+          <div  data-aos="zoom-in-right"  className="w-full px-4 text-center md:w-2/5 lg:w-1/2 md:text-left lg:pl-12">
+            <h3 className="mt-8 text-xl font-bold md:mt-0 sm:text-2xl">
               {item.title}
             </h3>
-            <p className="sm:text-lg mt-6">{item.content}</p>
+            <p className="mt-6 sm:text-lg">{item.content}</p>
           </div>
         </div>
       ))}

@@ -3,12 +3,12 @@ import { ComparisonsCards } from "../../../data/data";
 
 const CardComponent = () => {
   return (
-    <div className="-mx-4 flex flex-wrap p-8">
+    <div className="flex flex-wrap p-8 -mx-4">
       {ComparisonsCards.map((card) => (
         <div key={card.id} className="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div className="bg-white rounded-lg overflow-hidden shadow-md mb-4">
+          <div data-aos="fade-up"   data-aos-anchor-placement="bottom-bottom"className="mb-4 overflow-hidden bg-white rounded-lg shadow-md">
             <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{card.title}</h2>
+              <h2 className="mb-2 text-xl font-semibold">{card.title}</h2>
               <p className="text-gray-600">{card.description}</p>
             </div>
           </div>

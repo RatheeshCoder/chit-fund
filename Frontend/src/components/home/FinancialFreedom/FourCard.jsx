@@ -7,7 +7,7 @@ const FourCard = () => {
     <>
       <div className="relative grid grid-cols-1 gap-10 px-10 py-6 overflow-hidden md:grid-cols-2 lg:grid-cols-4 sm:py-12 cta-four-card">
         {FourCards.map((section, index) => (
-          <div
+          <div data-aos="flip-right"
             key={index}
             className="relative justify-around px-6 pt-10 pb-8 overflow-hidden transition-all duration-300 bg-white shadow-xl cursor-pointer group ring-1 ring-gray-900/5 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10 "
           >
