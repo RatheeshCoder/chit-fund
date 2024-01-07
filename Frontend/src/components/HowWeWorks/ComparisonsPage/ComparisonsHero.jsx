@@ -5,13 +5,13 @@ import img from '../../../asset/imgs/NewImg (9).jpg'
 const ComparisonsHero = () => {
   return (
 
-    <section className="md:mt-60 lg:mt-40 max-w-7xl  px-4 sm:px-6 lg:px-8">
-      <div className="my-10 mt-40  max-w-7xl px-4 sm:mt-20 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
+    <section className="px-4  max-w-7xl sm:px-6 lg:px-8">
+      <div className="flex flex-col gap-3 px-4 my-10 mt-40 max-w-7xl sm:mt-20 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 lg:flex-justify lg:flex lg:flex-row">
 
         <div className="sm:text-center lg:text-left">
-          <h1 className="lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight">
+          <h1 className="text-4xl font-bold tracking-tight lg:text-7xl md:text-5xl">
             <span className="block xl:inline">Knowledge fuels financial </span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900  xl:inline">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 xl:inline">
               success journey
             </span>
           </h1>
@@ -21,7 +21,7 @@ const ComparisonsHero = () => {
             savings.
           </p>
           <div className="mt-5 sm:mt-8 ">
-            <div className=" mt-10">
+            <div className="mt-10 ">
         <Link
           to="/Product"
           className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring "
@@ -31,9 +31,9 @@ const ComparisonsHero = () => {
       </div>
           </div>
         </div>
-        <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 my-4">
+        <div className="my-4 lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={img}
             alt=""
           />
