@@ -31,7 +31,7 @@ const ChitAct = () => {
           </div>
         </div>
       </div>
-      <img data-aos="fade-left"
+      <img data-aos="fade-right"
         src={img}
         alt="Leafs"
         className="object-cover w-full sm:h-screen sm:w-4/12"

@@ -34,7 +34,7 @@ const DoorstepHero = () => {
             </Link>
           </div>
         </div>
-        <div data-aos="fade-left" className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
+        <div data-aos="fade-right" className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
           <img
             className="object-cover object-center rounded"
             alt="hero"

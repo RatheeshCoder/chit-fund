@@ -8,7 +8,7 @@ const VisionSection = () => {
     <section  className="py-16 bg-gray-100" style={{ marginTop: "-100px" }}>
       <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
-          <div  data-aos="flip-left" className="flex flex-col items-center p-4 border">
+          <div  className="flex flex-col items-center p-4 border">
             <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#0c52a6] text-white">
               <PhoneIcon className="w-6 h-6" />
             </div>
@@ -20,7 +20,7 @@ const VisionSection = () => {
               </p>
             </div>
           </div>
-          <div data-aos="flip-left" className="flex flex-col items-center p-4 border">
+          <div className="flex flex-col items-center p-4 border">
             <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#0c52a6] text-white">
               <MailOutlineIcon className="w-6 h-6" />
             </div>
@@ -31,7 +31,7 @@ const VisionSection = () => {
               </p>
             </div>
           </div>
-          <div data-aos="flip-left" className="flex flex-col items-center p-4 border">
+          <div className="flex flex-col items-center p-4 border">
             <div className="flex items-center justify-center h-12 w-12 rounded-md bg-[#0c52a6] text-white">
               <RoomIcon className="w-6 h-6" />
             </div>
