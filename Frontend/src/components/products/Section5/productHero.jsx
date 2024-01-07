@@ -5,9 +5,9 @@ import img from '../../../asset/imgs/NewImg (20).jpg'
 const ProductHero = () => {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+      <div className="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
+        <div data-aos="flip-left" className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
+          <h1 className="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl">
             Seamless Chit Fund
             <br className="hidden lg:inline-block" />
             Services for You
@@ -34,7 +34,7 @@ const ProductHero = () => {
             </Link>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div data-aos="fade-right" className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
           <img
             className="object-cover object-center rounded"
             alt="hero"

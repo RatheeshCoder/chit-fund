@@ -14,18 +14,18 @@ import camera from "../../../asset/imgs/BusinessImg.png";
 
 const StatsSection = () => {
   return (
-    <section className=" p-4">
-      <div className="container mx-auto pt-12 pb-20 ">
-        <h1 className="text-4xl font-bold text-gray-800 text-center mb-8">
-        Welcome Segment
+    <section className="p-4 ">
+      <div className="container pt-12 pb-20 mx-auto ">
+        <h1 className="mb-8 text-4xl font-bold text-center text-gray-800">
+        Step into Financial Ease with Vanmoh Chitfunds
         </h1>
 
-        <p className="text-gray-700 text-lg text-center mb-12">
+        <p className="mb-12 text-lg text-center text-gray-700">
         Your pathway to straightforward savings and brighter financial horizons. <br /> Join Vanmoh for a simplified approach to financial well-being!
 
 
         </p>
-        <div className="grid bg-white grid-cols-1 md:grid-cols-6 gap-8 text-center">
+        <div data-aos="zoom-in-up" className="grid grid-cols-1 gap-8 text-center bg-white md:grid-cols-6">
           {renderStatBlock(user, "Subscribers", <NumberCounter />)}
           {renderStatBlock(trophy, "Prized Customers", <Prize />)}
           {renderStatBlock(gift, "Schemes", <Gift />)}
@@ -39,13 +39,13 @@ const StatsSection = () => {
 };
 
 const renderStatBlock = (imageSrc, title, content) => (
-  <div className="p-4 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+  <div className="p-4 transition duration-500 transform bg-white rounded-lg shadow-lg hover:scale-105">
     <img
       src={imageSrc}
       alt=""
-      className="text-indigo-500 w-12 h-12 mb-3 inline-block"
+      className="inline-block w-12 h-12 mb-3 text-indigo-500"
     />
-    <h2 className="text-xl font-bold text-gray-800 mb-4">{content}</h2>
+    <h2 className="mb-4 text-xl font-bold text-gray-800">{content}</h2>
     <p className="text-gray-700">{title}</p>
   </div>
 );

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/header';
 import Footermain from './components/footer/Footermain';
@@ -31,8 +31,19 @@ import MainDashBoard from './components/Dashboard/MainDashBoard/MainDashBoard';
 import Products from './components/Dashboard/AddProducts/Products';
 
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 function App() {
+  useEffect(() => {
+    AOS.init({ 
+      delay: 500,        
+      duration: 800,     
+      once: true,        
+      easing: 'ease-in-out',  
+     });
+  }, []);
   return (
     <AuthProvider>
       <BrowserRouter>

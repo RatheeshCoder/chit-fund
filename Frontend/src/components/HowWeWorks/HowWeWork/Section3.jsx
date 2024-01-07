@@ -15,7 +15,7 @@ const ChitProcess = () => {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {ChitProces.map((item, index) => (
-            <div key={index} className="p-8 bg-white rounded-lg shadow-lg">
+            <div data-aos="flip-left" key={index} className="p-8 bg-white rounded-lg shadow-lg">
               <h2 className="mb-4 text-xl font-bold text-gray-800">
                 {`Step ${index + 1}: ${item.title}`}
               </h2>

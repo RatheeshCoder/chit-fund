@@ -5,10 +5,10 @@ import img from '../../../asset/imgs/NewImg (9).jpg'
 const ComparisonsHero = () => {
   return (
 
-    <section className="px-4  max-w-7xl sm:px-6 lg:px-8">
+    <section className="px-4 max-w-7xl sm:px-6 lg:px-8">
       <div className="flex flex-col gap-3 px-4 my-10 mt-40 max-w-7xl sm:mt-20 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 lg:flex-justify lg:flex lg:flex-row">
 
-        <div className="sm:text-center lg:text-left">
+        <div data-aos="fade-right" className="sm:text-center lg:text-left">
           <h1 className="text-4xl font-bold tracking-tight lg:text-7xl md:text-5xl">
             <span className="block xl:inline">Knowledge fuels financial </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 xl:inline">
@@ -31,7 +31,7 @@ const ComparisonsHero = () => {
       </div>
           </div>
         </div>
-        <div className="my-4 lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div data-aos="fade-left" className="my-4 lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
             className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={img}
