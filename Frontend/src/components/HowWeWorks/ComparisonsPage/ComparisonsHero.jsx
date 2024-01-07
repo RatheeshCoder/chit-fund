@@ -31,7 +31,7 @@ const ComparisonsHero = () => {
       </div>
           </div>
         </div>
-        <div data-aos="fade-left" className="my-4 lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div data-aos="fade-right" className="my-4 lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
             className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
             src={img}

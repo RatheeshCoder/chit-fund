@@ -14,7 +14,7 @@ const FeaturesSection = () => {
         </div>
         <div className="flex flex-wrap mt-12 -mx-4">
           {featuresDatas.map((feature) => (
-            <div key={feature.id} data-aos="zoom-out-up" className="w-full px-4 mb-8 md:w-1/3">
+            <div key={feature.id}  data-aos="flip-left" className="w-full px-4 mb-8 md:w-1/3">
               <div className="p-8 bg-white rounded-md shadow-md">
                 <div className="mb-4 text-4xl font-bold text-transparent text-purple-600 bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
                   {feature.id}
