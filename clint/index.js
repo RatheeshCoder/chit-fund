@@ -5,6 +5,7 @@ const socketio = require('socket.io');
 const JobsRoutes = require('./routes/jobRoutes');
 const userRoutes = require('./routes/userRoutes');
 const branchsRoutes = require('./routes/branchsRoutes');
+const productRoutes = require('./routes/productRoutes'); // Import product routes
 require('dotenv').config(); 
 
 const app = express();
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 3002;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB connected'))
     .catch((err) => console.error('MongoDB connection error:', err));
 
@@ -34,9 +35,13 @@ io.on('connection', (socket) => {
 // Use the routes
 const jobsRouter = JobsRoutes(io);
 const branchsRouter = branchsRoutes(io);
+const productsRouter = productRoutes(io); // Use the product routes
 
 app.use('/jobs', jobsRouter);
 app.use('/branches', branchsRouter);
+app.use('/products', productsRouter); // Use the products routes
 app.use('/users', userRoutes);
+
+// Additional middleware or routes go here...
 
 module.exports = app;

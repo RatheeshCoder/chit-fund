@@ -190,19 +190,19 @@ const Product = () => {
   };
 
   return (
-    <div className="mx-auto my-8 p-6 bg-white rounded-md shadow-md">
-      <div className="mx-4 md:mx-14 mt-10 border-2 border-blue-400 rounded-lg">
-        <div className="mt-6 md:mt-10 text-center font-bold"> Add Your</div>
-        <div className="mt-3 text-center text-4xl font-bold">
+    <div className="p-6 mx-auto my-8 bg-white rounded-md shadow-md">
+      <div className="mx-4 mt-10 border-2 border-blue-400 rounded-lg md:mx-14">
+        <div className="mt-6 font-bold text-center md:mt-10"> Add Your</div>
+        <div className="mt-3 text-4xl font-bold text-center">
           Scheme for 304 Days
         </div>
         <div className="p-4 md:p-8">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
             <input
               type="text"
               name="name"
-              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
-              placeholder="Product Name *"
+              className="block w-full px-3 py-4 mt-1 bg-white border rounded-md shadow-sm md:w-1/2 border-slate-300 placeholder-slate-400 placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              placeholder="Scheme Name *"
               value={newProduct.name}
               onChange={(e) =>
                 setNewProduct({ ...newProduct, name: e.target.value })
@@ -211,20 +211,20 @@ const Product = () => {
             <input
               type="number"
               name="totalPrice"
-              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
-              placeholder="Total Price *"
+              className="block w-full px-3 py-4 mt-1 bg-white border rounded-md shadow-sm md:w-1/2 border-slate-300 placeholder-slate-400 placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              placeholder="Scheme Total Price *"
               value={newProduct.totalPrice}
               onChange={(e) =>
                 setNewProduct({ ...newProduct, totalPrice: e.target.value })
               }
             />
           </div>
-          <div className="flex flex-col md:flex-row gap-4 mt-5 mb-5">
+          <div className="flex flex-col gap-4 mt-5 mb-5 md:flex-row">
             <input
               type="number"
               name="totalDays"
-              className="block w-full rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
-              placeholder="Total Days *"
+              className="block w-full px-3 py-4 font-semibold text-gray-500 bg-white border rounded-md shadow-sm border-slate-300 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              placeholder="Scheme Total Days *"
               value={newProduct.totalDays}
               onChange={(e) =>
                 setNewProduct({ ...newProduct, totalDays: e.target.value })
@@ -233,7 +233,7 @@ const Product = () => {
             <input
               type="number"
               name="monthlyPay"
-              className="block w-full rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              className="block w-full px-3 py-4 font-semibold text-gray-500 bg-white border rounded-md shadow-sm border-slate-300 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
               placeholder="Monthly Pay *"
               value={newProduct.monthlyPay}
               onChange={(e) =>
@@ -241,11 +241,11 @@ const Product = () => {
               }
             />
           </div>
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
             <input
               type="number"
               name="weeklyPay"
-              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              className="block w-full px-3 py-4 mt-1 font-semibold text-gray-500 bg-white border rounded-md shadow-sm md:w-1/2 border-slate-300 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
               placeholder="Weekly Pay *"
               value={newProduct.weeklyPay}
               onChange={(e) =>
@@ -255,7 +255,7 @@ const Product = () => {
             <input
               type="number"
               name="dailyPay"
-              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              className="block w-full px-3 py-4 mt-1 font-semibold text-gray-500 bg-white border rounded-md shadow-sm md:w-1/2 border-slate-300 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
               placeholder="Daily Pay *"
               value={newProduct.dailyPay}
               onChange={(e) =>
@@ -270,7 +270,7 @@ const Product = () => {
                 <input
                   type="text"
                   name={`columnName-${index}`}
-                  className="block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+                  className="block w-1/2 px-3 py-4 font-semibold text-gray-500 bg-white border rounded-md shadow-sm border-slate-300 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
                   placeholder="Column Name *"
                   value={detail.columnName}
                   onChange={(e) =>
@@ -280,7 +280,7 @@ const Product = () => {
                 <input
                   type="text"
                   name={`value-${index}`}
-                  className="block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+                  className="block w-1/2 px-3 py-4 font-semibold text-gray-500 bg-white border rounded-md shadow-sm border-slate-300 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
                   placeholder="Value *"
                   value={detail.value}
                   onChange={(e) =>
@@ -289,7 +289,7 @@ const Product = () => {
                 />
                 <button
                   type="button"
-                  className="ml-2 px-4 py-2 font-medium text-white bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600 transition duration-150 ease-in-out"
+                  className="px-4 py-2 ml-2 font-medium text-white transition duration-150 ease-in-out bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600"
                   onClick={() => handleRemoveDetail(index)}
                 >
                   Remove
@@ -298,7 +298,7 @@ const Product = () => {
             ))}
             <button
               type="button"
-              className="mt-2 px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out"
+              className="px-4 py-2 mt-2 font-medium text-white transition duration-150 ease-in-out bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600"
               onClick={handleAddDetail}
             >
               Add More Details
@@ -307,7 +307,7 @@ const Product = () => {
           <div className="text-center">
             {formMode === "add" ? (
               <button
-                className="cursor-pointer rounded-lg bg-blue-700 px-4 md:px-8 py-3 md:py-5 w-full md:w-auto text-sm font-semibold text-white"
+                className="w-full px-4 py-3 text-sm font-semibold text-white bg-blue-700 rounded-lg cursor-pointer md:px-8 md:py-5 md:w-auto"
                 type="button"
                 onClick={addProduct}
               >
@@ -315,11 +315,11 @@ const Product = () => {
               </button>
             ) : (
               <button
-                className="cursor-pointer rounded-lg bg-green-500 px-4 md:px-8 py-3 md:py-5 w-full md:w-auto text-sm font-semibold text-white"
+                className="w-full px-4 py-3 text-sm font-semibold text-white bg-green-500 rounded-lg cursor-pointer md:px-8 md:py-5 md:w-auto"
                 type="button"
                 onClick={handleUpdate}
               >
-                Update Product
+                Update Scheme
               </button>
             )}
           </div>
@@ -328,32 +328,32 @@ const Product = () => {
       {products.length === 0 ? (
         <div>No Record</div>
       ) : (
-        <div className="max-w-full overflow-x-auto mt-4">
+        <div className="max-w-full mt-4 overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead>
               <tr>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Product Name
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Total Price
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Total Days
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Monthly Pay
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Weekly Pay
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Daily Pay
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   More Details
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Action
                 </th>
               </tr>
@@ -394,15 +394,15 @@ const Product = () => {
                         `, ...( ${product.moreDetails.length} )`}
                     </td>
 
-                    <td className="px-6 py-4 whitespace-nowrap space-x-2">
+                    <td className="px-6 py-4 space-x-2 whitespace-nowrap">
                       <button
-                        className="px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out"
+                        className="px-4 py-2 font-medium text-white transition duration-150 ease-in-out bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600"
                         onClick={() => handleEdit(product._id)}
                       >
                         Edit
                       </button>
                       <button
-                        className="ml-2 px-4 py-2 font-medium text-white bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600 transition duration-150 ease-in-out"
+                        className="px-4 py-2 ml-2 font-medium text-white transition duration-150 ease-in-out bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600"
                         onClick={() => handleDelete(product._id)}
                       >
                         Delete
