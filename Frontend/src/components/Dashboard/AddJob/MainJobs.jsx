@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../Auth/AuthContext";
-
+import { Helmet } from 'react-helmet';
 import { API_BASE_URL,WEBSOCKET_URL } from "../apiConfig";
 
 const MainJobs = () => {
@@ -194,18 +194,22 @@ const MainJobs = () => {
   };
 
   return (
-    <div className=" mx-auto my-8 p-6 bg-white rounded-md shadow-md">
-      <div className="mx-4 md:mx-14 mt-10 border-2 border-blue-400 rounded-lg">
-        <div className="mt-6 md:mt-10 text-center font-bold">Jobs</div>
-        <div className="mt-3 text-center text-4xl font-bold">
+    <>
+     <Helmet>
+        <title> Vanmoh | Add Jobs</title>
+      </Helmet>
+    <div className="p-6 mx-auto my-8 bg-white rounded-md shadow-md ">
+      <div className="mx-4 mt-10 border-2 border-blue-400 rounded-lg md:mx-14">
+        <div className="mt-6 font-bold text-center md:mt-10">Jobs</div>
+        <div className="mt-3 text-4xl font-bold text-center">
           Add Your New Jobs
         </div>
         <div className="p-4 md:p-8">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
             <input
               type="text"
               name="jobTitle"
-              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              className="block w-full px-3 py-4 mt-1 bg-white border rounded-md shadow-sm md:w-1/2 border-slate-300 placeholder-slate-400 placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
               placeholder="Job Title *"
               value={newTask.jobTitle}
               onChange={(e) =>
@@ -215,7 +219,7 @@ const MainJobs = () => {
             <input
               type="text"
               name="branch"
-              className="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              className="block w-full px-3 py-4 mt-1 bg-white border rounded-md shadow-sm md:w-1/2 border-slate-300 placeholder-slate-400 placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
               placeholder="Branch *"
               value={newTask.branch}
               onChange={(e) =>
@@ -227,7 +231,7 @@ const MainJobs = () => {
             <input
               type="text"
               name="experience"
-              className="block w-full rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+              className="block w-full px-3 py-4 font-semibold text-gray-500 bg-white border rounded-md shadow-sm border-slate-300 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
               placeholder="Experience *"
               value={newTask.experience}
               onChange={(e) =>
@@ -239,7 +243,7 @@ const MainJobs = () => {
               id="text"
               cols="30"
               rows="5"
-              className="mb-4 h-32 md:h-40 w-full resize-none rounded-md border border-slate-300 p-3 md:p-5 font-semibold text-gray-500 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm "
+              className="w-full h-32 p-3 mb-4 font-semibold text-gray-500 border rounded-md shadow-sm resize-none md:h-40 border-slate-300 md:p-5 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm "
               placeholder="Description *"
               value={newTask.description}
               onChange={(e) =>
@@ -250,7 +254,7 @@ const MainJobs = () => {
           <div className="text-center ">
             {formMode === "add" ? (
               <button
-                className="cursor-pointer rounded-lg bg-blue-700 px-4 md:px-8 py-3 md:py-5 w-full md:w-auto text-sm font-semibold text-white"
+                className="w-full px-4 py-3 text-sm font-semibold text-white bg-blue-700 rounded-lg cursor-pointer md:px-8 md:py-5 md:w-auto"
                 type="button"
                 onClick={addTask}
               >
@@ -258,7 +262,7 @@ const MainJobs = () => {
               </button>
             ) : (
               <button
-                className="cursor-pointer rounded-lg bg-green-500 px-4 md:px-8 py-3 md:py-5 w-full md:w-auto text-sm font-semibold text-white"
+                className="w-full px-4 py-3 text-sm font-semibold text-white bg-green-500 rounded-lg cursor-pointer md:px-8 md:py-5 md:w-auto"
                 type="button"
                 onClick={handleUpdate}
               >
@@ -271,23 +275,23 @@ const MainJobs = () => {
       {jobs.length === 0 ? (
         <div>No Record</div>
       ) : (
-        <div className="max-w-full overflow-x-auto mt-4 ">
+        <div className="max-w-full mt-4 overflow-x-auto ">
           <table className="min-w-full divide-y divide-gray-200">
             <thead>
               <tr>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Job Title
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Branch
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Experience
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Description
                 </th>
-                <th className="px-6 py-3 text-center text-l font-bold text-gray-900 uppercase tracking-wider">
+                <th className="px-6 py-3 font-bold tracking-wider text-center text-gray-900 uppercase text-l">
                   Action
                 </th>
               </tr>
@@ -310,15 +314,15 @@ const MainJobs = () => {
                     <td className="px-6 py-4 whitespace-nowrap">
                       {task.description}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap space-x-2">
+                    <td className="px-6 py-4 space-x-2 whitespace-nowrap">
                       <button
-                        className="px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out"
+                        className="px-4 py-2 font-medium text-white transition duration-150 ease-in-out bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600"
                         onClick={() => handleEdit(task._id)}
                       >
                         Edit
                       </button>
                       <button
-                        className="ml-2 px-4 py-2 font-medium text-white bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600 transition duration-150 ease-in-out"
+                        className="px-4 py-2 ml-2 font-medium text-white transition duration-150 ease-in-out bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:shadow-outline-red active:bg-red-600"
                         onClick={() => handleDelete(task._id)}
                       >
                         Delete
@@ -331,6 +335,7 @@ const MainJobs = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

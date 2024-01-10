@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useAuth } from "../../Auth/AuthContext";
+import { Helmet } from 'react-helmet';
 
 const MainDashBoard = () => {
   const { isAuthenticated } = useAuth();
@@ -27,35 +28,40 @@ const MainDashBoard = () => {
   }
 
   return (
+    <>
+     <Helmet>
+        <title>Vanmoh | DashBoard</title>
+      </Helmet>
     <div className="flex items-center justify-center h-screen">
-      <div className="px-4 md:px-8 py-12 bg-gray-100 rounded-lg shadow-2xl max-w-xl">
-        <h1 className="text-lg mb-4 text-center">
+      <div className="max-w-xl px-4 py-12 bg-gray-100 rounded-lg shadow-2xl md:px-8">
+        <h1 className="mb-4 text-lg text-center">
           Hey Vanmoh<span className="mx-2">{greeting}</span>😄,
           <br />
         </h1>
 
-        <div className="flex flex-col justify-center w-full text-center mt-8 gap-6 sm:flex-row text-lg font-semibold">
+        <div className="flex flex-col justify-center w-full gap-6 mt-8 text-lg font-semibold text-center sm:flex-row">
           <Link
             to="/MainDashBoard/DashBoard/AddJobs"
-            className="bg-blue-600 w-full sm:w-40 py-4 rounded-lg text-white hover:bg-blue-700 shadow-lg"
+            className="w-full py-4 text-white bg-blue-600 rounded-lg shadow-lg sm:w-40 hover:bg-blue-700"
           >
             Add Jobs
           </Link>
           <Link
             to="/MainDashBoard/DashBoard/AddBranch"
-            className="bg-blue-600 w-full sm:w-40 py-4 rounded-lg text-white hover:bg-blue-700 shadow-lg"
+            className="w-full py-4 text-white bg-blue-600 rounded-lg shadow-lg sm:w-40 hover:bg-blue-700"
           >
             Add Branch
           </Link>
           <Link
             to="/MainDashBoard/DashBoard/AddProducts"
-            className="bg-blue-600 w-full sm:w-40 py-4 rounded-lg text-white hover:bg-blue-700 shadow-lg"
+            className="w-full py-4 text-white bg-blue-600 rounded-lg shadow-lg sm:w-40 hover:bg-blue-700"
           >
             Add Products
           </Link>
         </div>
       </div>
     </div>
+    </>
   );
 };
 
