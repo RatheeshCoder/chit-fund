@@ -4,7 +4,7 @@ function Location() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    const targetCount = 4;
+    const targetCount = 5;
     const duration = 1000;
     const steps = 40;
 
