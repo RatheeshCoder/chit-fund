@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../Auth/AuthContext";
+import { Helmet } from 'react-helmet';
 
 const Product = () => {
   const { isAuthenticated } = useAuth();
@@ -190,6 +191,10 @@ const Product = () => {
   };
 
   return (
+    <>
+     <Helmet>
+        <title>Vanmoh | Add Scheme</title>
+      </Helmet>
     <div className="p-6 mx-auto my-8 bg-white rounded-md shadow-md">
       <div className="mx-4 mt-10 border-2 border-blue-400 rounded-lg md:mx-14">
         <div className="mt-6 font-bold text-center md:mt-10"> Add Your</div>
@@ -415,6 +420,7 @@ const Product = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

@@ -5,10 +5,14 @@ import ChitProcess from '../../components/HowWeWorks/HowWeWork/Section3'
 import ComparisonsHero from '../../components/HowWeWorks/ComparisonsPage/ComparisonsHero'
 import ComparisonsTitle from '../../components/HowWeWorks/ComparisonsPage/ComparisonsTitle'
 import CardComponent from '../../components/HowWeWorks/ComparisonsPage/ComparisonsCard'
-
+import { Helmet } from 'react-helmet';
 
 const HowWeWork = () => {
   return (
+    <>
+     <Helmet>
+        <title>Vanmoh | Our Works</title>
+      </Helmet>
     <main>
       <HeroSection />
       <ChitAct />
@@ -19,6 +23,7 @@ const HowWeWork = () => {
       <CardComponent />
 
     </main>
+    </>
   )
 }
 

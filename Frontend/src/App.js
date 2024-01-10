@@ -1,9 +1,9 @@
-
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Header from './components/header/header';
 import Footermain from './components/footer/Footermain';
-import './style/style.css'
+import './style/style.css';
 import Share from './components/share/share';
 import Gallery from './page/gallery/gallery';
 import CaseStudy from './page/HowWeWorks/Blogs';
@@ -30,23 +30,25 @@ import BranchList from './components/Dashboard/AddBranch/Branch';
 import MainDashBoard from './components/Dashboard/MainDashBoard/MainDashBoard';
 import Products from './components/Dashboard/AddProducts/Products';
 
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 function App() {
   useEffect(() => {
-    AOS.init({ 
-      delay: 500,        
-      duration: 800,     
-      once: true,        
-      easing: 'ease-in-out',  
-     });
+    AOS.init({
+      delay: 500,
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out',
+    });
   }, []);
+
   return (
     <AuthProvider>
       <BrowserRouter>
+        <Helmet>
+          <title>Welcome to Vanmoh</title>
+        </Helmet>
         <Header />
         <FAQsPage />
         <FloatingButton />
@@ -60,7 +62,6 @@ function App() {
           <Route path="/MainDashBoard/DashBoard/AddJobs" element={<MainJobs />} />
           <Route path="/MainDashBoard/DashBoard/AddBranch" element={<BranchList />} />
           <Route path="/MainDashBoard/DashBoard/AddProducts" element={<Products />} />
-
 
           <Route path="/Products/Product" element={<Product />} />
           <Route path="/Products/Services" element={<ServiesMain />} />
