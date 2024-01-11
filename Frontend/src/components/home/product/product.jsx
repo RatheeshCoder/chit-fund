@@ -14,8 +14,7 @@ const Features = () => {
           you'll love
         </h2>
         <p className="max-w-md mx-auto mt-2 text-gray-500">
-          A responsive documentation template built for everyone who wants to
-          create a plugin.
+        Our journey is all about doing things right. We believe in honesty and openness as we help you grow your money
         </p>
       </div>
 
