@@ -5,7 +5,7 @@ const socketio = require('socket.io');
 const JobsRoutes = require('./routes/jobRoutes');
 const userRoutes = require('./routes/userRoutes');
 const branchsRoutes = require('./routes/branchsRoutes');
-const productRoutes = require('./routes/productRoutes'); // Import product routes
+const productRoutes = require('./routes/productRoutes'); 
 require('dotenv').config(); 
 
 const app = express();
@@ -35,13 +35,13 @@ io.on('connection', (socket) => {
 // Use the routes
 const jobsRouter = JobsRoutes(io);
 const branchsRouter = branchsRoutes(io);
-const productsRouter = productRoutes(io); // Use the product routes
+const productsRouter = productRoutes(io); 
 
 app.use('/jobs', jobsRouter);
 app.use('/branches', branchsRouter);
-app.use('/products', productsRouter); // Use the products routes
+app.use('/products', productsRouter); 
 app.use('/users', userRoutes);
 
-// Additional middleware or routes go here...
+
 
 module.exports = app;
