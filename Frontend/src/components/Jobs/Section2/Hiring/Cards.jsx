@@ -3,10 +3,8 @@ import { jobData } from "../../../../data/data";
 import RegistrationForm from "./Form";
 import openimg from "../../../../asset/imgs/jobOpenimg.png";
 import closeimg from "../../../../asset/imgs/jobCloseimg.png";
-import axios from "axios";
 
 const Cards = () => {
-  const [jobs, setJobs] = useState([]);
   const [filter, setFilter] = useState("all");
   const [isActive, setActive] = useState(false);
   const [isSidebarHidden, setSidebarHidden] = useState(window.innerWidth < 720);
@@ -20,8 +18,8 @@ const Cards = () => {
     setSidebarHidden(!isSidebarHidden);
   };
 
-  const filteredJobs = jobs.filter(
-    (job) => filter === "all" || job.branch === filter
+  const filteredJobs = jobData.filter(
+    (job) => filter === "all" || job.office === filter
   );
 
   useEffect(() => {
@@ -34,19 +32,6 @@ const Cards = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://localhost:3002/jobs/get");
-        setJobs(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
   }, []);
 
   return (
@@ -97,18 +82,16 @@ const Cards = () => {
             >
               JOB'S TITLES ↓
             </li>
-            {jobTitles.map((branch) => (
+            {jobTitles.map((office) => (
               <li
-                className={`jobFilter ${
-                  filter === branch ? "bg-blue-800 text-white" : ""
-                }`}
-                key={branch}
+                className="jobFilter"
+                key={office}
                 onClick={() => {
-                  setFilter(branch);
+                  setFilter(office);
                   setActive(false);
                 }}
               >
-                {branch === "all" ? "All Jobs" : branch}
+                {office === "all" ? "All Jobs" : office}
               </li>
             ))}
           </div>
@@ -118,26 +101,30 @@ const Cards = () => {
       <div className="job-listings">
         {filteredJobs.map((job) => (
           <div
-            key={job._id}
-            className="relative flex-1 flex items-stretch flex-col p-8 rounded-xl border-2 cta-job-card"
+            key={job.id}
+            className="relative flex flex-col items-stretch flex-1 p-8 border-2 rounded-xl cta-job-card"
           >
             <div>
-              <h4 className="text-indigo-600 text-2xl font-medium text-center text-black">
-                {job.jobTitle}
+              <h4 className="text-2xl font-medium text-center text-black text-indigo-600">
+               {job.title}
               </h4>
-              <p className="mt-4 text-gray-800 text-xl font-semibold">
-                {job.branch}
+              <p className="mt-4 text-xl font-semibold text-gray-800">
+             {job.office}
               </p>
-              <p className="text-sm text-gray-600">{job.experience}</p>
+              <p className="text-sm text-gray-600">
+              {job.experience}
+                </p>
             </div>
             <div className="py-8 space-y-3">
               <div className="flex items-center gap-5">
                 <div className="flex flex-col">
-                  <p>{job.description}</p>
+                  <p>
+                  {job.description}
+                    </p>
                 </div>
               </div>
             </div>
-            <div className="flex-1 flex items-end">
+            <div className="flex items-end flex-1">
               <RegistrationForm />
             </div>
           </div>

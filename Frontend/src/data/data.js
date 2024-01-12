@@ -793,6 +793,12 @@ export const BranchData = [
     location: "Connor",
     address: "7/1, 1st floor SS Sekar complex, Mount Road, Coonoor The Nilgiris-643102",
     link: "https://maps.app.goo.gl/KaTBZd6LdtXv9K35A"
+  },
+  {
+    id: "5",
+    location: "ooty",
+    address: "Door No.327 (Shop No,7 &8)First Floor, Y.M.C.A City Towers, Wenlock Road, Udhagamandalam, The Nilgiris 643001",
+    link: "https://maps.app.goo.gl/55LSrxBgXPbFzGGL8"
   }
 ];
 
