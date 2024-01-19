@@ -21,15 +21,15 @@ const AvgFund = () => {
 
   return (
     <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+      <div className="max-w-screen-xl px-4 mx-auto text-gray-600 md:px-8">
         <div className="relative max-w-xl mx-auto sm:text-center">
-          <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+          <h3 className="text-3xl font-semibold text-gray-800 sm:text-4xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
               ChitFunds
             </span>{" "}
             912 Days !
           </h3>
-          <div className="mt-3 max-w-xl">
+          <div className="max-w-xl mt-3">
             <p>
               Embark on boundless prosperity with ChitFunds, your gateway to
               financial brilliance. Explore smart investing, tailored solutions,
@@ -37,17 +37,17 @@ const AvgFund = () => {
             </p>
           </div>
         </div>
-        <div className="mt-16 space-y-6 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3">
+        <div className="justify-center gap-6 mt-16 space-y-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3">
           {avg_fund.map((product, idx) => (
             <div
               key={idx}
-              className="relative flex-1 flex items-stretch flex-col p-8 rounded-xl border-2"
+              className="relative flex flex-col items-stretch flex-1 p-8 border-2 rounded-xl"
             >
               <div>
-                <h4 className="text-indigo-600 font-medium text-center text-black">
+                <h4 className="font-medium text-center text-black text-indigo-600">
                   Chit Schema
                 </h4>
-                <p className="mt-4 text-gray-800 text-3xl font-semibold">
+                <p className="mt-4 text-3xl font-semibold text-gray-800">
                   ₹{product.amount}
                 </p>
                 <p className="text-sm text-gray-600">{product.timeline}</p>
@@ -66,9 +66,9 @@ const AvgFund = () => {
                   </div>
                 )}
               </div>
-              <div className="flex-1 flex items-end">
+              <div className="flex items-end flex-1">
                 <Button
-                  className=" cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  "
+                  className="w-full px-3 py-3 text-sm font-semibold duration-150 rounded-lg cta-view-more-product"
                   onClick={() => openContentPopup(product)}
                 >
                   More Details
@@ -85,73 +85,25 @@ const AvgFund = () => {
         contentLabel="Additional Information"
         className="cta-popup-product"
       >
-        {selectedProduct && selectedProduct.additionalInfo && (
-          <div className="main-table">
-            <table>
-              <tbody>
-                <tr>
-                  {selectedProduct.additionalInfo.tableData[0].map(
-                    (heading, colIndex) => (
-                      <th key={colIndex}>{heading}</th>
-                    )
-                  )}
-                </tr>
-                {selectedProduct.additionalInfo.tableData
-                  .slice(
-                    1,
-                    Math.min(
-                      16,
-                      selectedProduct.additionalInfo.tableData.length
-                    )
-                  )
-                  .map((row, rowIndex) => (
-                    <tr key={rowIndex}>
-                      {row.map((cell, colIndex) => (
-                        <td key={colIndex}>{cell}</td>
-                      ))}
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
+        {selectedProduct && selectedProduct.imageSrc && (
+          <div className="main-content">
+            {/* Display image */}
+            <img
+              src={selectedProduct.imageSrc}
+              alt="Additional Information"
+              className="additional-info-image"
+            />
 
-            {selectedProduct.additionalInfo.tableData[0] &&
-              selectedProduct.additionalInfo.tableData.length > 15 && (
-                <table>
-                  <tbody>
-                    <tr>
-                      {selectedProduct.additionalInfo.tableData[0].map(
-                        (heading, colIndex) => (
-                          <th key={colIndex}>{heading}</th>
-                        )
-                      )}
-                    </tr>
-                    {selectedProduct.additionalInfo.tableData
-                      .slice(
-                        16,
-                        Math.min(
-                          31,
-                          selectedProduct.additionalInfo.tableData.length
-                        )
-                      )
-                      .map((row, rowIndex) => (
-                        <tr key={rowIndex}>
-                          {row.map((cell, colIndex) => (
-                            <td key={colIndex}>{cell}</td>
-                          ))}
-                        </tr>
-                      ))}
-                  </tbody>
-                </table>
-              )}
+            {/* Close button */}
+            <Button
+              className="cta-btn"
+              variant="outlined"
+              onClick={closeContentPopup}
+            >
+              Close
+            </Button>
           </div>
         )}
-        <Button
-          className="cta-btn"
-          variant="outlined"
-          onClick={closeContentPopup}
-        >
-          Close
-        </Button>
       </Modal>
     </section>
   );

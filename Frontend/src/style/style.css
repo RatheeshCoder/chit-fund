@@ -937,8 +937,8 @@ table td:first-child {
   color: #ffffff;
   font-weight: 600;
   position: absolute;
-  top: 15%;
-  right: 1%;
+  top: 2%;
+  right: 2%;
 }
 
 @media (max-width: 500px) {
@@ -3090,4 +3090,8 @@ table td:first-child {
 
 .cta-act-points {
   list-style: circle;
+}
+
+.ReactModal__Overlay {
+  z-index: 999999999;
 }/*# sourceMappingURL=style.css.map */

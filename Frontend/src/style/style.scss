@@ -1178,8 +1178,8 @@ table {
     color: #ffffff;
     font-weight: 600;
     position: absolute;
-    top: 15%;
-    right: 1%;
+    top: 2%;
+    right: 2%;
 
   }
 }
@@ -3959,4 +3959,8 @@ table {
 }
 .cta-act-points{
   list-style:circle;
+}
+
+.ReactModal__Overlay{
+  z-index: 999999999;
 }
