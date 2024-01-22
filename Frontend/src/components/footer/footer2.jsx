@@ -56,11 +56,15 @@ function Footer2() {
       items: [
         {
           href: "javascript:void()",
+          name: "All About Chits",
+        },
+        {
+          href: "javascript:void()",
           name: "Blogs",
         },
         {
           href: "javascript:void()",
-          name: "Comparisons",
+          name: "ChitFund Act",
         },
         {
           href: "javascript:void()",

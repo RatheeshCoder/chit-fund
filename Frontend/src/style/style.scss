@@ -3936,8 +3936,15 @@ table {
 }
 
 .cta-team-top{
-  margin-top: 20%;
+  margin-top: 10%;
 }
+
+@media (max-width: 950px){
+  .cta-team-top{
+    margin-top: 25%;
+  }
+}
+
 
 /* Add this to your existing CSS file or component */
 @keyframes zoomIn {

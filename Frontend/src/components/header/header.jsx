@@ -38,7 +38,9 @@ const Header = () => {
   return (
     <nav className={`nav font-sans text-lg ${navActive ? "nav-active" : ""}`}>
       <div className="logo">
+        <Link to="/">
         <img src={logo} alt="Logo" />
+        </Link>
       </div>
       <ul className={`nav-links  ${navActive ? "nav-active" : ""}`}>
         <li
