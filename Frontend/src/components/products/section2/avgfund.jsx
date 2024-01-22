@@ -27,7 +27,7 @@ const AvgFund = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
               ChitFunds
             </span>{" "}
-            912 Days !
+            30 Months !
           </h3>
           <div className="max-w-xl mt-3">
             <p>
