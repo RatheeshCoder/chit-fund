@@ -38,9 +38,7 @@ const VisionSection = () => {
             <div className="mt-5 text-center">
               <h3 className="text-lg font-medium text-gray-900">Location</h3>
               <p className="mt-2 text-base text-gray-500">
-                <span>Head Office</span>: 1437, Ground floor Red rose chambers,
-                Trichy road (Opp to welcome ITC hotel, Race course)
-                Coimbatore-641018
+                <span>Head Office</span>  S.M.Arcade. Door no. 34 to 36, l-b, 9th street extn., gandhipuram, coimbatore-641012.
               </p>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../asset/imgs/logo-img.png";
 import { Facebook, Instagram, LinkedIn, WhatsApp } from "@mui/icons-material";
 // import { Facebook, LinkedIn, WhatsApp, Instagram } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 function Footer2() {
   const footerNavs = [
@@ -11,22 +12,27 @@ function Footer2() {
         {
           href: "javascript:void()",
           name: "Home",
+          link:"/"
         },
         {
           href: "javascript:void()",
           name: "Careers",
+          link:"/Jobs"
         },
         {
           href: "javascript:void()",
           name: "Gallery",
+          link:"/Gallery"
         },
         {
           href: "javascript:void()",
           name: "Products",
+          link:"/Products/Product"
         },
         {
           href: "javascript:void()",
           name: "Contact Us",
+          link:"/ContactMain"
         },
       ],
     },
@@ -36,18 +42,22 @@ function Footer2() {
         {
           href: "javascript:void()",
           name: "Why Choose Us",
+          link:"/about/CompanyPro"
         },
         {
           href: "javascript:void()",
           name: "Company Profile",
+          link:"/about/Benefits"
         },
         {
           href: "javascript:void()",
           name: "Directors",
+          link:"/about/Direction"
         },
         {
           href: "javascript:void()",
           name: "Values",
+          link:"/about/Values"
         },
       ],
     },
@@ -57,18 +67,22 @@ function Footer2() {
         {
           href: "javascript:void()",
           name: "All About Chits",
+          link:"/how-it-works/HowWeWorks"
         },
         {
           href: "javascript:void()",
           name: "Blogs",
+          link:"/how-it-works/Blogs"
         },
         {
           href: "javascript:void()",
           name: "ChitFund Act",
+          link:"/how-it-works/Comparisons"
         },
         {
           href: "javascript:void()",
           name: "FAQs",
+          link:"/how-it-works/faq"
         },
         
       ],
@@ -80,7 +94,9 @@ function Footer2() {
       <div className="justify-between gap-6 md:flex">
         <div className="flex-1">
           <div className="max-w-xs">
+            <Link to='/'>
             <img src={logo} className="w-40" />
+            </Link>
             <p className="leading-relaxed mt-2 text-[15px]">
               Feel free to reach out with any questions or concerns; we're here
               to help.
@@ -99,13 +115,13 @@ function Footer2() {
               <div className="space-y-4" key={idx}>
                 <h4 className="font-medium text-gray-800">{item.label}</h4>
                 {item.items.map((el, idx) => (
-                  <a
+                  <Link
                     key={idx}
-                    href={el.href}
+                    to={el.link}
                     className="block hover:underline hover:text-indigo-600"
                   >
                     {el.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             ))}
@@ -119,25 +135,25 @@ function Footer2() {
         <div className="mt-6 sm:mt-0">
           <ul className="flex items-center space-x-4">
             <li className="flex items-center justify-center w-10 h-10 border rounded-full">
-              <a href="javascript:void()">
+              <a href="https://www.facebook.com/profile.php?id=100070051033472&mibextid=LQQJ4d" target="_blank">
                 <Facebook/>
               </a>
             </li>
 
             <li className="flex items-center justify-center w-10 h-10 border rounded-full">
-              <a href="javascript:void()">
+              <a href="https://instagram.com/vanmoh_chit_funds?igshid=bnVhYjh1MmV2b3Fj" target="_blank">
                 <Instagram/>
               </a>
             </li>
 
-            <li className="flex items-center justify-center w-10 h-10 border rounded-full">
+            {/* <li className="flex items-center justify-center w-10 h-10 border rounded-full">
               <a href="javascript:void()">
                 <WhatsApp/>
               </a>
-            </li>
+            </li> */}
 
             <li className="flex items-center justify-center w-10 h-10 border rounded-full">
-              <a href="javascript:void()">
+              <a href="https://in.linkedin.com/in/kannan-mohan-0216ba214" target="_blank">
                 <LinkedIn/>
               </a>
             </li>
