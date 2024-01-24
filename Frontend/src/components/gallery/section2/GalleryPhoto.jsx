@@ -59,19 +59,19 @@ const GalleryPhoto = () => {
           onClick={() => handleCategoryClick('CustomerMeetups')}
           className={activeCategory === 'CustomerMeetups' ? 'active' : ''}
         >
-          Customer Meetups
+           Customer Interactions
         </button>
         <button
           onClick={() => handleCategoryClick('FestivalCelebrations')}
           className={activeCategory === 'FestivalCelebrations' ? 'active' : ''}
         >
-          Festival Celebrations
+          Pongal Celebration
         </button>
         <button
           onClick={() => handleCategoryClick('anniversary')}
           className={activeCategory === 'anniversary' ? 'active' : ''}
         >
-          Anniversary
+          3rd Anniversary
         </button>
         {/* Add more buttons for other categories as needed */}
       </div>

@@ -23,8 +23,8 @@ const ComparisonsHero = () => {
           <div className="mt-5 sm:mt-8 ">
             <div className="mt-10 ">
         <Link
-          to="/Product"
-          className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring "
+          to="/ContactMain"
+          className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500  "
         >
           Get Connect
         </Link>

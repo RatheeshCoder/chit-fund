@@ -552,9 +552,9 @@ export const jobData = [
 export const BranchData = [
   {
     id: "1",
-    location: "Race Course",
-    address: "1437, Ground floor Red Rose Chambers, Trichy road (Opp to welcome ITC hotel, Race course) Coimbatore-641018",
-    link: "https://maps.app.goo.gl/EzD6GxfBn2mUy8HV7"
+    location: "S.M.Arcade",
+    address: " Door no. 34 to 36, l-b, 9th street extn, gandhipuram, coimbatore-641012.",
+    link: "https://maps.app.goo.gl/WA2KczQWkNNKTaAn7"
   },
   {
     id: "2",
@@ -635,44 +635,26 @@ export const faqsList = [
 export const featuresData = [
   {
     iconType: 'AccountBalanceIcon',
-    title: 'High Interest Loan & Low Interest Returns',
+    title: 'Add All Services',
 
   },
   {
-    iconType: 'AccountBalanceIcon',
-    title: 'Upto 4% of Returns',
+    iconType:'SavingsIcon',
+    title: '20% profit on savings schemes ',
 
   },
+  
   {
-    iconType: 'AccountBalanceIcon',
-    title: 'Tedious Disbursement Process',
-
-  },
-  {
-    iconType: 'AccountBalanceIcon',
-    title: 'More Security Documents for Loan',
+    iconType:  'AccountBalanceIcon',
+    title: '24/7 customer support',
 
   },
   {
     iconType: 'SavingsIcon',
-    title: 'Low Interest Loan & High Interest Returns',
+    title: 'minimum documentation',
 
   },
-  {
-    iconType: 'SavingsIcon',
-    title: 'Upto 12% of Returns',
-
-  },
-  {
-    iconType: 'SavingsIcon',
-    title: 'Simple Disbursement Process',
-
-  },
-  {
-    iconType: 'SavingsIcon',
-    title: 'Unsecure Loan',
-
-  },
+  
 ];
 
 

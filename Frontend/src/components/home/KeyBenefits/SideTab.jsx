@@ -40,7 +40,7 @@ const SideTab = ({ options, contentData }) => {
           ))}
           <div className="mt-10">
             <Link
-              to="/Product"
+              to="/Products/Product"
               className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500 hover:bg-white hover:text-black focus:outline-none focus:ring "
             >
               Know More
