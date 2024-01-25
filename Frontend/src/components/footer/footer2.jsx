@@ -104,7 +104,7 @@ function Footer2() {
           </div>
           <div className="mt-4">
             <p className="font-medium text-gray-800">Contact Information</p>
-            <p>1437, Ground floor red rose chambers  trichy road <br /> Coimbatore-641018</p>
+            <p> S.M.Arcade. Door no. 34 to 36, l-b, 9th street extn., gandhipuram,<br />  coimbatore-641012</p>
             <p>Phone: +91 93618 05480</p>
             <p>Email: reach@vanmohchitfunds.com</p>
           </div>

@@ -8,7 +8,7 @@ const Cards = () => {
   const [filter, setFilter] = useState("all");
   const [isActive, setActive] = useState(false);
   const [isSidebarHidden, setSidebarHidden] = useState(window.innerWidth < 720);
-  const jobTitles = ["all", "Coimbatore", "Karamadai", "Coonoor"];
+  const jobTitles = ["all", "Coimbatore", "Karamadai", "Coonoor","Ooty"];
 
   const toggleActive = () => {
     setActive(!isActive);
@@ -71,32 +71,30 @@ const Cards = () => {
           )}
         </button>
       )}
-      {!isSidebarHidden && (
-        <div className={`sidenavbar ${isActive ? "active" : ""}`}>
-          <div className="wrapper">
-            <li
-              onClick={toggleActive}
-              className={`bg-[#0c52a6] brand-dropdown ${
-                isActive ? "active" : ""
-              }`}
-            >
-              JOB'S TITLES ↓
-            </li>
-            {jobTitles.map((office) => (
-              <li
-                className="jobFilter"
-                key={office}
-                onClick={() => {
-                  setFilter(office);
-                  setActive(false);
-                }}
-              >
-                {office === "all" ? "All Jobs" : office}
-              </li>
-            ))}
-          </div>
-        </div>
-      )}
+  {!isSidebarHidden && (
+  <div className={`sidenavbar ${isActive ? "active" : ""}`}>
+    <div className="wrapper">
+      <li
+        onClick={toggleActive}
+        className={`bg-[#0c52a6] brand-dropdown ${isActive ? "active" : ""}`}
+      >
+        JOB TITLES ↓
+      </li>
+      {jobTitles.map((office) => (
+        <li
+          className={`jobFilter ${filter === office ? "active" : ""}`}
+          key={office}
+          onClick={() => {
+            setFilter(office);
+            setActive(false);
+          }}
+        >
+          {office === "all" ? "All Jobs" : office}
+        </li>
+      ))}
+    </div>
+  </div>
+)}
 
       <div className="job-listings">
         {filteredJobs.map((job) => (

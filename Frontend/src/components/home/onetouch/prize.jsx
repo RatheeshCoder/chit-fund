@@ -4,7 +4,7 @@ function Prize() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    const targetCount = 500;
+    const targetCount = 1500;
     const duration = 1000;
     const steps = 100;
 

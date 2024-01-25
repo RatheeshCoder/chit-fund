@@ -29,9 +29,9 @@ const StatsSection = () => {
           {renderStatBlock(user, "Subscribers", <NumberCounter />)}
           {renderStatBlock(trophy, "Prized Customers", <Prize />)}
           {renderStatBlock(gift, "Schemes", <Gift />)}
-          {renderStatBlock(heart, "Dedicated Kinds", <Heart />)}
+          {renderStatBlock(heart, "Dedicated Minds", <Heart />)}
           {renderStatBlock(location, "Locations", <Location />)}
-          {renderStatBlock(camera, "Repeat Business", <Camera />)}
+          {renderStatBlock(camera, "Repeated Customers", <Camera />)}
         </div>
       </div>
     </section>
