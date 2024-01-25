@@ -4,7 +4,7 @@ function NumberCounter() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    const targetCount = 3000;
+    const targetCount = 4000;
     const duration = 1000;
     const steps = 60;
 

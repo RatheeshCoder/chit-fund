@@ -635,23 +635,33 @@ export const faqsList = [
 export const featuresData = [
   {
     iconType: 'AccountBalanceIcon',
-    title: 'Add All Services',
+    title: 'Doorstep Collections Service',
 
   },
   {
     iconType:'SavingsIcon',
-    title: '20% profit on savings schemes ',
+    title: 'Regular Monthly Auctions    ',
 
   },
   
   {
     iconType:  'AccountBalanceIcon',
-    title: '24/7 customer support',
+    title: '20% Profit on savings schemes    ',
 
   },
   {
     iconType: 'SavingsIcon',
-    title: 'minimum documentation',
+    title: '24/7 Customer care and support',
+
+  },
+  {
+    iconType:  'AccountBalanceIcon',
+    title: 'Minimum documentation    ',
+
+  },
+  {
+    iconType: 'SavingsIcon',
+    title: 'Diverse schemes to choose',
 
   },
   

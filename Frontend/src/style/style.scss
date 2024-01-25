@@ -1349,7 +1349,7 @@ table {
     margin: 100px 0px 30px 0px;
 
     span {
-      font-style: italic;
+      // font-style: italic;
       // color: $primary-color;
       font-weight: 600;
 
@@ -3970,4 +3970,15 @@ table {
 
 .ReactModal__Overlay{
   z-index: 999999999;
+}
+
+.sidenavbar .jobFilter.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px; 
+  background-color: #000000; /* Adjust the color of the vertical line */
 }
