@@ -130,7 +130,7 @@ function Footer2() {
       </div>
       <div className="items-center justify-between py-6 mt-8 border-t sm:flex">
         <div className="mt-4 sm:mt-0">
-          &copy; ©2023. Vanmoh chit funds Pvt.Ltd, All Rights Reserved.
+          ©2023. Vanmoh chit funds Pvt.Ltd, All Rights Reserved.
         </div>
         <div className="mt-6 sm:mt-0">
           <ul className="flex items-center space-x-4">
