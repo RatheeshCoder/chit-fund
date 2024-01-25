@@ -8,7 +8,7 @@ const Cards = () => {
   const [filter, setFilter] = useState("all");
   const [isActive, setActive] = useState(false);
   const [isSidebarHidden, setSidebarHidden] = useState(window.innerWidth < 720);
-  const jobTitles = ["all", "Coimbatore", "Karamadai", "Coonoor","Ooty"];
+  const jobTitles = ["all", "Coimbatore", "Karamadai", "Coonoor","Thudiyalur","Ooty"];
 
   const toggleActive = () => {
     setActive(!isActive);

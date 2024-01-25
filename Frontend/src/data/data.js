@@ -456,53 +456,53 @@ export const mid_fund = [
 export const jobData = [
   {
     id: 1,
-    title: "HR admin",
+    title: "Accounts Assistant Manager",
     office: "Coimbatore",
     experience: "Experience: 5+ Years",
     description: "We are looking for a talented frontend developer to join our team and work on cutting-edge web applicatio....",
   },
   {
     id: 2,
-    title: "Customer Relationship Manager(Female)",
+    title: "Field Sales Manager",
     office: "Coimbatore",
     experience: "Experience: 5+ Years",
     description: "We are seeking a skilled UI/UX designer with a strong understanding of React to help create v....",
   },
   {
     id: 3,
-    title: "Collection Manager",
+    title: "Business Development Executive",
     office: "Coimbatore",
     experience: "Experience: 5+ Years",
     description: "We are hiring a full-stack developer proficient in React to work on end-to....",
   },
-  {
-    id: 4,
-    title: "Field Sales Manager ",
-    office: "Coimbatore",
-    experience: "Experience: 5+ Years",
-    description: "Join our backend development team and work on building robust and sca....",
-  },
-  {
-    id: 5,
-    title: "Business Development executive",
-    office: "Coimbatore",
-    experience: "Experience: 5+ Years",
-    description: "We are looking for a product manager to lead the development and relea....",
-  },
-  {
-    id: 6,
-    title: "Collection executive",
-    office: "Coimbatore",
-    experience: "Experience: 5+ Years",
-    description: "Join our quality assurance team and help ensure the high qual....",
-  },
-  {
-    id: 7,
-    title: "Collection Manager",
-    office: "Karamadai",
-    experience: "Experience: 5+ Years",
-    description: "We are hiring a DevOps engineer with experience in deplo....",
-  },
+  // {
+  //   id: 4,
+  //   title: "Field Sales Manager ",
+  //   office: "Coimbatore",
+  //   experience: "Experience: 5+ Years",
+  //   description: "Join our backend development team and work on building robust and sca....",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Business Development executive",
+  //   office: "Coimbatore",
+  //   experience: "Experience: 5+ Years",
+  //   description: "We are looking for a product manager to lead the development and relea....",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Collection executive",
+  //   office: "Coimbatore",
+  //   experience: "Experience: 5+ Years",
+  //   description: "Join our quality assurance team and help ensure the high qual....",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Collection Manager",
+  //   office: "Karamadai",
+  //   experience: "Experience: 5+ Years",
+  //   description: "We are hiring a DevOps engineer with experience in deplo....",
+  // },
   {
     id: 8,
     title: "Field Sales Manager",
@@ -517,34 +517,87 @@ export const jobData = [
     experience: "Experience: 5+ Years",
     description: "We're seeking a data analyst to work with React-bas....",
   },
-  {
-    id: 10,
-    title: "Collection executives",
-    office: "Karamadai",
-    experience: "Experience: 5+ Years",
-    description: "Join our customer support team and assist users of our React-powere....",
-  },
+  // {
+  //   id: 10,
+  //   title: "Collection executives",
+  //   office: "Karamadai",
+  //   experience: "Experience: 5+ Years",
+  //   description: "Join our customer support team and assist users of our React-powere....",
+  // },
   {
     id: 11,
-    title: "Collection Manager",
+    title: "Business Development Executives",
     office: "Coonoor",
     experience: "Experience: 5+ Years",
     description: "Join our customer support team and assist users of our React-powere....",
   },
-  {
-    id: 12,
-    title: "Field sales executives",
-    office: "Coonoor",
-    experience: "Experience: 5+ Years",
-    description: "Join our customer support team and assist users of our React-powere....",
-  },
+  // {
+  //   id: 12,
+  //   title: "Field sales executives",
+  //   office: "Coonoor",
+  //   experience: "Experience: 5+ Years",
+  //   description: "Join our customer support team and assist users of our React-powere....",
+  // },
   {
     id: 13,
-    title: "Collection executives",
-    office: "Coonoor",
+    title: "Branch Manager",
+    office: "Ooty",
     experience: "Experience: 5+ Years",
     description: "Join our customer support team and assist users of our React-powere....",
   },
+  {
+    id: 14,
+    title: "Collection Manager",
+    office: "Ooty",
+    experience: "Experience: 5+ Years",
+    description: "Join our customer support team and assist users of our React-powere....",
+  },
+  {
+    id: 15,
+    title: "Field Sales Manager",
+    office: "Ooty",
+    experience: "Experience: 5+ Years",
+    description: "Join our customer support team and assist users of our React-powere....",
+  },
+  {
+    id: 16,
+    title: "Business Development Executive",
+    office: "Ooty",
+    experience: "Experience: 5+ Years",
+    description: "Join our customer support team and assist users of our React-powere....",
+  },
+  {
+    id: 18,
+    title: "Accounts admin",
+    office: "Ooty",
+    experience: "Experience: 5+ Years",
+    description: "Join our customer support team and assist users of our React-powere....",
+  },
+  {
+    id: 17,
+    title: "Collection Executive",
+    office: "Ooty",
+    experience: "Experience: 5+ Years",
+    description: "Join our customer support team and assist users of our React-powere....",
+  },
+ 
+
+  {
+    id: 19,
+    title: "Business Development Executives",
+    office: "Thudiyalur",
+    experience: "Experience: 5+ Years",
+    description: "Join our customer support team and assist users of our React-powere....",
+  },
+
+  {
+    id: 20,
+    title: "Collection Executive",
+    office: "Thudiyalur",
+    experience: "Experience: 5+ Years",
+    description: "Join our customer support team and assist users of our React-powere....",
+  },
+  
 ];
 
 // Company branch data
@@ -576,7 +629,7 @@ export const BranchData = [
   },
   {
     id: "5",
-    location: "ooty",
+    location: "Ooty",
     address: "Door No.327 (Shop No,7 &8)First Floor, Y.M.C.A City Towers, Wenlock Road, Udhagamandalam, The Nilgiris 643001",
     link: "https://maps.app.goo.gl/55LSrxBgXPbFzGGL8"
   }
