@@ -18,25 +18,25 @@ const FAQsPage = () => {
   };
 
   return (
-    <div className="leading-relaxed mt-12 mx-4 md:mx-8 font-sans text-lg ">
-      <div className="fixed  bottom-4 right-4 z-50">
+    <div className="mx-4 mt-12 font-sans text-lg leading-relaxed md:mx-8 ">
+      <div className="fixed z-50 bottom-4 right-6">
         <button className="focus:outline-none " onClick={toggleFAQsVisibility}>
           <img
             src={isFAQsVisible ? closeImage : openImage}
             alt={isFAQsVisible ? "Close FAQs" : "Show FAQs"}
-            className="w-14 h-14  "
+            className="w-12 h-12 "
           />
         </button>
       </div>
 
       {isFAQsVisible && (
-        <div className="fixed inset-0 bg-white rounded-md overflow-y-auto shadow-md z-40 mt-12">
+        <div className="fixed inset-0 z-40 mt-12 overflow-y-auto bg-white rounded-md shadow-md">
           <div className="flex items-center justify-center ">
-            <div className="max-w-5xl w-full">
+            <div className="w-full max-w-5xl">
               <div className="grid gap-4 py-8 md:grid-cols-2">
                 {faqsList.map((item, idx) => (
-                  <div className="space-y-3 mt-6 px-8" key={idx}>
-                    <h4 className="text-gray-800 text-xl font-semibold">
+                  <div className="px-8 mt-6 space-y-3" key={idx}>
+                    <h4 className="text-xl font-semibold text-gray-800">
                       {item.q}
                     </h4>
                     <p className="text-gray-500">{item.a}</p>
