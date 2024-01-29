@@ -6,8 +6,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "futura regular";
-  src: url("../font/futura/futur.ttf") format("opentype");
+  font-family: "FuturaRegular";
+  src: url("../font/futura/FuturaLT.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "futura regular", Arial, sans-serif !important;
+  font-family: "FuturaRegular", sans-serif !important;
 }
 
 body {
@@ -35,7 +35,7 @@ nav {
   align-items: center;
   min-height: 12vh;
   background-color: #fff;
-  font-family: "futura regular", Arial, sans-serif;
+  font-family: "FuturaRegular", sans-serif;
   z-index: 999999999;
 }
 
