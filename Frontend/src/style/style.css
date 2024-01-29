@@ -66,7 +66,7 @@ nav {
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .burger {
@@ -2788,7 +2788,7 @@ table td:first-child {
 }
 
 .menu-link {
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
 }
 
 @media screen and (max-width: 490px) {
@@ -3114,4 +3114,8 @@ table td:first-child {
 .input-box-file {
   position: static;
   margin-bottom: 10px;
+}
+
+.special-class {
+  letter-spacing: 2px !important;
 }/*# sourceMappingURL=style.css.map */
