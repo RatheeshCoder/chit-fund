@@ -30,6 +30,7 @@ $other-color: #000;
 body {
 
   overflow-x: hidden;
+  // letter-spacing: 2px !important;
 }
 
 a:-webkit-any-link {
@@ -80,7 +81,7 @@ nav {
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .burger {
@@ -3634,7 +3635,7 @@ table {
 }
 
 .menu-link {
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
 }
 
 @media screen and (max-width: 490px) {
@@ -3987,4 +3988,8 @@ table {
 .input-box-file{
   position: static;
   margin-bottom: 10px;
+}
+
+.special-class{
+  letter-spacing: 2px !important;
 }

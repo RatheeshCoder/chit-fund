@@ -54,7 +54,7 @@ const Header = () => {
               toggleNav();
               closeNavbar();
             }}
-            className="font-bold menu-link"
+            className="font-bold "
           >
             Home
           </Link>
@@ -66,7 +66,7 @@ const Header = () => {
           }`}
         >
           <span
-            className={`cursor-pointer menu-link`}
+            className={`cursor-pointer menu-link `}
             onClick={() => {
               toggleAboutDropdown();
             }}
@@ -86,7 +86,7 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   Why choose us
                 </Link>
@@ -99,7 +99,7 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   Company Profile
                 </Link>
@@ -112,7 +112,7 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   Directors
                 </Link>
@@ -125,7 +125,7 @@ const Header = () => {
                     toggleAboutDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   Values
                 </Link>
@@ -161,7 +161,7 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   All About Chits
                 </Link>
@@ -174,7 +174,7 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   Blogs
                 </Link>
@@ -187,7 +187,7 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   ChitFund Act
                 </Link>
@@ -200,7 +200,7 @@ const Header = () => {
                     toggleHowItWorksDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   FAQ
                 </Link>
@@ -214,7 +214,7 @@ const Header = () => {
             location.pathname === "/Gallery" ? "active" : ""
           }`}
         >
-          <Link to="/Gallery" onClick={toggleNav} className="menu-link">
+          <Link to="/Gallery" onClick={toggleNav} className="">
             Gallery
           </Link>
         </li>
@@ -225,13 +225,13 @@ const Header = () => {
           }`}
         >
           <span
-            className={`cursor-pointer menu-link`}
+            className={`cursor-pointer menu-link special-class `}
             onClick={() => {
               toggleProductDropdown();
             }}
             style={{ display: "inline-flex", alignItems: "center" }}
           >
-            Products&nbsp; {showProductDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50 " /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
+            Products &nbsp; {showProductDropdown ? <img src={closearrow} alt="Open" className="w-5 opacity-50 " /> : <img src={openarrow} alt="Closed" className="w-5 opacity-50"/>}
           </span>
           {showProductDropdown && (
             <ul
@@ -245,7 +245,7 @@ const Header = () => {
                     toggleProductDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   Services
                 </Link>
@@ -258,7 +258,7 @@ const Header = () => {
                     toggleProductDropdown();
                     closeNavbar();
                   }}
-                  className="block px-4 py-2 text-gray-800 menu-link"
+                  className="block px-4 py-2 text-gray-800 "
                 >
                   Schemes
                 </Link>
@@ -275,7 +275,7 @@ const Header = () => {
             location.pathname === "/Jobs" ? "active" : ""
           }`}
         >
-          <Link to="/Jobs" onClick={toggleNav} className="menu-link">
+          <Link to="/Jobs" onClick={toggleNav} className="">
             Careers
           </Link>
         </li>
@@ -284,7 +284,7 @@ const Header = () => {
             location.pathname === "/ContactMain" ? "active" : ""
           }`}
         >
-          <Link to="/ContactMain" onClick={toggleNav} className="menu-link">
+          <Link to="/ContactMain" onClick={toggleNav} className="">
             ContactUs
           </Link>
         </li>
