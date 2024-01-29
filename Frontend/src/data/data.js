@@ -48,12 +48,13 @@ import blogimg1 from '../asset/imgs/Case Study Education_.jpg'
 import blogimg2 from '../asset/imgs/Case Study Own Vehicle_.webp'
 import blogimg3 from '../asset/imgs/Case Study Insurance_.jpg'
 
-import BenefitImg1 from '../asset/imgs/BenefitImg (1).jpg'
-import BenefitImg2 from '../asset/imgs/BenefitImg (4).jpg'
-import BenefitImg3 from '../asset/imgs/BenefitImg (3).jpg'
-import BenefitImg4 from '../asset/imgs/BenefitImg (2).jpg'
-import BenefitImg5 from '../asset/imgs/BenefitImg (5).jpg'
 
+// Benefit dataset
+import BenefitImg1 from '../asset/imgs/Benefit/img4.jpg'
+import BenefitImg2 from '../asset/imgs/Benefit/img5.jpg'
+import BenefitImg3 from '../asset/imgs/Benefit/img2.jpg'
+import BenefitImg4 from '../asset/imgs/Benefit/img1.jpg'
+import BenefitImg5 from '../asset/imgs/Benefit/img3.jpg'
 
 
 
