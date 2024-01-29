@@ -54,9 +54,9 @@ export default function RegistrationForm() {
   };
 
   return (
-    <div className="cta-reg-form  cta-hiring-form">
+    <div className="cta-reg-form cta-hiring-form">
       <Button
-        className="cta-know-more-btn cta-view-more-product px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150  "
+        className="w-full px-3 py-3 text-sm font-semibold duration-150 rounded-lg cta-know-more-btn cta-view-more-product "
         variant="contained"
         onClick={handleDialogOpen}
       >
@@ -110,6 +110,7 @@ export default function RegistrationForm() {
               accept=".pdf,.doc,.docx"
               name="selectedFile"
               onChange={handleFileChange}
+              className="input-box-file"
             />
             <DialogActions>
               <Button variant="contained" color="primary" type="submit">

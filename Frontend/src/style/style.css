@@ -3109,4 +3109,9 @@ table td:first-child {
   bottom: 0;
   width: 3px;
   background-color: #000000; /* Adjust the color of the vertical line */
+}
+
+.input-box-file {
+  position: static;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
