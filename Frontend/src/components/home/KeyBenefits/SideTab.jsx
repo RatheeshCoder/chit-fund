@@ -31,7 +31,7 @@ const SideTab = ({ options, contentData }) => {
             backgroundImage: `url('${contentData[selectedOption].image}')`,
           }}
         />
-        <div className="relative z-10 h-full text-white cta-half-effect">
+        <div className="relative z-10 h-full text-black cta-half-effect">
           <h2 className="mb-4 text-2xl font-bold">{selectedOption}</h2>
           {contentData[selectedOption].data.map((item) => (
             <div key={item.id} className="mb-2 ">
@@ -41,7 +41,7 @@ const SideTab = ({ options, contentData }) => {
           <div className="mt-10">
             <Link
               to="/Products/Product"
-              className="inline-block px-12 py-3 text-sm font-medium text-white bg-[#0c52a6] border border-[#0c52a6] rounded active:text-violet-500 hover:bg-white hover:text-black focus:outline-none focus:ring "
+              className="inline-block px-12 py-3 text-sm font-medium text-black bg-white rounded "
             >
               Know More
             </Link>

@@ -36,7 +36,7 @@ const AvgFund = () => {
           {small_fund.map((product, idx) => (
             <div key={idx} className='relative flex flex-col items-stretch flex-1 p-8 border-2 rounded-xl'>
               <div>
-                <h4 className='font-medium text-center text-black text-indigo-600'>
+                <h4 className='font-medium text-center text-black'>
                   Chit Schema
                 </h4>
                 <p className='mt-4 text-3xl font-semibold text-gray-800'>
