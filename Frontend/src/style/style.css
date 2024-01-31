@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "FuturaRegular", sans-serif !important;
+  font-family: Arial, sans-serif !important;
 }
 
 body {
@@ -66,7 +66,7 @@ nav {
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 4vw, 1.2rem) !important;
 }
 
 .burger {
@@ -2879,8 +2879,8 @@ table td:first-child {
 .cta-half-effect {
   width: 50%;
   background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
   padding: 5%;
 }
 
@@ -2890,7 +2890,10 @@ table td:first-child {
   }
 }
 .custom-icon-color {
-  color: #0c52a6;
+  color: #2532c1;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 3%;
 }
 
 .caption {

@@ -20,17 +20,12 @@ const Features = () => {
 
       <div className="grid gap-10 mt-10 md:grid-cols-2">
         {featuresData.map((feature, index) => (
-          <div key={index} className="flex items-start gap-4" data-aos="zoom-out">
-            {feature.iconType === "AccountBalanceIcon" && (
-              <span className="p-3 rounded-full text-violet-600 bg-violet-500/10">
-                <AccountBalanceIcon className="custom-icon-color" />
-              </span>
-            )}
-            {feature.iconType === "SavingsIcon" && (
-              <span className="p-3 rounded-full text-violet-600 bg-violet-500/10">
-                <SavingsIcon className="custom-icon-color" />
-              </span>
-            )}
+          <div key={index} className="flex items-center gap-4" data-aos="zoom-out">
+            <img
+                src={feature.iconType}
+                alt={feature.title}
+                className="custom-icon-color"
+              />
             <div>
               <h3 className="text-xl font-semibold">{feature.title}</h3>
             </div>

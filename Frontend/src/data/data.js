@@ -97,6 +97,16 @@ import schemedata9 from '../asset/imgs/scheme/month 4l.jpg'
 import schemedata10 from '../asset/imgs/scheme/month 10l.jpg'
 
 
+import Feature1 from '../asset/imgs/Benefit/CollectionsIcon.png'
+import Feature2 from '../asset/imgs/Benefit/ProfitIcon.png'
+import Feature3 from '../asset/imgs/Benefit/documentationIcon.png'
+import Feature4 from '../asset/imgs/Benefit/auctionIcon.png'
+import Feature5 from '../asset/imgs/Benefit/customerIcon.png'
+import Feature6 from '../asset/imgs/Benefit/DiverseIcon.png'
+
+
+
+
 // Gallery start data
 
 export const gallaryImg = [
@@ -688,33 +698,33 @@ export const faqsList = [
 // Features data
 export const featuresData = [
   {
-    iconType: 'AccountBalanceIcon',
+    iconType:Feature1,
     title: 'Doorstep Collections Service',
 
   },
   {
-    iconType:'SavingsIcon',
+    iconType:Feature4,
     title: 'Regular Monthly Auctions    ',
 
   },
   
   {
-    iconType:  'AccountBalanceIcon',
+    iconType: Feature2,
     title: '20% Profit on savings schemes    ',
 
   },
   {
-    iconType: 'SavingsIcon',
+    iconType: Feature5,
     title: '24/7 Customer care and support',
 
   },
   {
-    iconType:  'AccountBalanceIcon',
+    iconType: Feature3,
     title: 'Minimum documentation    ',
 
   },
   {
-    iconType: 'SavingsIcon',
+    iconType: Feature6,
     title: 'Diverse schemes to choose',
 
   },
