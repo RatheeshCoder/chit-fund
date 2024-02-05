@@ -92,7 +92,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: $primary-color;
+  background-color: #0c52a6;
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -4001,4 +4001,12 @@ table {
 
 .bet-color-change{
   color: #fff !important;
+}
+.custom-class-for-add{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }

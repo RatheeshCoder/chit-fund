@@ -12,7 +12,7 @@ import Benefit from "../../components/home/KeyBenefits/Benefit";
 
 const Home = () => {
   return (
-    <section className="cta-main-home font-sans text-lg">
+    <section className="font-sans text-lg cta-main-home">
       <Carousel />
       <FourCard />
       <StatsSection />
