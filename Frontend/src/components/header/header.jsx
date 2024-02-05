@@ -37,9 +37,9 @@ const Header = () => {
 
   return (
     <nav className={`nav font-sans text-lg ${navActive ? "nav-active" : ""}`}>
-<div class="logo flex justify-center">
-    <Link href="/">
-        <img class="max-w-full h-auto" src={logo} alt="Logo" />
+<div className="flex justify-center logo">
+    <Link to="/">
+        <img className="logo-image" src={logo} alt="Logo" />
     </Link>
 </div>
 

@@ -40,14 +40,15 @@ nav {
 }
 
 .logo {
-  height: 10vh;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.logo img {
-  width: 90%;
-  height: 90%;
-  margin-left: 10px;
+
+.logo-image {
+  max-height: 10vh;
+  max-width: 100%;
 }
 
 .nav-links {
@@ -3121,4 +3122,8 @@ table td:first-child {
 
 .special-class {
   letter-spacing: 2px !important;
+}
+
+.bet-color-change {
+  color: #fff !important;
 }/*# sourceMappingURL=style.css.map */

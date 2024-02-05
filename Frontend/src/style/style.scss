@@ -53,17 +53,18 @@ nav {
   z-index: 999999999;
 }
 
-// .logo {
+.logo {
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-//   height: 10vh;
-//   width: fit-content;
+.logo-image {
+  max-height: 10vh;
+  max-width: 100%;
+}
 
-//   img {
-//     width: 90%;
-//     height: 90%;
-//     margin-left: 10px;
-//   }
-// }
 
 .nav-links {
   display: flex;
@@ -3996,4 +3997,8 @@ table {
 
 .special-class{
   letter-spacing: 2px !important;
+}
+
+.bet-color-change{
+  color: #fff !important;
 }

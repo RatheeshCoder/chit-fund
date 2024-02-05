@@ -907,43 +907,54 @@ export const Benefitcontent = {
     image: BenefitImg1,
     data: [
       {
-        id: 1, title: ` Vanmoh Chitfunds brings people together for shared financial growth. Your savings journey becomes a community effort, where everyone benefits from collective prosperity` },
-
+        id: 1,
+        title: ` Vanmoh Chitfunds brings people together for shared financial growth. Your savings journey becomes a community effort, where everyone benefits from collective prosperity`,
+        color: 'text-black',
+      },
     ],
   },
   'Crystal Clear Processes': {
     image: BenefitImg2,
     data: [
       {
-        id: 2, title: ` No hidden tricks here! Vanmoh is all about clear and simple processes. Your savings are handled transparently, ensuring you always know where your money is and how it's working for you` },
-
+        id: 2,
+        title: ` No hidden tricks here! Vanmoh is all about clear and simple processes. Your savings are handled transparently, ensuring you always know where your money is and how it's working for you`,
+        color: 'text-white',
+      },
     ],
   },
   'Tailored to You': {
     image: BenefitImg3,
     data: [
       {
-        id: 3, title: `Your savings, your way. Vanmoh understands that one size doesn't fit all. We offer flexible savings options designed to suit your unique financial goals and preferences` },
-
+        id: 3,
+        title: `Your savings, your way. Vanmoh understands that one size doesn't fit all. We offer flexible savings options designed to suit your unique financial goals and preferences`,
+        color: 'text-black',
+      },
     ],
   },
   'Luck is Fair': {
     image: BenefitImg4,
     data: [
       {
-        id: 4, title: `In Vanmoh Chitfunds, luck is impartial. Our lucky draw system ensures everyone has an equal chance to be rewarded. It's a fair game where every participant stands a shot at success.`},
-
+        id: 4,
+        title: `In Vanmoh Chitfunds, luck is impartial. Our lucky draw system ensures everyone has an equal chance to be rewarded. It's a fair game where every participant stands a shot at success.`,
+        color: 'text-black',
+      },
     ],
   },
   'Guidance Beyond Savings': {
     image: BenefitImg5,
     data: [
       {
-        id: 5, title: ` Vanmoh is not just about chitfunds; it's about your financial well-being. We offer personalized guidance to empower you on your journey, making sure you have the support you need to achieve your financial dreams` },
-
+        id: 5,
+        title: ` Vanmoh is not just about chitfunds; it's about your financial well-being. We offer personalized guidance to empower you on your journey, making sure you have the support you need to achieve your financial dreams`,
+        color: 'text-black',
+      },
     ],
   },
 };
+
 
 
 
