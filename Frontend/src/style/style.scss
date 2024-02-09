@@ -4007,6 +4007,11 @@ table {
   justify-content: center !important;
   align-items: center !important;
   width: 100% !important;
-  padding: 0 !important;
+  padding: 10% !important;
   margin: 0 !important;
+  text-align: center !important;
+
+  h1{
+    text-align: center;
+  }
 }
