@@ -3133,6 +3133,10 @@ table td:first-child {
   justify-content: center !important;
   align-items: center !important;
   width: 100% !important;
-  padding: 0 !important;
+  padding: 10% !important;
   margin: 0 !important;
+  text-align: center !important;
+}
+.custom-class-for-add h1 {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
