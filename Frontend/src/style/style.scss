@@ -11,7 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Monsarret';
+  src: url('../font/Fonts/Montserrat-VariableFont_wght.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 $font-family:'FuturaRegular', sans-serif;;
@@ -23,7 +28,7 @@ $other-color: #000;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif !important;
+  font-family: 'Monsarret', sans-serif;
   // border: 2px solid red !important;
 }
 
@@ -49,7 +54,7 @@ nav {
   align-items: center;
   min-height: 12vh;
   background-color: $secondary-color;
-  font-family: $font-family;
+  font-family: $font-family !important;
   z-index: 999999999;
 }
 
@@ -69,7 +74,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: 68%;
 }
 
 .nav-links li {
