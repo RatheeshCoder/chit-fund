@@ -39,7 +39,7 @@ const Header = () => {
     <nav className={`nav font-sans text-lg ${navActive ? "nav-active" : ""}`}>
 <div className="flex justify-center logo">
     <Link to="/">
-        <img className="logo-image" src={logo} alt="Logo" />
+        <img className="logo-image w-[212px] sm:w-[230px]" src={logo} alt="Logo" />
     </Link>
 </div>
 

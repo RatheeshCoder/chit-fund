@@ -9,10 +9,9 @@ const Footer1 = () => {
           <p className=" cta-footer-text text-white text-3xl font-semibold sm:text-4xl">
             Build the future with us
           </p>
-          <p className=" cta-footer-text  text-blue-100 mt-3">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-            cupidatat non proident.
+          <p className=" cta-footer-text text-blue-100  my-0.5 text-center "> Shape Your Financial Tomorrow with Us</p>
+          <p className=" cta-footer-text  text-blue-100">
+          Every month brings you closer to financial security. Your journey to prosperity starts here.
           </p>
         </div>
         <div className="mt-4">
@@ -20,7 +19,7 @@ const Footer1 = () => {
             to="/Products/Product"
             className="inline-block py-2 px-4 text-gray-800 font-medium bg-white duration-150 hover:bg-gray-100 active:bg-gray-200 rounded-full"
           >
-            Get started
+            Start Your Chitfund Journey Now.
           </Link>
         </div>
       </div>
