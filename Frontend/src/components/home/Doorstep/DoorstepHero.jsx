@@ -6,8 +6,8 @@ const DoorstepHero = () => {
   return (
 <section className="text-gray-600 body-font cta-list-top">
   <div className="container flex flex-col items-center justify-center mx-auto md:flex-row">
-    <div data-aos="fade-right" className="flex flex-col items-center mx-auto mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 custom-class-for-add"> {/* Added mx-auto */}
-      <h1 className="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl">
+    <div data-aos="fade-right" className="flex flex-col items-center mx-auto  text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 custom-class-for-add"> {/* Added mx-auto */}
+      <h1 className="mb-3 text-3xl font-medium text-gray-900 title-font sm:text-4xl">
         Delivered To Your Doorstep
         <br className="hidden lg:inline-block" />
         In Coimbatore & Nilgiris.

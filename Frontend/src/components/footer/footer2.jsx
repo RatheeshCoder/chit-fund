@@ -97,7 +97,7 @@ function Footer2() {
             <Link to='/'>
             <img src={logo} className="w-40" />
             </Link>
-            <p className="leading-relaxed mt-2 text-[15px]">
+            <p className="leading-relaxed mt-6 text-[15px]">
               Feel free to reach out with any questions or concerns; we're here
               to help.
             </p>

@@ -5,7 +5,7 @@ import SavingsIcon from "@mui/icons-material/Savings";
 
 const Features = () => {
   return (
-    <div className="max-w-4xl px-5 mx-auto mt-16 mb-20">
+    <div className="max-w-4xl px-5 mx-auto  mb-14">
       <div className="text-center">
         <h2 className="text-3xl font-semibold">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">

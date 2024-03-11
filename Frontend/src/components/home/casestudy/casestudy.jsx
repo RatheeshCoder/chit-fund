@@ -27,7 +27,7 @@ const Carousel = () => {
           <>
         
             <img
-              className="absolute top-0 left-0 object-cover w-full h-full" 
+              className="absolute top-0 left-0 object-fill w-full h-full" 
               src={image.imageUrl}
               alt={`Slider ${index + 1}`}
             />
