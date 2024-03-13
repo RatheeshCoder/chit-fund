@@ -13,6 +13,7 @@ const FourCard = () => {
           >
             <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-[#0c52a6] transition-all duration-300 group-hover:scale-[10]"></span>
             <div className="relative z-10 max-w-md mx-auto">
+              <div className="flex ">
               <span className="grid h-20 w-20 place-items-center rounded-full bg-[#0c52a6] transition-all duration-300 group-hover: bg-[#0c52a6]">
                 <img
                   src={section.imageSrc}
@@ -20,8 +21,10 @@ const FourCard = () => {
                   className="w-10 h-10 text-white transition-all"
                 />
               </span>
+              <h1 className="text-2xl font-bold mt-6 ml-6 sm:ml-3">{section.title}</h1>
+              </div>
               <div className="pt-5 space-y-6 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
-                <h1 className="text-2xl font-bold">{section.title}</h1>
+                
                 <p>{section.content}</p>
               </div>
             </div>
