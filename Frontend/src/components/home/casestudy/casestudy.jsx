@@ -15,7 +15,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative mt-20 mb-20 half-img">
+    <div className="relative mt-20 sm:mb-20  half-img h-[47vh] sm:h-[50vh] ">
       {CarouselImg.map((image, index) => (
         <CSSTransition
           key={index}
@@ -27,7 +27,7 @@ const Carousel = () => {
           <>
         
             <img
-              className="absolute top-0 left-0 object-fill w-full h-full" 
+              className="absolute top-0 left-0 object-fill w-full sm:h-full  h-3/4" 
               src={image.imageUrl}
               alt={`Slider ${index + 1}`}
             />
@@ -43,7 +43,7 @@ const Carousel = () => {
           Bridging Your Goals and Financial Success
         </p>
       </div>
-      <div className="absolute inset-0 z-0 w-full h-full bg-black opacity-50"></div>
+      <div className="absolute inset-0 z-0 w-full sm:h-full h-3/4 bg-black opacity-50"></div>
     </div>
   );
 };

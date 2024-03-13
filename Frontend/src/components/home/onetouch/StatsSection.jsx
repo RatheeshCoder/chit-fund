@@ -25,7 +25,7 @@ const StatsSection = () => {
 
 
         </p>
-        <div data-aos="zoom-in-up" className="grid grid-cols-1 gap-8 text-center bg-white md:grid-cols-6">
+        <div data-aos="zoom-in-up" className="grid grid-cols-2 sm:grid-cols-1 gap-8 text-center bg-white md:grid-cols-6">
           {renderStatBlock(user, "Subscribers", <NumberCounter />)}
           {renderStatBlock(trophy, "Prized Customers", <Prize />)}
           {renderStatBlock(gift, "Schemes", <Gift />)}
