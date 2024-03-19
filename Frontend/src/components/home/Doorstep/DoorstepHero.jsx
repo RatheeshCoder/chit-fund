@@ -10,7 +10,7 @@ const DoorstepHero = () => {
       <h1 className="mb-3 text-3xl font-medium text-gray-900 title-font sm:text-4xl">
         Delivered To Your Doorstep
         <br className="hidden lg:inline-block" />
-        In Coimbatore & Nilgiris.
+        &nbsp; In Coimbatore & Nilgiris.
       </h1>
       <p className="mb-8 leading-relaxed">
         Experience hassle-free financial empowerment with Vanmoh chitfunds.

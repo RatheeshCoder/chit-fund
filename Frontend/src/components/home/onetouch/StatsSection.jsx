@@ -16,8 +16,8 @@ const StatsSection = () => {
   return (
     <section className="p-4 ">
       <div className="container pt-12 pb-12 mx-auto ">
-        <h1 className="mb-8 text-4xl font-bold text-center text-gray-800">
-        Step into Financial Ease with Vanmoh Chitfunds
+        <h1 className="mb-8 sm:text-4xl text-2xl font-bold text-center text-gray-800 ">
+        Step into Financial Ease with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900"> Vanmoh </span> Chitfunds
         </h1>
 
         <p className="mb-12 text-lg text-center text-gray-700">

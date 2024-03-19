@@ -35,15 +35,15 @@ const Carousel = () => {
           </>
         </CSSTransition>
       ))}
-      <div className="absolute z-10 w-full text-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+      <div className="absolute z-10 w-full text-center transform -translate-x-1/2 -translate-y-1/2  top-1/2 left-1/2 ">
+        <h2 className="text-4xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
           <span className="">Vanmoh</span> chitfunds
         </h2>
         <p className="mt-2 text-base text-white sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
           Bridging Your Goals and Financial Success
         </p>
       </div>
-      <div className="absolute inset-0 z-0 w-full sm:h-full h-3/4 bg-black opacity-50"></div>
+      <div className="absolute inset-0 z-0 w-full h-full  bg-black opacity-50"></div>
     </div>
   );
 };

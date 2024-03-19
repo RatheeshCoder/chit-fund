@@ -7,7 +7,7 @@ const SideTab = ({ options, contentData }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
   return (
-    <div className="flex flex-col mb-20 md:flex-row ">
+    <div className="flex flex-col mb-2 md:flex-row ">
       <div className="relative w-full p-4 text-black md:w-1/4">
         {options.map((option) => (
           <div
