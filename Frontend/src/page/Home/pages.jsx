@@ -16,14 +16,11 @@ const Home = () => {
       <Carousel />
       <StatsSection />
       <Product />
-      <FourCard />
+       <FourCard />
       {/* <Secure /> */}
       {/* <Read /> */}
       <Benefit/>
       <DoorstepHero />
-      
-
-      
     </section>
   );
 };
