@@ -15,7 +15,7 @@ import camera from "../../../asset/imgs/BusinessImg.png";
 const StatsSection = () => {
   return (
     <section className="p-4 ">
-      <div className="container pt-12 pb-12 mx-auto ">
+      <div className="container pb-12 mx-auto ">
         <h1 className="mb-8 sm:text-4xl text-2xl font-bold text-center text-gray-800 ">
         Step into Financial Ease with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900"> Vanmoh </span> Chitfunds
         </h1>
