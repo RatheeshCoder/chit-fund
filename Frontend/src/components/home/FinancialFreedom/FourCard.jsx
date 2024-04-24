@@ -5,7 +5,7 @@ import { FourCards } from "../../../data/data";
 const FourCard = () => {
   return (
     <>
-      <div className="relative grid grid-cols-1 gap-10 sm:px-10 px-4 py-6 overflow-hidden md:grid-cols-2 lg:grid-cols-4 sm:py-12 cta-four-card mt-3">
+      <div className="relative grid grid-cols-1 gap-10 sm:px-10 px-4 py-6 overflow-hidden md:grid-cols-2 lg:grid-cols-4 sm:py-12 cta-four-card">
         {FourCards.map((section, index) => (
           <div data-aos="flip-right"
             key={index}

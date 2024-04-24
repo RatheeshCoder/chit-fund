@@ -6,7 +6,7 @@ import { Benefitcontent, Benefitoptions } from '../../../data/data';
 function Benefit() {
   return (
     <div className='mx-5 lg:mx-16' >
-      <h1 className="mt-6 mb-8 text-4xl font-bold text-center text-gray-800">
+      <h1 className="mt-14 mb-8 text-4xl font-bold text-center text-gray-800">
       Key <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900' >Benefits</span>
         </h1>
       <SideTab options={Benefitoptions} contentData={Benefitcontent} />

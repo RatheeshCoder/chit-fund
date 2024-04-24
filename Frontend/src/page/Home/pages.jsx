@@ -14,15 +14,13 @@ const Home = () => {
   return (
     <section className="font-sans text-lg cta-main-home">
       <Carousel />
-      <FourCard />
       <StatsSection />
+      <Product />
+       <FourCard />
       {/* <Secure /> */}
       {/* <Read /> */}
       <Benefit/>
       <DoorstepHero />
-      <Product />
-
-      
     </section>
   );
 };
